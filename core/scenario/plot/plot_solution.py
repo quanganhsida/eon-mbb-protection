@@ -75,12 +75,11 @@ def build_note_text(env):
         nominal = env.nominal_paths[demand_id]
         path = nominal["path"]
         slot_block = nominal["slot_block"]
-        last_slot = nominal["last_slot"]
 
         lines.append(
 #             f"P{demand_id}: {' -> '.join(path)}, "
             f"P{demand_id}: {' -> '.join(map(str, path))}, "
-            f"S={slot_block}, last={last_slot}"
+            f"S={slot_block}"
         )
 
     if getattr(env, "failure_links", []):
@@ -277,12 +276,11 @@ def build_result_note_text(env, solution):
 
         path = item["path"]
         slot_block = item["slot_block"]
-        last_slot = item["last_slot"]
 
         lines.append(
 #             f"P{k}: {' -> '.join(path)}, "
             f"P{k}: {' -> '.join(map(str, path))}, "
-            f"S={slot_block}, last={last_slot}"
+            f"S={slot_block}"
         )
 
     return "\n".join(lines)
@@ -457,11 +455,9 @@ def build_single_demand_note_text(demand_id, env, solution):
 
     nominal_path  = nominal["path"]
     nominal_slots = nominal["slot_block"]
-    nominal_last  = nominal["last_slot"]
 
     migrated_path  = migrated["path"]
     migrated_slots = migrated["slot_block"]
-    migrated_last  = migrated["last_slot"]
 
     migration_order_text = solution.get("migration_order_text", "")
 
@@ -481,11 +477,11 @@ def build_single_demand_note_text(demand_id, env, solution):
     lines.append("")
     lines.append(
         f"Nominal path : {' -> '.join(map(str, nominal_path))}, "
-        f"S={nominal_slots}, last={nominal_last}"
+        f"S={nominal_slots}"
     )
     lines.append(
         f"Migrated path: {' -> '.join(map(str, migrated_path))}, "
-        f"S={migrated_slots}, last={migrated_last}"
+        f"S={migrated_slots}"
     )
 
     return "\n".join(lines)

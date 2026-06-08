@@ -26,8 +26,7 @@ solve-model:
 	python3 main.py --plot_type=solve --solution_file=../data/solution/protection/scenario3_basic_solution.json
 
 solve-orange-model:
-	python3 main.py --instance_file=../data/instance/orange/orange_european_18_40_d10_b.json --plot_type=solve --solution_file=../data/solution/orange/orange_european_18_40_d10_b_solution.json
-
+	python3 main.py --instance_file=../data/instance/orange/orange_european_18_40_d10_b.json --plot_type=solve --solution_file=../data/solution/orange/orange_european_18_40_d10_b_solution.json 2>&1 | tee ../data/log/European_18_40/orange_european_18_40_d10_b_gurobi.log
 # ==============================================================================================================================================================================
 
 plot-result:
