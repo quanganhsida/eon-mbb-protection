@@ -1,0 +1,93 @@
+{
+  "name": "toy_5nodes_2demands",
+  "nodes": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "links": [
+    {
+      "id": 1,
+      "u": 1,
+      "v": 2,
+      "length": 1,
+      "slots": 6
+    },
+    {
+      "id": 2,
+      "u": 1,
+      "v": 3,
+      "length": 1,
+      "slots": 6
+    },
+    {
+      "id": 3,
+      "u": 2,
+      "v": 3,
+      "length": 1,
+      "slots": 6
+    },
+    {
+      "id": 4,
+      "u": 2,
+      "v": 4,
+      "length": 1,
+      "slots": 6
+    },
+    {
+      "id": 5,
+      "u": 3,
+      "v": 5,
+      "length": 1,
+      "slots": 6
+    },
+    {
+      "id": 6,
+      "u": 4,
+      "v": 5,
+      "length": 1,
+      "slots": 6
+    }
+  ],
+  "demands": [
+    {
+      "id": 1,
+      "source": 1,
+      "target": 4,
+      "slots": 2
+    },
+    {
+      "id": 2,
+      "source": 3,
+      "target": 4,
+      "slots": 1
+    }
+  ],
+  "nominal_path": {
+    "1": {
+      "path": [
+        1,
+        2,
+        4
+      ],
+      "last_slot": 2,
+      "slot_block": [
+        1,
+        2
+      ]
+    },
+    "2": {
+      "path": [
+        3,
+        5,
+        4
+      ],
+      "last_slot": 3,
+      "slot_block": [
+        3
+      ]
+    }
+  }
+}
