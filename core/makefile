@@ -1,8 +1,13 @@
 generate-scenario3:
 	python3 -m sample.generate_data
 
+# generate-orange:
+# 	python3 -m sample.orange.prepare_instance --link_file=../data/raw/orange/Outputs/Instances/1.5x/efficient/German_17_26/Links/10_demands-b/Link.csv --execution_file=../data/raw/orange/Outputs/executionOutputs/German_17_26/oP_L1.5x_Teff_iGerman_17_26_d10_ofNLUS_f0_cd1_os1_gn0_b1_r0_cu0_p2.txt --output_file=../data/instance/German_17_26/orange_german_17_26_d10_b.json --num_failed_links=1
+
+#  just for isntance iGerman_17_26_d10 only
 generate-orange:
-	python3 -m sample.orange.prepare_instance --link_file=../data/raw/orange/Outputs/Instances/1.5x/efficient/German_17_26/Links/10_demands-b/Link.csv --execution_file=../data/raw/orange/Outputs/executionOutputs/Germany_17_26/oP_L1.5x_Teff_iGerman_17_26_d10_ofNLUS_f0_cd1_os1_gn0_b1_r0_cu0_p2.txt --output_file=../data/instance/German_17_26/orange_german_17_26_d10_b.json --num_failed_links=1
+	python3 -m sample.orange.prepare_instance --link_file=../data/raw/orange/Outputs/Instances/1.5x/efficient/German_17_26/Links/10_demands-b/Link.csv --execution_file=../data/raw/orange/Outputs/executionOutputs/German_17_26/oP_L1.5x_Teff_iGerman_17_26_d10_ofNLUS_f0_cd1_os1_gn0_b1_r0_cu0_p2.txt --output_file=../data/instance/German_17_26/orange_german_17_26_d10_b.json --num_failed_links=1
+
 
 # ==============================================================================================================================================================================
 
@@ -18,7 +23,7 @@ solve-model:
 	python3 main.py --plot_type=solve --solution_file=../data/solution/protection/scenario3_basic_solution.json
 
 solve-orange-model:
-	python3 main.py --instance_file=../data/instance/orange/orange_european_18_40_d90_b.json --plot_type=solve --solution_file=../data/solution/orange/orange_european_18_40_d90_b_solution.json 2>&1 | tee ../data/log/European_18_40/orange_european_18_40_d90_b_gurobi.log
+	python3 main.py --instance_file=../data/instance/German_17_26/orange_german_17_26_d10_b.json --plot_type=solve --solution_file=../data/solution/German_17_26/orange_german_17_26_d10_b_solution.json 2>&1 | tee ../data/log/German_17_26/orange_german_17_26_d10_b_gurobi.log
 # ==============================================================================================================================================================================
 
 plot-result:
