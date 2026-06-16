@@ -12,15 +12,15 @@ def solve_basic_resilient_rsa(env, output_path: str):
 
     model.optimize()
 
-    if model.Status not in [GRB.OPTIMAL, GRB.TIME_LIMIT]:
+    if model.Status not in [GRB.OPTIMAL, GRB.TIME_LIMIT] or model.SolCount == 0:
         print(f"[ERROR] Optimization ended with status: {model.Status}")
-#
+
         result = {
             "instance": env.name,
-            "status"  : int(model.Status),
-            "message" : "No feasible solution extracted.",
+            "status": int(model.Status),
+            "message": "No feasible solution extracted.",
         }
-#
+
         save_json(result, output_path)
         return result
 
@@ -28,6 +28,7 @@ def solve_basic_resilient_rsa(env, output_path: str):
         model=model,
         data=data,
         variables=variables,
+        env=env,
     )
 
     result = {

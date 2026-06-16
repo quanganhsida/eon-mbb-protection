@@ -638,18 +638,26 @@ def plot_single_demand_solution(env, solution, demand_id, output_path):
 
 def plot_model_solution_by_demand(env, solution_path: str, output_dir: str):
     """
-    Plot one figure for each migrated demand.
+    Plot one figure for each directly affected demand in K_Z.
     """
 
     solution = load_solution(solution_path)
 
     migrated_paths = solution.get("migrated_paths", {})
+    affected_demands = solution.get("affected_demands_KZ", env.affected_demands)
 
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    for demand_id_str in sorted(migrated_paths.keys(), key=int):
-        demand_id = int(demand_id_str)
+    for demand_id in sorted(affected_demands):
+        demand_id_str = str(demand_id)
+
+        if demand_id_str not in migrated_paths:
+            print(
+                f"[WARNING] Demand {demand_id} is in K_Z "
+                f"but not found in migrated_paths. Skipped."
+            )
+            continue
 
         output_path = output_dir / f"demand_{demand_id}_model_solution.pdf"
 

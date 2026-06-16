@@ -88,7 +88,68 @@ def format_migration_order(order):
     """
     return " -> ".join(map(str, order))
 
-def extract_solution(model, data, variables):
+def get_nominal_paths(data, env=None):
+    """
+    Retrieve nominal paths from env or data.
+    """
+    if env is not None and hasattr(env, "nominal_paths"):
+        return env.nominal_paths
+
+    if "nominal_paths" in data:
+        return data["nominal_paths"]
+
+    return {}
+
+
+def get_affected_demands(data, env=None):
+    """
+    Retrieve K_Z from env or data.
+    """
+    if env is not None:
+        if hasattr(env, "K_Z"):
+            return set(env.K_Z)
+        if hasattr(env, "affected_demands"):
+            return set(env.affected_demands)
+
+    if "K_Z" in data:
+        return set(data["K_Z"])
+
+    if "affected_demands_KZ" in data:
+        return set(data["affected_demands_KZ"])
+
+    return set()
+
+
+def is_really_migrated(k, migrated, nominal_paths, affected_demands):
+    """
+    A demand is kept in K' if:
+      - it is directly affected by the failure zone, or
+      - its path changes, or
+      - its slot block changes.
+    """
+
+    if k in affected_demands:
+        return True
+
+    k_str = str(k)
+
+    if k_str not in nominal_paths:
+        return True
+
+    nominal = nominal_paths[k_str]
+
+    nominal_path = nominal["path"]
+    nominal_slots = nominal["slot_block"]
+
+    migrated_path = migrated["path"]
+    migrated_slots = migrated["slot_block"]
+
+    return (
+        migrated_path != nominal_path
+        or migrated_slots != nominal_slots
+    )
+
+def extract_solution(model, data, variables, env=None):
     x = variables["x"]
     p = variables["p"]
 
@@ -99,8 +160,10 @@ def extract_solution(model, data, variables):
     d = data["d"]
     b = data["b"]
 
-    migrated_demands = []
-    migrated_paths = {}
+    nominal_paths = get_nominal_paths(data, env)
+    affected_demands = get_affected_demands(data, env)
+
+    candidate_paths = {}
 
     for k in K:
         selected = []
@@ -109,42 +172,62 @@ def extract_solution(model, data, variables):
             arcs_s = [
                 a
                 for a in A
-                if x[k,a,s].X > 0.5
+                if x[k, a, s].X > 0.5
             ]
 
             if arcs_s:
                 selected.append((s, arcs_s))
 
-        if selected:
-            migrated_demands.append(k)
+        if not selected:
+            continue
 
-            # one selected starting slot
-            start_slot, selected_arcs = selected[0]
-            path = reconstruct_path(
-                selected_arcs=selected_arcs,
-                source=o[k],
-                target=d[k],
-            )
+        # one selected starting slot
+        start_slot, selected_arcs = selected[0]
 
-            slot_block = list(range(start_slot, start_slot + b[k]))
+        path = reconstruct_path(
+            selected_arcs=selected_arcs,
+            source=o[k],
+            target=d[k],
+        )
 
-            migrated_paths[str(k)] = {
-                "path": path,
-                "start_slot": start_slot,
-                "last_slot": start_slot + b[k] - 1,
-                "slot_block": slot_block,
-                "selected_arcs": [
-                    [u,v]
-                    for u, v in selected_arcs
-                ],
-            }
+        slot_block = list(range(start_slot, start_slot + b[k]))
+
+        candidate_paths[str(k)] = {
+            "path": path,
+            "start_slot": start_slot,
+            "last_slot": start_slot + b[k] - 1,
+            "slot_block": slot_block,
+            "selected_arcs": [
+                [u, v]
+                for u, v in selected_arcs
+            ],
+        }
+
+    migrated_paths = {}
+
+    for k_str, migrated in candidate_paths.items():
+        k = int(k_str)
+
+        if is_really_migrated(
+            k=k,
+            migrated=migrated,
+            nominal_paths=nominal_paths,
+            affected_demands=affected_demands,
+        ):
+            migrated_paths[k_str] = migrated
+
+    migrated_demands = sorted(
+        int(k)
+        for k in migrated_paths.keys()
+    )
 
     precedence_relations = []
 
     for k in K:
         for h in K:
-            if k != h and p[k,h].X > 0.5:
-                precedence_relations.append([k,h])
+            if k != h and p[k, h].X > 0.5:
+                if k in migrated_demands and h in migrated_demands:
+                    precedence_relations.append([k, h])
 
     migration_order = compute_migration_order(
         migrated_demands=migrated_demands,
@@ -152,9 +235,9 @@ def extract_solution(model, data, variables):
     )
 
     return {
-            "migrated_demands_K_prime": migrated_demands,
-            "migrated_paths": migrated_paths,
-            "precedence_relations": precedence_relations,
-            "migration_order": migration_order,
-            "migration_order_text": format_migration_order(migration_order),
+        "migrated_demands_K_prime": migrated_demands,
+        "migrated_paths": migrated_paths,
+        "precedence_relations": precedence_relations,
+        "migration_order": migration_order,
+        "migration_order_text": format_migration_order(migration_order),
     }
