@@ -1,0 +1,113 @@
+{
+  "instance": "Scenario3",
+  "status": 2,
+  "objective_value": 2.0,
+  "failure_links": [
+    [
+      "a",
+      "b"
+    ]
+  ],
+  "affected_demands_KZ": [
+    1
+  ],
+  "migrated_demands_K_prime": [
+    1,
+    2,
+    3
+  ],
+  "migrated_paths": {
+    "1": {
+      "path": [
+        "s",
+        "d",
+        "t"
+      ],
+      "start_slot": 1,
+      "last_slot": 4,
+      "slot_block": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selected_arcs": [
+        [
+          "s",
+          "d"
+        ],
+        [
+          "d",
+          "t"
+        ]
+      ]
+    },
+    "2": {
+      "path": [
+        "s",
+        "c",
+        "t"
+      ],
+      "start_slot": 1,
+      "last_slot": 3,
+      "slot_block": [
+        1,
+        2,
+        3
+      ],
+      "selected_arcs": [
+        [
+          "s",
+          "c"
+        ],
+        [
+          "c",
+          "t"
+        ]
+      ]
+    },
+    "3": {
+      "path": [
+        "s",
+        "c",
+        "t"
+      ],
+      "start_slot": 4,
+      "last_slot": 5,
+      "slot_block": [
+        4,
+        5
+      ],
+      "selected_arcs": [
+        [
+          "s",
+          "c"
+        ],
+        [
+          "c",
+          "t"
+        ]
+      ]
+    }
+  },
+  "precedence_relations": [
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      1
+    ]
+  ],
+  "migration_order": [
+    2,
+    3,
+    1
+  ],
+  "migration_order_text": "2 -> 3 -> 1"
+}

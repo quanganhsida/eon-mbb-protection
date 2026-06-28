@@ -1,0 +1,125 @@
+{
+  "instance": "oP_L1_5x_Teff_iEuropean_18_40_d20_b_ofNLUS_f0_cd1_os1_gn0_b1_r0_cu0_p2",
+  "status": 2,
+  "objective_value": 0.0,
+  "failure_links": [
+    [
+      3,
+      6
+    ]
+  ],
+  "affected_demands_KZ": [
+    6,
+    11,
+    18
+  ],
+  "migrated_demands_K_prime": [
+    6,
+    11,
+    18
+  ],
+  "migrated_paths": {
+    "6": {
+      "path": [
+        3,
+        11,
+        6
+      ],
+      "start_slot": 13,
+      "last_slot": 18,
+      "slot_block": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "selected_arcs": [
+        [
+          3,
+          11
+        ],
+        [
+          11,
+          6
+        ]
+      ]
+    },
+    "11": {
+      "path": [
+        2,
+        16,
+        11,
+        6
+      ],
+      "start_slot": 25,
+      "last_slot": 30,
+      "slot_block": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "selected_arcs": [
+        [
+          2,
+          16
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          16,
+          11
+        ]
+      ]
+    },
+    "18": {
+      "path": [
+        3,
+        11,
+        6
+      ],
+      "start_slot": 19,
+      "last_slot": 24,
+      "slot_block": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "selected_arcs": [
+        [
+          3,
+          11
+        ],
+        [
+          11,
+          6
+        ]
+      ]
+    }
+  },
+  "precedence_relations": [
+    [
+      11,
+      6
+    ],
+    [
+      11,
+      18
+    ]
+  ],
+  "migration_order": [
+    11,
+    6,
+    18
+  ],
+  "migration_order_text": "11 -> 6 -> 18"
+}
