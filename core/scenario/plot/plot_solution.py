@@ -636,34 +636,259 @@ def plot_single_demand_solution(env, solution, demand_id, output_path):
     print(f"[OK] Demand {demand_id} solution saved to: {output_file}")
 
 
-def plot_model_solution_by_demand(env, solution_path: str, output_dir: str):
+def build_combined_solution_note_text(env, solution, demand_ids):
     """
-    Plot one figure for each directly affected demand in K_Z.
+    Build a unified note block for the combined MBB solution.
     """
 
-    solution = load_solution(solution_path)
+    affected_demands = solution.get("affected_demands_KZ", env.affected_demands)
+
+    migration_order_text = solution.get("migration_order_text", "")
+
+    if not migration_order_text:
+        order = solution.get("migration_order", [])
+        migration_order_text = " -> ".join(map(str, order))
+
+    migrated_paths = solution.get("migrated_paths", {})
+
+    lines = []
+    lines.append("Combined MBB solution")
+    lines.append(f"Failure link(s): {env.failure_links}")
+    lines.append(f"Affected demands K_Z: {affected_demands}")
+    lines.append(f"Number of affected demands: {len(affected_demands)}")
+    lines.append(f"Migration order: {migration_order_text}")
+    lines.append("")
+    lines.append("Affected demand paths")
+
+    for demand_id in sorted(demand_ids):
+        demand_id_str = str(demand_id)
+
+        if demand_id_str not in env.nominal_paths:
+            continue
+
+        if demand_id_str not in migrated_paths:
+            continue
+
+        nominal = env.nominal_paths[demand_id_str]
+        migrated = migrated_paths[demand_id_str]
+
+        nominal_path = nominal["path"]
+        migrated_path = migrated["path"]
+
+        nominal_slots = nominal["slot_block"]
+        migrated_slots = migrated["slot_block"]
+
+        lines.append(
+            f"P{demand_id} nominal : "
+            f"{' -> '.join(map(str, nominal_path))}, "
+            f"S={nominal_slots}"
+        )
+
+        lines.append(
+            f"P{demand_id} migrated: "
+            f"{' -> '.join(map(str, migrated_path))}, "
+            f"S={migrated_slots}"
+        )
+
+    return "\n".join(lines)
+
+
+def plot_combined_model_solution(env, solution, output_path):
+    """
+    Plot all directly affected demands K_Z on one single topology.
+    """
+
+    graph = env.graph
+    pos = get_layout(env)
 
     migrated_paths = solution.get("migrated_paths", {})
     affected_demands = solution.get("affected_demands_KZ", env.affected_demands)
 
-    output_dir = Path(output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
+    valid_demand_ids = []
+    nominal_edges = set()
+    migrated_edges = set()
 
     for demand_id in sorted(affected_demands):
         demand_id_str = str(demand_id)
 
-        if demand_id_str not in migrated_paths:
-            print(
-                f"[WARNING] Demand {demand_id} is in K_Z "
-                f"but not found in migrated_paths. Skipped."
-            )
+        if demand_id_str not in env.nominal_paths:
+            print(f"[WARNING] Demand {demand_id} not found in nominal_paths. Skipped.")
             continue
 
-        output_path = output_dir / f"demand_{demand_id}_model_solution.pdf"
+        if demand_id_str not in migrated_paths:
+            print(f"[WARNING] Demand {demand_id} not found in migrated_paths. Skipped.")
+            continue
 
-        plot_single_demand_solution(
-            env=env,
-            solution=solution,
-            demand_id=demand_id,
-            output_path=output_path,
+        valid_demand_ids.append(demand_id)
+
+        nominal = env.nominal_paths[demand_id_str]
+        migrated = migrated_paths[demand_id_str]
+
+        nominal_edges.update(
+            collect_edges_from_path(nominal["path"])
         )
+
+        migrated_edges.update(
+            collect_edges_from_path(migrated["path"])
+        )
+
+    failure_edges = {
+        tuple(sorted((u, v)))
+        for u, v in getattr(env, "failure_links", [])
+    }
+
+    all_edges = {
+        tuple(sorted((u, v)))
+        for u, v in graph.edges()
+    }
+
+    ordinary_edges = list(
+        all_edges - nominal_edges - migrated_edges - failure_edges
+    )
+
+    nominal_edges_to_draw = list(
+        nominal_edges - failure_edges - migrated_edges
+    )
+
+    migrated_edges_to_draw = list(
+        migrated_edges - failure_edges
+    )
+
+    fig, ax = plt.subplots(figsize=(13, 9))
+
+    # Ordinary topology edges.
+    nx.draw_networkx_edges(
+        graph,
+        pos,
+        ax=ax,
+        edgelist=ordinary_edges,
+        edge_color="gray",
+        width=1.0,
+        alpha=0.75,
+    )
+
+    # Nominal paths of affected demands.
+    if nominal_edges_to_draw:
+        nx.draw_networkx_edges(
+            graph,
+            pos,
+            ax=ax,
+            edgelist=nominal_edges_to_draw,
+            edge_color="royalblue",
+            width=3.0,
+            style="dashed",
+        )
+
+    # Migrated paths of affected demands.
+    if migrated_edges_to_draw:
+        nx.draw_networkx_edges(
+            graph,
+            pos,
+            ax=ax,
+            edgelist=migrated_edges_to_draw,
+            edge_color="forestgreen",
+            width=4.0,
+            style="solid",
+        )
+
+    # Forecasted failure link(s).
+    if failure_edges:
+        nx.draw_networkx_edges(
+            graph,
+            pos,
+            ax=ax,
+            edgelist=list(failure_edges),
+            edge_color="red",
+            width=4.8,
+            style="solid",
+        )
+
+    # Nodes.
+    nx.draw_networkx_nodes(
+        graph,
+        pos,
+        ax=ax,
+        node_size=180,
+        node_color="lightskyblue",
+        edgecolors="black",
+        linewidths=0.5,
+    )
+
+    nx.draw_networkx_labels(
+        graph,
+        pos,
+        ax=ax,
+        font_size=8,
+        font_color="black",
+    )
+
+    ax.set_title("Combined MBB solution for the failure zone", fontsize=13)
+    ax.axis("off")
+
+    legend_handles = [
+        Line2D([0], [0], color="gray", lw=1.0, label="Ordinary topology edge"),
+        Line2D([0], [0], color="royalblue", lw=3.0, linestyle="--", label="Nominal path"),
+        Line2D([0], [0], color="forestgreen", lw=4.0, linestyle="-", label="Migrated path"),
+        Line2D([0], [0], color="red", lw=4.8, linestyle="-", label="Forecasted failure link"),
+    ]
+
+    ax.legend(
+        handles=legend_handles,
+        loc="lower center",
+        bbox_to_anchor=(0.5, -0.10),
+        ncol=2,
+        fontsize=9,
+        frameon=False,
+    )
+
+    note_text = build_combined_solution_note_text(
+        env=env,
+        solution=solution,
+        demand_ids=valid_demand_ids,
+    )
+
+    fig.text(
+        0.10,
+        0.02,
+        note_text,
+        ha="left",
+        va="bottom",
+        fontsize=9,
+        family="monospace",
+    )
+
+    output_file = Path(output_path)
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+
+    plt.tight_layout(rect=[0, 0.18, 1, 1])
+    plt.savefig(output_file, bbox_inches="tight")
+    plt.close()
+
+    print(f"[OK] Combined model solution saved to: {output_file}")
+
+
+def plot_model_solution_by_demand(env, solution_path: str, output_dir: str):
+    """
+    Unified plotting function for model solution.
+    """
+
+    solution = load_solution(solution_path)
+
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    # Remove old separated demand PDFs to avoid confusion.
+    for old_file in output_dir.glob("demand_*_model_solution.pdf"):
+        old_file.unlink()
+
+    # Remove old migrated solution PDFs to regenerate cleanly.
+    for old_file in output_dir.glob("Migrated_solution_*.pdf"):
+        old_file.unlink()
+
+    output_path = output_dir / "Migrated_solution_1.pdf"
+
+    plot_combined_model_solution(
+        env=env,
+        solution=solution,
+        output_path=output_path,
+    )
