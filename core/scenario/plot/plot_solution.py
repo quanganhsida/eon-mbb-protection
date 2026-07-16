@@ -655,6 +655,8 @@ def build_combined_solution_note_text(env, solution, demand_ids):
     lines.append("Combined MBB solution")
     lines.append(f"Failure link(s): {env.failure_links}")
     lines.append(f"Affected demands K_Z: {affected_demands}")
+    lines.append(f"Displayed migrated solution(s): {sorted(demand_ids)}")
+    lines.append(f"Number of displayed migrated solutions: {len(demand_ids)}")
     lines.append(f"Number of affected demands: {len(affected_demands)}")
     lines.append(f"Migration order: {migration_order_text}")
     lines.append("")
@@ -693,7 +695,7 @@ def build_combined_solution_note_text(env, solution, demand_ids):
     return "\n".join(lines)
 
 
-def plot_combined_model_solution(env, solution, output_path):
+def plot_combined_model_solution(env, solution, output_path, demand_ids=None):
     """
     Plot all directly affected demands K_Z on one single topology.
     """
@@ -704,11 +706,14 @@ def plot_combined_model_solution(env, solution, output_path):
     migrated_paths = solution.get("migrated_paths", {})
     affected_demands = solution.get("affected_demands_KZ", env.affected_demands)
 
+    if demand_ids is None:
+        demand_ids = affected_demands
+
     valid_demand_ids = []
     nominal_edges = set()
     migrated_edges = set()
 
-    for demand_id in sorted(affected_demands):
+    for demand_id in sorted(demand_ids):
         demand_id_str = str(demand_id)
 
         if demand_id_str not in env.nominal_paths:
@@ -874,6 +879,14 @@ def plot_model_solution_by_demand(env, solution_path: str, output_dir: str):
 
     solution = load_solution(solution_path)
 
+    migrated_paths = solution.get("migrated_paths", {})
+    affected_demands = solution.get("affected_demands_KZ", env.affected_demands)
+
+    failure_edges = [
+        tuple(sorted((u, v)))
+        for u, v in getattr(env, "failure_links", [])
+    ]
+
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -885,10 +898,90 @@ def plot_model_solution_by_demand(env, solution_path: str, output_dir: str):
     for old_file in output_dir.glob("Migrated_solution_*.pdf"):
         old_file.unlink()
 
-    output_path = output_dir / "Migrated_solution_1.pdf"
+    # Remove old combined PDF if it exists.
+    old_combined_file = output_dir / "combined_model_solution.pdf"
+    if old_combined_file.exists():
+        old_combined_file.unlink()
 
-    plot_combined_model_solution(
-        env=env,
-        solution=solution,
-        output_path=output_path,
-    )
+    if not failure_edges:
+        output_path = output_dir / "Migrated_solution_1.pdf"
+
+        plot_combined_model_solution(
+            env=env,
+            solution=solution,
+            output_path=output_path,
+            demand_ids=affected_demands,
+        )
+
+        return
+
+    queues_by_failure = {
+        failure_edge: []
+        for failure_edge in failure_edges
+    }
+
+    for demand_id in sorted(affected_demands):
+        demand_id_str = str(demand_id)
+
+        if demand_id_str not in env.nominal_paths:
+            print(f"[WARNING] Demand {demand_id} not found in nominal_paths. Skipped.")
+            continue
+
+        if demand_id_str not in migrated_paths:
+            print(f"[WARNING] Demand {demand_id} not found in migrated_paths. Skipped.")
+            continue
+
+        nominal_path = env.nominal_paths[demand_id_str]["path"]
+        nominal_edges = collect_edges_from_path(nominal_path)
+
+        crossed_failure_edges = [
+            failure_edge
+            for failure_edge in failure_edges
+            if failure_edge in nominal_edges
+        ]
+
+        if not crossed_failure_edges:
+            print(
+                f"[WARNING] Demand {demand_id} does not cross any failure edge. "
+                f"Skipped."
+            )
+            continue
+
+        # If a demand crosses several failed links, assign it to the least
+        # loaded failed link to avoid plotting it multiple times.
+        selected_failure_edge = min(
+            crossed_failure_edges,
+            key=lambda edge: len(queues_by_failure[edge]),
+        )
+
+        queues_by_failure[selected_failure_edge].append(demand_id)
+
+    solution_index = 1
+
+    while any(queues_by_failure[edge] for edge in failure_edges):
+        demand_group = []
+
+        for failure_edge in failure_edges:
+            if queues_by_failure[failure_edge]:
+                demand_group.append(
+                    queues_by_failure[failure_edge].pop(0)
+                )
+
+        if not demand_group:
+            break
+
+        output_path = output_dir / f"Migrated_solution_{solution_index}.pdf"
+
+        plot_combined_model_solution(
+            env=env,
+            solution=solution,
+            output_path=output_path,
+            demand_ids=demand_group,
+        )
+
+        print(
+            f"[OK] Migrated_solution_{solution_index}.pdf contains "
+            f"demand(s): {demand_group}"
+        )
+
+        solution_index += 1
