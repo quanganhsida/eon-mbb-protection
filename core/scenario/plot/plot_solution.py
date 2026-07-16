@@ -709,9 +709,23 @@ def plot_combined_model_solution(env, solution, output_path, demand_ids=None):
     if demand_ids is None:
         demand_ids = affected_demands
 
+    migrated_colors = [
+        "forestgreen",
+        "darkorange",
+        "purple",
+        "deepskyblue",
+        "brown",
+        "magenta",
+    ]
+
     valid_demand_ids = []
     nominal_edges = set()
-    migrated_edges = set()
+    migrated_groups = []
+
+    failure_edge_list = [
+        tuple(sorted((u, v)))
+        for u, v in getattr(env, "failure_links", [])
+    ]
 
     for demand_id in sorted(demand_ids):
         demand_id_str = str(demand_id)
@@ -729,13 +743,29 @@ def plot_combined_model_solution(env, solution, output_path, demand_ids=None):
         nominal = env.nominal_paths[demand_id_str]
         migrated = migrated_paths[demand_id_str]
 
-        nominal_edges.update(
-            collect_edges_from_path(nominal["path"])
-        )
+        nominal_path_edges = collect_edges_from_path(nominal["path"])
+        migrated_path_edges = collect_edges_from_path(migrated["path"])
 
-        migrated_edges.update(
-            collect_edges_from_path(migrated["path"])
-        )
+        nominal_edges.update(nominal_path_edges)
+
+        crossed_failure_edges = [
+            edge for edge in failure_edge_list
+            if edge in nominal_path_edges
+        ]
+
+        if crossed_failure_edges:
+            selected_failure_edge = crossed_failure_edges[0]
+            color_index = failure_edge_list.index(selected_failure_edge) % len(migrated_colors)
+        else:
+            selected_failure_edge = None
+            color_index = len(migrated_groups) % len(migrated_colors)
+
+        migrated_groups.append({
+            "demand_id": demand_id,
+            "failure_edge": selected_failure_edge,
+            "edges": migrated_path_edges,
+            "color": migrated_colors[color_index],
+        })
 
     failure_edges = {
         tuple(sorted((u, v)))
@@ -747,16 +777,17 @@ def plot_combined_model_solution(env, solution, output_path, demand_ids=None):
         for u, v in graph.edges()
     }
 
+    all_migrated_edges = set()
+
+    for group in migrated_groups:
+        all_migrated_edges.update(group["edges"])
+
     ordinary_edges = list(
-        all_edges - nominal_edges - migrated_edges - failure_edges
+        all_edges - nominal_edges - all_migrated_edges - failure_edges
     )
 
     nominal_edges_to_draw = list(
-        nominal_edges - failure_edges - migrated_edges
-    )
-
-    migrated_edges_to_draw = list(
-        migrated_edges - failure_edges
+        nominal_edges - failure_edges - all_migrated_edges
     )
 
     fig, ax = plt.subplots(figsize=(13, 9))
@@ -784,17 +815,20 @@ def plot_combined_model_solution(env, solution, output_path, demand_ids=None):
             style="dashed",
         )
 
-    # Migrated paths of affected demands.
-    if migrated_edges_to_draw:
-        nx.draw_networkx_edges(
-            graph,
-            pos,
-            ax=ax,
-            edgelist=migrated_edges_to_draw,
-            edge_color="forestgreen",
-            width=4.0,
-            style="solid",
-        )
+    # Migrated paths of affected demands: one color per failure link.
+    for group in migrated_groups:
+        migrated_edges_to_draw = list(group["edges"] - failure_edges)
+
+        if migrated_edges_to_draw:
+            nx.draw_networkx_edges(
+                graph,
+                pos,
+                ax=ax,
+                edgelist=migrated_edges_to_draw,
+                edge_color=group["color"],
+                width=4.0,
+                style="solid",
+            )
 
     # Forecasted failure link(s).
     if failure_edges:
@@ -833,9 +867,22 @@ def plot_combined_model_solution(env, solution, output_path, demand_ids=None):
     legend_handles = [
         Line2D([0], [0], color="gray", lw=1.0, label="Ordinary topology edge"),
         Line2D([0], [0], color="royalblue", lw=3.0, linestyle="--", label="Nominal path"),
-        Line2D([0], [0], color="forestgreen", lw=4.0, linestyle="-", label="Migrated path"),
         Line2D([0], [0], color="red", lw=4.8, linestyle="-", label="Forecasted failure link"),
     ]
+
+    for group in migrated_groups:
+        demand_id = group["demand_id"]
+        failure_edge = group["failure_edge"]
+        color = group["color"]
+
+        if failure_edge is not None:
+            label = f"Migrated P{demand_id} for failure link {failure_edge}"
+        else:
+            label = f"Migrated P{demand_id}"
+
+        legend_handles.append(
+            Line2D([0], [0], color=color, lw=4.0, linestyle="-", label=label)
+        )
 
     ax.legend(
         handles=legend_handles,
