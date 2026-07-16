@@ -18,15 +18,15 @@ plot-orange-topology:
 solve-orange-model:
 	mkdir -p ../data/log/European_18_40_z2/
 	python3 main.py \
-		--instance_file=../data/instance/European_18_40_z2/orange_european_18_40_d50-b_z2.json \
+		--instance_file=../data/instance/European_18_40_z2/orange_european_18_40_d60-b_z2.json \
 		--plot_type=solve \
-		--solution_file=../data/solution/European_18_40_z2/orange_european_18_40_d50-b_z2_solution.json 2>&1 | tee ../data/log/European_18_40_z2/orange_european_18_40_d50-b_z2_gurobi.log
+		--solution_file=../data/solution/European_18_40_z2/orange_european_18_40_d60-b_z2_solution.json 2>&1 | tee ../data/log/European_18_40_z2/orange_european_18_40_d60-b_z2_gurobi.log
 
 # ==============================================================================================================================================================================
 
 plot-orange-result-by-demand:
 	python3 main.py \
-		--instance_file=../data/instance/European_18_40_z2/orange_european_18_40_d50-b_z2.json \
+		--instance_file=../data/instance/European_18_40_z2/orange_european_18_40_d60-b_z2.json \
 		--plot_type=result_by_demand \
-		--solution_file=../data/solution/European_18_40_z2/orange_european_18_40_d50-b_z2_solution.json \
-		--figure_dir=../data/figure/european_18_40_z2/orange_european_18_40_d50-b_z2_by_demand
+		--solution_file=../data/solution/European_18_40_z2/orange_european_18_40_d60-b_z2_solution.json \
+		--figure_dir=../data/figure/european_18_40_z2/orange_european_18_40_d60-b_z2_by_demand
