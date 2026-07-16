@@ -1,17 +1,17 @@
 generate-orange:
 	python3 -m sample.orange.prepare_instance \
-		--link_file=../data/raw/orange/Outputs/Instances/1.5x/efficient/European_18_40/Links/50_demands-b/Link.csv\
-		--execution_file=../data/raw/orange/Outputs/executionOutputs/oP_L1.5x_Teff_iEuropean_18_40_d50-b_ofNLUS_f0_cd1_os1_gn0_b1_r0_cu0_p2.txt \
-		--output_file=../data/instance/European_18_40_z2/orange_european_18_40_d50-b_z2.json \
+		--link_file=../data/raw/orange/Outputs/Instances/1.5x/efficient/European_18_40/Links/60_demands-b/Link.csv\
+		--execution_file=../data/raw/orange/Outputs/executionOutputs/oP_L1.5x_Teff_iEuropean_18_40_d60-b_ofNLUS_f0_cd1_os1_gn0_b1_r0_cu0_p2.txt \
+		--output_file=../data/instance/European_18_40_z2/orange_european_18_40_d60-b_z2.json \
 		--num_failed_links=2
 
 # ==============================================================================================================================================================================
 
 plot-orange-topology:
 	python3 main.py \
-		--instance_file=../data/instance/European_18_40_z2/orange_european_18_40_d50-b_z2.json \
+		--instance_file=../data/instance/European_18_40_z2/orange_european_18_40_d60-b_z2.json \
 		--plot_type=topology \
-		--figure_file=../data/figure/european_18_40_z2/orange_european_18_40_d50-b_z2_topology.pdf
+		--figure_file=../data/figure/european_18_40_z2/orange_european_18_40_d60-b_z2_topology.pdf
 
 # ==============================================================================================================================================================================
 

@@ -7,7 +7,7 @@ from simulator.solver.gurobi.output import extract_solution, save_json
 def solve_basic_resilient_rsa(env, output_path: str):
     model, data, variables = build_resilient_rsa_model(env)
 
-    model.Params.TimeLimit = 600
+    model.Params.TimeLimit = 1800
     model.Params.OutputFlag = 1
 
     model.optimize()
