@@ -1,0 +1,74 @@
+[INFO] Instance loaded
+    name            : oP_L2x_Teff_iGerman_17_26_d10_b_ofNLUS_f0_cd1_os1_gn0_b1_r0_cu0_p2
+    nodes           : 17
+    links           : 26
+    demands         : 10
+    nominal path    : 10
+    plot type       : solve
+    failure links   : [[5, 9]]
+    affected K_Z    : [2, 4, 5]
+Set parameter Username
+Set parameter LicenseID to value 2812610
+Academic license - for non-commercial use only - expires 2027-04-23
+Set parameter TimeLimit to value 300
+Set parameter OutputFlag to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Arch Linux")
+
+CPU model: Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 4 logical processors, using up to 4 threads
+
+Non-default parameters:
+TimeLimit  300
+
+Optimize a model with 6203 rows, 7890 columns and 99422 nonzeros (Min)
+Model fingerprint: 0xc59b953d
+Model has 330 linear objective coefficients
+Variable types: 0 continuous, 7890 integer (7890 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 4e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization (min) with 2 objectives... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve...
+---------------------------------------------------------------------------
+
+Presolve removed 2585 rows and 2199 columns
+Presolve time: 0.28s
+Presolved: 3618 rows, 5691 columns, 47195 nonzeros
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (min_additional_mig) ...
+---------------------------------------------------------------------------
+
+Presolve removed 4 rows and 11 columns
+Presolve time: 0.11s
+Presolved: 3614 rows, 5680 columns, 46928 nonzeros
+Variable types: 0 continuous, 5680 integer (5680 binary)
+
+Root relaxation: infeasible, 1572 iterations, 0.12 seconds (0.13 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 infeasible    0               - infeasible      -     -    0s
+
+Explored 1 nodes (1572 simplex iterations) in 0.56 seconds (0.59 work units)
+Thread count was 4 (of 4 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 0.56 seconds (0.59 work units)
+Model is infeasible
+
+[ERROR] Optimization ended with status: 3
+[OK] Result saved to: ../data/solution/German_17_26/orange_german_17_26_d10_b_solution.json

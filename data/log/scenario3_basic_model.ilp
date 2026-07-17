@@ -1,0 +1,22 @@
+\ Model Scenario3_basic_resilient_RSA_copy
+\ LP format - for model browsing. Use MPS format to capture full model detail.
+\ Signature: 0x248a7d9d036f5a63
+Minimize multi-objectives
+  min_additional_migrations: Priority=2 Weight=1 AbsTol=1e-06 RelTol=0
+  
+  min_total_latency: Priority=1 Weight=1 AbsTol=1e-06 RelTol=0
+   x[1,('s',_'a'),1] + x[1,('s',_'a'),2] + x[1,('s',_'c'),1]
+   + x[1,('s',_'c'),2] + x[1,('s',_'d'),1] + x[1,('s',_'d'),2]
+Subject To
+ impacted_must_migrate[1]: x[1,('s',_'a'),1] + x[1,('s',_'a'),2]
+   + x[1,('s',_'c'),1] + x[1,('s',_'c'),2] + x[1,('s',_'d'),1]
+   + x[1,('s',_'d'),2] = 1
+ no_in_source[1,1]: x[1,('s',_'a'),1] + x[1,('s',_'c'),1]
+   + x[1,('s',_'d'),1] = 0
+ no_in_source[1,2]: x[1,('s',_'a'),2] + x[1,('s',_'c'),2]
+   + x[1,('s',_'d'),2] = 0
+Bounds
+Binaries
+ x[1,('s',_'a'),1] x[1,('s',_'a'),2] x[1,('s',_'c'),1] x[1,('s',_'c'),2]
+ x[1,('s',_'d'),1] x[1,('s',_'d'),2]
+End

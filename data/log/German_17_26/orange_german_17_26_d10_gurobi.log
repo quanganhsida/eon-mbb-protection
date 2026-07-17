@@ -1,0 +1,98 @@
+[INFO] Instance loaded
+    name            : oP_L1_5x_Teff_iGerman_17_26_d10_ofNLUS_f0_cd1_os1_gn0_b1_r0_cu0_p2
+    nodes           : 17
+    links           : 26
+    demands         : 10
+    nominal path    : 10
+    plot type       : solve
+    failure links   : [[15, 16]]
+    affected K_Z    : [2, 9]
+Set parameter Username
+Set parameter LicenseID to value 2812610
+Academic license - for non-commercial use only - expires 2027-04-23
+Set parameter TimeLimit to value 600
+Set parameter OutputFlag to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Arch Linux")
+
+CPU model: Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 4 logical processors, using up to 4 threads
+
+Non-default parameters:
+TimeLimit  600
+
+Optimize a model with 35475 rows, 75490 columns and 790930 nonzeros (Min)
+Model fingerprint: 0x0351a730
+Model has 3915 linear objective coefficients
+Variable types: 0 continuous, 75490 integer (75490 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 4e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization (min) with 2 objectives... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve...
+---------------------------------------------------------------------------
+
+Presolve removed 12570 rows and 20997 columns
+Presolve time: 1.10s
+Presolved: 22905 rows, 54493 columns, 469247 nonzeros
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (min_additional_mig) ...
+---------------------------------------------------------------------------
+
+Found heuristic solution: objective 0.0000000
+
+Explored 0 nodes (0 simplex iterations) in 1.15 seconds (1.88 work units)
+Thread count was 1 (of 4 available processors)
+
+Solution count 1: 0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 2 (min_total_latency) ...
+---------------------------------------------------------------------------
+
+Loaded user MIP start with objective 1140
+
+Presolve removed 4337 rows and 10851 columns
+Presolve time: 0.71s
+Presolved: 18569 rows, 43642 columns, 343496 nonzeros
+Variable types: 0 continuous, 43642 integer (43642 binary)
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing primal log only...
+
+
+Solved with primal simplex
+
+Root relaxation: cutoff, 1638 iterations, 0.20 seconds (0.25 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0      1140.00000 1140.00000  0.00%     -    2s
+
+Explored 1 nodes (1638 simplex iterations) in 2.13 seconds (3.17 work units)
+Thread count was 4 (of 4 available processors)
+
+Solution count 1: 1140 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.140000000000e+03, best bound 1.140000000000e+03, gap 0.0000%
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 2.14 seconds (3.17 work units), solution count 1
+
+[OK] Result saved to: ../data/solution/German_17_26/orange_german_17_26_d10_solution.json
+[SOLUTION] Basic resilient RSA
+    affected K_Z    : [2, 9]
+    K_prime         : [2, 9]
+    migration_order : 2 -> 9
+    migrated_paths  : {'2': {'path': [16, 17, 13, 15, 14], 'start_slot': 145, 'last_slot': 150, 'slot_block': [145, 146, 147, 148, 149, 150], 'selected_arcs': [[13, 15], [17, 13], [15, 14], [16, 17]]}, '9': {'path': [15, 13, 17, 16], 'start_slot': 37, 'last_slot': 42, 'slot_block': [37, 38, 39, 40, 41, 42], 'selected_arcs': [[15, 13], [13, 17], [17, 16]]}}

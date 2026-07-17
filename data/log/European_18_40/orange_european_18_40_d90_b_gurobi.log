@@ -1,0 +1,178 @@
+[INFO] Instance loaded
+    name            : oP_L1_5x_Teff_iEuropean_18_40_d90_b_ofNLUS_f0_cd1_os1_gn0_b1_r0_cu0_p2
+    nodes           : 18
+    links           : 40
+    demands         : 90
+    nominal path    : 90
+    plot type       : solve
+    failure links   : [[4, 12]]
+    affected K_Z    : [3, 6, 13, 18, 39, 41, 64, 66, 79, 82]
+Set parameter Username
+Set parameter LicenseID to value 2812610
+Academic license - for non-commercial use only - expires 2027-04-23
+Set parameter TimeLimit to value 300
+Set parameter OutputFlag to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Arch Linux")
+
+CPU model: Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 4 logical processors, using up to 4 threads
+
+Non-default parameters:
+TimeLimit  300
+
+Optimize a model with 1092288 rows, 945210 columns and 21105913 nonzeros (Min)
+Model fingerprint: 0x4e70fb38
+Model has 47320 linear objective coefficients
+Variable types: 0 continuous, 945210 integer (945210 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 2e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization (min) with 2 objectives... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve...
+---------------------------------------------------------------------------
+
+Presolve removed 51390 rows and 122066 columns (presolve time = 5s)...
+Presolve removed 73226 rows and 122066 columns (presolve time = 10s)...
+Presolve removed 73226 rows and 122066 columns (presolve time = 15s)...
+Presolve removed 79139 rows and 129858 columns (presolve time = 20s)...
+Presolve removed 79364 rows and 129858 columns (presolve time = 25s)...
+Presolve removed 79451 rows and 129882 columns (presolve time = 30s)...
+Presolve removed 79451 rows and 129882 columns (presolve time = 35s)...
+Presolve removed 79451 rows and 129882 columns (presolve time = 41s)...
+Presolve removed 79640 rows and 130230 columns (presolve time = 45s)...
+Presolve removed 90720 rows and 130230 columns (presolve time = 50s)...
+Presolve removed 90720 rows and 130230 columns (presolve time = 55s)...
+Presolve removed 90720 rows and 130230 columns (presolve time = 60s)...
+Presolve removed 90664 rows and 130198 columns
+Presolve time: 61.56s
+Presolved: 1001624 rows, 815012 columns, 9837238 nonzeros
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (min_additional_mig) ...
+---------------------------------------------------------------------------
+
+Presolve removed 87 rows and 281 columns (presolve time = 5s)...
+Presolve removed 87 rows and 281 columns (presolve time = 10s)...
+Presolve removed 90 rows and 281 columns (presolve time = 15s)...
+Presolve removed 90 rows and 282 columns (presolve time = 20s)...
+Presolve removed 90 rows and 282 columns (presolve time = 25s)...
+Presolve removed 90 rows and 282 columns
+Presolve time: 28.58s
+Presolved: 1001534 rows, 814730 columns, 9834273 nonzeros
+Variable types: 0 continuous, 814730 integer (814730 binary)
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 6s
+Ordering time: 6.31s
+
+Barrier performed 0 iterations in 113.20 seconds (211.92 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 11.19s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    2791    0.0000000e+00   0.000000e+00   0.000000e+00    114s
+
+Root relaxation: objective 0.000000e+00, 2791 iterations, 19.18 seconds (8.10 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+H    0     0                       0.0000000    0.00000  0.00%     -  113s
+     0     0    0.00000    0   89    0.00000    0.00000  0.00%     -  113s
+
+Explored 1 nodes (2791 simplex iterations) in 114.03 seconds (210.83 work units)
+Thread count was 4 (of 4 available processors)
+
+Solution count 1: 0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 2 (min_total_latency) ...
+---------------------------------------------------------------------------
+
+Loaded user MIP start with objective 52219
+
+Presolve removed 878777 rows and 372398 columns
+Presolve time: 2.64s
+Presolved: 122848 rows, 442614 columns, 3441087 nonzeros
+Variable types: 0 continuous, 442614 integer (442614 binary)
+Performing another presolve...
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 0.46s
+
+Barrier performed 0 iterations in 126.04 seconds (225.20 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with primal simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   16149    2.4832000e+04   0.000000e+00   0.000000e+00    126s
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00               126s
+
+       6 PPushes remaining with PInf 0.0000000e+00               126s
+       0 PPushes remaining with PInf 0.0000000e+00               126s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 0.0000000e+00    126s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   16219    2.4832000e+04   0.000000e+00   0.000000e+00    126s
+Crossover time: 0.12 seconds (0.10 work units)
+
+Root relaxation: objective 2.483200e+04, 16219 iterations, 2.79 seconds (3.21 work units)
+Total elapsed time = 12.12s (DegenMoves)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+H    0     0                    24832.000000 24832.0000  0.00%     -  126s
+     0     0 24832.0000    0   10 24832.0000 24832.0000  0.00%     -  126s
+
+Explored 1 nodes (16219 simplex iterations) in 126.39 seconds (225.33 work units)
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 24832 52219 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.483200000000e+04, best bound 2.483200000000e+04, gap 0.0000%
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 126.55 seconds (225.33 work units), solution count 2
+
+[OK] Result saved to: ../data/solution/orange/orange_european_18_40_d90_b_solution.json
+[SOLUTION] Basic resilient RSA
+    affected K_Z    : [3, 6, 13, 18, 39, 41, 64, 66, 79, 82]
+    K_prime         : [3, 6, 13, 18, 39, 41, 64, 66, 79, 82]
+    migration_order : 3 -> 6 -> 13 -> 18 -> 39 -> 41 -> 66 -> 79 -> 82 -> 64
+    migrated_paths  : {'3': {'path': [12, 13, 4, 16, 11], 'start_slot': 78, 'last_slot': 80, 'slot_block': [78, 79, 80], 'selected_arcs': [[13, 4], [4, 16], [16, 11], [12, 13]]}, '6': {'path': [2, 4, 13, 12], 'start_slot': 120, 'last_slot': 125, 'slot_block': [120, 121, 122, 123, 124, 125], 'selected_arcs': [[2, 4], [4, 13], [13, 12]]}, '13': {'path': [7, 16, 2, 9, 15, 17, 14], 'start_slot': 77, 'last_slot': 79, 'slot_block': [77, 78, 79], 'selected_arcs': [[2, 9], [16, 2], [7, 16], [9, 15], [17, 14], [15, 17]]}, '18': {'path': [5, 9, 4, 13, 12], 'start_slot': 130, 'last_slot': 135, 'slot_block': [130, 131, 132, 133, 134, 135], 'selected_arcs': [[9, 4], [4, 13], [5, 9], [13, 12]]}, '39': {'path': [11, 16, 4, 13, 12], 'start_slot': 109, 'last_slot': 111, 'slot_block': [109, 110, 111], 'selected_arcs': [[4, 13], [16, 4], [11, 16], [13, 12]]}, '41': {'path': [4, 13, 12], 'start_slot': 63, 'last_slot': 68, 'slot_block': [63, 64, 65, 66, 67, 68], 'selected_arcs': [[4, 13], [13, 12]]}, '64': {'path': [11, 16, 4, 13, 12], 'start_slot': 46, 'last_slot': 48, 'slot_block': [46, 47, 48], 'selected_arcs': [[4, 13], [16, 4], [11, 16], [13, 12]]}, '66': {'path': [12, 13, 4, 2, 10], 'start_slot': 72, 'last_slot': 77, 'slot_block': [72, 73, 74, 75, 76, 77], 'selected_arcs': [[4, 2], [2, 10], [13, 4], [12, 13]]}, '79': {'path': [14, 17, 15, 9, 2, 16, 7], 'start_slot': 57, 'last_slot': 59, 'slot_block': [57, 58, 59], 'selected_arcs': [[9, 2], [2, 16], [16, 7], [15, 9], [14, 17], [17, 15]]}, '82': {'path': [10, 2, 4, 13, 12], 'start_slot': 56, 'last_slot': 61, 'slot_block': [56, 57, 58, 59, 60, 61], 'selected_arcs': [[2, 4], [10, 2], [4, 13], [13, 12]]}}

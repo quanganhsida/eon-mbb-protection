@@ -1,0 +1,85 @@
+[INFO] Instance loaded
+    name            : oP_L1_5x_Teff_iEuropean_18_40_d10_b_ofNLUS_f0_cd1_os1_gn0_b1_r0_cu0_p2
+    nodes           : 18
+    links           : 40
+    demands         : 10
+    nominal path    : 10
+    plot type       : solve
+    failure links   : [[2, 9]]
+    affected K_Z    : [1]
+Set parameter Username
+Set parameter LicenseID to value 2812610
+Academic license - for non-commercial use only - expires 2027-04-23
+Set parameter TimeLimit to value 300
+Set parameter OutputFlag to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Arch Linux")
+
+CPU model: Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 4 logical processors, using up to 4 threads
+
+Non-default parameters:
+TimeLimit  300
+
+Optimize a model with 4744 rows, 8330 columns and 87015 nonzeros (Min)
+Model fingerprint: 0x46e7101e
+Model has 429 linear objective coefficients
+Variable types: 0 continuous, 8330 integer (8330 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 2e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization (min) with 2 objectives... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve...
+---------------------------------------------------------------------------
+
+Presolve removed 1424 rows and 1098 columns
+Presolve time: 0.12s
+Presolved: 3320 rows, 7232 columns, 56715 nonzeros
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (min_additional_mig) ...
+---------------------------------------------------------------------------
+
+Found heuristic solution: objective 0.0000000
+
+Explored 0 nodes (0 simplex iterations) in 0.12 seconds (0.13 work units)
+Thread count was 1 (of 4 available processors)
+
+Solution count 1: 0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 2 (min_total_latency) ...
+---------------------------------------------------------------------------
+
+Loaded user MIP start with objective 552
+
+Presolve removed 3321 rows and 7232 columns
+Presolve time: 0.07s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.20 seconds (0.20 work units)
+Thread count was 1 (of 4 available processors)
+
+Solution count 2: 493 552 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.930000000000e+02, best bound 4.930000000000e+02, gap 0.0000%
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 0.20 seconds (0.20 work units), solution count 2
+
+[OK] Result saved to: ../data/solution/orange/orange_european_18_40_d10_b_solution.json
+[SOLUTION] Basic resilient RSA
+    affected K_Z    : [1]
+    K_prime         : [1]
+    migration_order : 1
+    migrated_paths  : {'1': {'path': [2, 10, 9], 'start_slot': 7, 'last_slot': 12, 'slot_block': [7, 8, 9, 10, 11, 12], 'selected_arcs': [[2, 10], [10, 9]]}}
