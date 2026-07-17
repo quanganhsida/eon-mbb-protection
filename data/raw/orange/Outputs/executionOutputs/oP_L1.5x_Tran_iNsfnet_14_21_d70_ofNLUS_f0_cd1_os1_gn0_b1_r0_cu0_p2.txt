@@ -1,0 +1,1785 @@
+PARAMETER FILE: parametersSet/batch_3//oP_L1.5x_Tran_iNsfnet_14_21_d70_ofNLUS_f0_cd1_os1_gn0_b1_r0_cu0_p2.txt
+Getting input file paths...
+Getting topology file...
+... Instances/1.5x/random/Nsfnet_14_21/Links/70_demands/Link.csv
+WARNING: Field 'initialMappingDemandFile=' is empty.
+WARNING: Field 'initialMappingAssignmentFile=' is empty.
+QoT parameters...
+WARNING: Field 'QoTFolder=' is empty.
+Getting QoT parameters...
+Getting formulation parameters...
+Getting optimization parameters...
+Getting execution parameters...
+Populating online demand files...
+Finish reading input.
+TOPOLOGY FILE: Instances/1.5x/random/Nsfnet_14_21/Links/70_demands/Link.csv
+ROUTED DEMANDS FILE: 
+INITIAL ASSIGNMENT FILE: 
+All information from input is consistent.
+> Number of online demand files: 1
+--- READING INSTANCE... --- 
+--- CREATING INITIAL MAPPING... --- 
+Reading Instances/1.5x/random/Nsfnet_14_21/Links/70_demands/Link.csv.
+Creating edge #1. 1 -- 2. nb slices in C band: 105, nb slices in L band: 0, length: 1100, amplis: 14, noiseC: 3.4797e-06, noiseL: 0, noiseS: 0
+Creating edge #2. 1 -- 3. nb slices in C band: 105, nb slices in L band: 0, length: 1600, amplis: 20, noiseC: 5.0124e-06, noiseL: 0, noiseS: 0
+Creating edge #3. 1 -- 8. nb slices in C band: 105, nb slices in L band: 0, length: 2800, amplis: 35, noiseC: 8.39111e-06, noiseL: 0, noiseS: 0
+Creating edge #4. 2 -- 3. nb slices in C band: 105, nb slices in L band: 0, length: 600, amplis: 8, noiseC: 1.97456e-06, noiseL: 0, noiseS: 0
+Creating edge #5. 2 -- 4. nb slices in C band: 105, nb slices in L band: 0, length: 1000, amplis: 13, noiseC: 3.08633e-06, noiseL: 0, noiseS: 0
+Creating edge #6. 3 -- 6. nb slices in C band: 105, nb slices in L band: 0, length: 2000, amplis: 25, noiseC: 6.13863e-06, noiseL: 0, noiseS: 0
+Creating edge #7. 4 -- 5. nb slices in C band: 105, nb slices in L band: 0, length: 600, amplis: 8, noiseC: 1.97456e-06, noiseL: 0, noiseS: 0
+Creating edge #8. 4 -- 11. nb slices in C band: 105, nb slices in L band: 0, length: 2400, amplis: 30, noiseC: 7.26487e-06, noiseL: 0, noiseS: 0
+Creating edge #9. 5 -- 6. nb slices in C band: 105, nb slices in L band: 0, length: 1100, amplis: 14, noiseC: 3.4797e-06, noiseL: 0, noiseS: 0
+Creating edge #10. 5 -- 7. nb slices in C band: 105, nb slices in L band: 0, length: 800, amplis: 10, noiseC: 2.75993e-06, noiseL: 0, noiseS: 0
+Creating edge #11. 6 -- 10. nb slices in C band: 105, nb slices in L band: 0, length: 1200, amplis: 15, noiseC: 3.88616e-06, noiseL: 0, noiseS: 0
+Creating edge #12. 6 -- 13. nb slices in C band: 105, nb slices in L band: 0, length: 2000, amplis: 25, noiseC: 6.13863e-06, noiseL: 0, noiseS: 0
+Creating edge #13. 7 -- 8. nb slices in C band: 105, nb slices in L band: 0, length: 700, amplis: 9, noiseC: 2.35666e-06, noiseL: 0, noiseS: 0
+Creating edge #14. 8 -- 9. nb slices in C band: 105, nb slices in L band: 0, length: 700, amplis: 9, noiseC: 2.35666e-06, noiseL: 0, noiseS: 0
+Creating edge #15. 9 -- 10. nb slices in C band: 105, nb slices in L band: 0, length: 900, amplis: 12, noiseC: 2.70811e-06, noiseL: 0, noiseS: 0
+Creating edge #16. 9 -- 12. nb slices in C band: 105, nb slices in L band: 0, length: 500, amplis: 7, noiseC: 1.61895e-06, noiseL: 0, noiseS: 0
+Creating edge #17. 9 -- 14. nb slices in C band: 105, nb slices in L band: 0, length: 500, amplis: 7, noiseC: 1.61895e-06, noiseL: 0, noiseS: 0
+Creating edge #18. 11 -- 12. nb slices in C band: 105, nb slices in L band: 0, length: 800, amplis: 10, noiseC: 2.75993e-06, noiseL: 0, noiseS: 0
+Creating edge #19. 11 -- 14. nb slices in C band: 105, nb slices in L band: 0, length: 800, amplis: 10, noiseC: 2.75993e-06, noiseL: 0, noiseS: 0
+Creating edge #20. 12 -- 13. nb slices in C band: 105, nb slices in L band: 0, length: 300, amplis: 4, noiseC: 1.24101e-06, noiseL: 0, noiseS: 0
+Creating edge #21. 13 -- 14. nb slices in C band: 105, nb slices in L band: 0, length: 300, amplis: 4, noiseC: 1.24101e-06, noiseL: 0, noiseS: 0
+Starting with an empty initial mapping. 
+Number of bands : 1
+0 are present in the initial mapping.
+--- READING NEW DEMANDS TO BE ROUTED... --- 
+Reading Instances/1.5x/random/Nsfnet_14_21/Demands/70_demands/demands_1.csv ...
+
+--- The Non Routed Demands ---
+#1. 12 -- 5. nbSlices C: 6, maxCD C: 50000, osnrLimit C: 16, pchC: 0.00075, transpIdC: 5. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#2. 13 -- 11. nbSlices C: 4, maxCD C: 20000, osnrLimit C: 16, pchC: 0.0005, transpIdC: 3. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#3. 13 -- 12. nbSlices C: 6, maxCD C: 40000, osnrLimit C: 21, pchC: 0.00075, transpIdC: 6. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 300, ROUTED: NO
+#4. 8 -- 3. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#5. 6 -- 10. nbSlices C: 6, maxCD C: 50000, osnrLimit C: 16, pchC: 0.00075, transpIdC: 5. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#6. 5 -- 10. nbSlices C: 3, maxCD C: 40000, osnrLimit C: 15, pchC: 0.000375, transpIdC: 1. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#7. 2 -- 4. nbSlices C: 4, maxCD C: 20000, osnrLimit C: 16, pchC: 0.0005, transpIdC: 3. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#8. 9 -- 4. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#9. 11 -- 8. nbSlices C: 3, maxCD C: 40000, osnrLimit C: 15, pchC: 0.000375, transpIdC: 1. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#10. 6 -- 1. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#11. 6 -- 13. nbSlices C: 6, maxCD C: 50000, osnrLimit C: 16, pchC: 0.00075, transpIdC: 5. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#12. 4 -- 6. nbSlices C: 6, maxCD C: 40000, osnrLimit C: 21, pchC: 0.00075, transpIdC: 6. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 300, ROUTED: NO
+#13. 6 -- 8. nbSlices C: 6, maxCD C: 50000, osnrLimit C: 16, pchC: 0.00075, transpIdC: 5. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#14. 14 -- 12. nbSlices C: 3, maxCD C: 40000, osnrLimit C: 15, pchC: 0.000375, transpIdC: 1. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#15. 4 -- 13. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#16. 5 -- 7. nbSlices C: 6, maxCD C: 40000, osnrLimit C: 21, pchC: 0.00075, transpIdC: 6. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 300, ROUTED: NO
+#17. 14 -- 2. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#18. 5 -- 1. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#19. 10 -- 3. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#20. 10 -- 5. nbSlices C: 3, maxCD C: 40000, osnrLimit C: 15, pchC: 0.000375, transpIdC: 1. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#21. 7 -- 11. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#22. 9 -- 11. nbSlices C: 6, maxCD C: 50000, osnrLimit C: 16, pchC: 0.00075, transpIdC: 5. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#23. 9 -- 3. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#24. 13 -- 2. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#25. 6 -- 12. nbSlices C: 6, maxCD C: 50000, osnrLimit C: 16, pchC: 0.00075, transpIdC: 5. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#26. 4 -- 5. nbSlices C: 4, maxCD C: 20000, osnrLimit C: 16, pchC: 0.0005, transpIdC: 3. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#27. 2 -- 11. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#28. 10 -- 8. nbSlices C: 6, maxCD C: 40000, osnrLimit C: 21, pchC: 0.00075, transpIdC: 6. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 300, ROUTED: NO
+#29. 14 -- 2. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#30. 7 -- 1. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#31. 12 -- 6. nbSlices C: 6, maxCD C: 50000, osnrLimit C: 16, pchC: 0.00075, transpIdC: 5. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#32. 6 -- 14. nbSlices C: 6, maxCD C: 50000, osnrLimit C: 16, pchC: 0.00075, transpIdC: 5. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#33. 12 -- 6. nbSlices C: 3, maxCD C: 40000, osnrLimit C: 15, pchC: 0.000375, transpIdC: 1. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#34. 12 -- 11. nbSlices C: 6, maxCD C: 40000, osnrLimit C: 21, pchC: 0.00075, transpIdC: 6. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 300, ROUTED: NO
+#35. 1 -- 8. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#36. 2 -- 4. nbSlices C: 3, maxCD C: 40000, osnrLimit C: 15, pchC: 0.000375, transpIdC: 1. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#37. 5 -- 1. nbSlices C: 6, maxCD C: 50000, osnrLimit C: 16, pchC: 0.00075, transpIdC: 5. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#38. 3 -- 10. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#39. 8 -- 5. nbSlices C: 6, maxCD C: 50000, osnrLimit C: 16, pchC: 0.00075, transpIdC: 5. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#40. 9 -- 3. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#41. 4 -- 6. nbSlices C: 6, maxCD C: 40000, osnrLimit C: 21, pchC: 0.00075, transpIdC: 6. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 300, ROUTED: NO
+#42. 2 -- 4. nbSlices C: 6, maxCD C: 40000, osnrLimit C: 21, pchC: 0.00075, transpIdC: 6. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 300, ROUTED: NO
+#43. 10 -- 3. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#44. 12 -- 3. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#45. 9 -- 10. nbSlices C: 6, maxCD C: 20000, osnrLimit C: 24, pchC: 0.00075, transpIdC: 7. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 400, ROUTED: NO
+#46. 6 -- 14. nbSlices C: 6, maxCD C: 50000, osnrLimit C: 16, pchC: 0.00075, transpIdC: 5. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#47. 8 -- 7. nbSlices C: 3, maxCD C: 40000, osnrLimit C: 15, pchC: 0.000375, transpIdC: 1. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#48. 6 -- 1. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#49. 11 -- 8. nbSlices C: 3, maxCD C: 40000, osnrLimit C: 15, pchC: 0.000375, transpIdC: 1. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#50. 7 -- 13. nbSlices C: 3, maxCD C: 40000, osnrLimit C: 15, pchC: 0.000375, transpIdC: 1. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#51. 10 -- 6. nbSlices C: 6, maxCD C: 50000, osnrLimit C: 16, pchC: 0.00075, transpIdC: 5. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#52. 13 -- 11. nbSlices C: 3, maxCD C: 40000, osnrLimit C: 15, pchC: 0.000375, transpIdC: 1. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#53. 2 -- 8. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#54. 3 -- 2. nbSlices C: 3, maxCD C: 40000, osnrLimit C: 15, pchC: 0.000375, transpIdC: 1. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#55. 2 -- 8. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#56. 5 -- 10. nbSlices C: 3, maxCD C: 40000, osnrLimit C: 15, pchC: 0.000375, transpIdC: 1. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#57. 10 -- 1. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#58. 2 -- 5. nbSlices C: 3, maxCD C: 40000, osnrLimit C: 15, pchC: 0.000375, transpIdC: 1. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#59. 14 -- 11. nbSlices C: 4, maxCD C: 20000, osnrLimit C: 16, pchC: 0.0005, transpIdC: 3. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#60. 8 -- 13. nbSlices C: 6, maxCD C: 40000, osnrLimit C: 21, pchC: 0.00075, transpIdC: 6. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 300, ROUTED: NO
+#61. 12 -- 10. nbSlices C: 6, maxCD C: 50000, osnrLimit C: 16, pchC: 0.00075, transpIdC: 5. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#62. 2 -- 14. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#63. 13 -- 11. nbSlices C: 3, maxCD C: 40000, osnrLimit C: 15, pchC: 0.000375, transpIdC: 1. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#64. 11 -- 4. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#65. 4 -- 11. nbSlices C: 6, maxCD C: 50000, osnrLimit C: 16, pchC: 0.00075, transpIdC: 5. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#66. 9 -- 4. nbSlices C: 3, maxCD C: 100000, osnrLimit C: 13, pchC: 0.000375, transpIdC: 2. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#67. 3 -- 5. nbSlices C: 6, maxCD C: 50000, osnrLimit C: 16, pchC: 0.00075, transpIdC: 5. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+#68. 7 -- 5. nbSlices C: 3, maxCD C: 40000, osnrLimit C: 15, pchC: 0.000375, transpIdC: 1. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 100, ROUTED: NO
+#69. 8 -- 9. nbSlices C: 6, maxCD C: 20000, osnrLimit C: 24, pchC: 0.00075, transpIdC: 7. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 400, ROUTED: NO
+#70. 5 -- 9. nbSlices C: 6, maxCD C: 50000, osnrLimit C: 16, pchC: 0.00075, transpIdC: 5. nbSlices L: 0, maxCD L: 0, osnrLimit L: 0, pchL: 0, transpIdL: 0, maxCD S: 0, osnrLimit S: 0, pchS: 0. Gbits/s: 200, ROUTED: NO
+
+70 demands to be routed.
+> Non routable arcs: 50453
+Called Path Existence preprocessing.
+> Number of erased arcs due to Path Existence: 0
+Called CD preprocessing.
+> Number of erased arcs due to CD in graph: 186572
+> Number of erased arcs in tflow: 1837
+Called OSNR preprocessing.
+> Number of erased arcs due to OSNR in graph: 1836
+> Number of erased arcs in tflow: 18
+Called Path Existence preprocessing.
+> Number of erased arcs due to Path Existence: 0
+Called CD preprocessing.
+> Variables set to 0: 238861
+--- Flow formulation has been chosen. |K| = 70, |S| = 105. ---
+Flow variables have been defined...
+Max slice overall variable has been defined...
+Source constraints have been defined...
+Flow conservation constraints have been defined...
+Target constraints have been defined...
+CD constraints have been defined...
+OSNR constraints have been defined...
+Non-Overlapping constraints has been defined...
+Constraints = 2205
+Max Used Slice Overall constraints have been defined...
+Objective obj_nlus has been defined.
+--- Flow formulation has been defined ---
+--- CPLEX has been initialized ---
+CPLEX parameters have been defined...
+CPLEX variables have been defined...
+CPLEX constraints have been defined...
+CPLEX objective has been defined...
+Solving...
+Chosen objective: obj_nlus
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Threads                                 4
+CPXPARAM_Output_WriteLevel                       1
+CPXPARAM_TimeLimit                               14400
+CPXPARAM_MIP_Limits_TreeMemory                   16384
+Generic callback                                 0x40
+Tried aggregator 2 times.
+MIP Presolve eliminated 56027 rows and 8299 columns.
+MIP Presolve modified 95059 coefficients.
+Aggregator did 14611 substitutions.
+Reduced MIP has 21015 rows, 50185 columns, and 424007 nonzeros.
+Reduced MIP has 50114 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.67 sec. (2454.91 ticks)
+Probing time = 0.18 sec. (24.09 ticks)
+Tried aggregator 2 times.
+Detecting symmetries...
+MIP Presolve eliminated 2 rows and 0 columns.
+MIP Presolve modified 2 coefficients.
+Aggregator did 309 substitutions.
+Reduced MIP has 20704 rows, 49876 columns, and 422771 nonzeros.
+Reduced MIP has 49805 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.54 sec. (422.31 ticks)
+Probing time = 0.16 sec. (23.98 ticks)
+Clique table members: 11542.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 4 threads.
+Root relaxation solution time = 7.34 sec. (4418.89 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                          105.0000        6.0000            94.29%
+      0     0       22.1538   982      105.0000       22.1538       14   78.90%
+*     0+    0                           87.0000       22.1538            74.54%
+      0     0       22.1538   767       87.0000      Cuts: 30     7977   74.54%
+      0     0       22.1538  1159       87.0000      Cuts: 91    45551   74.54%
+      0     0       22.1538   776       87.0000   MIRcuts: 13    57815   74.54%
+*     0+    0                           58.0000       22.1538            61.80%
+*     0+    0                           54.0000       22.1538            58.97%
+*     0+    0                           52.0000       22.1538            57.40%
+*     0+    0                           49.0000       22.1538            54.79%
+      0     0  -1.00000e+75     0       49.0000       22.1538    57815   54.79%
+      0     0       22.1538   840       49.0000      Cuts: 40    90470   54.79%
+Heuristic still looking.
+Heuristic still looking.
+*     0+    0                           46.0000       22.1538            51.84%
+*     0+    0                           44.0000       22.1538            49.65%
+*     0+    0                           43.0000       22.1538            48.48%
+*     0+    0                           42.0000       22.1538            47.25%
+
+Repeating presolve.
+Tried aggregator 4 times.
+MIP Presolve eliminated 9183 rows and 25891 columns.
+MIP Presolve modified 1703 coefficients.
+Aggregator did 1071 substitutions.
+Reduced MIP has 10450 rows, 22914 columns, and 188888 nonzeros.
+Reduced MIP has 22843 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.90 sec. (1047.83 ticks)
+Probing time = 0.15 sec. (12.98 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 10450 rows, 22914 columns, and 188888 nonzeros.
+Reduced MIP has 22843 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.17 sec. (137.24 ticks)
+Represolve time = 1.41 sec. (1331.10 ticks)
+Probing time = 0.12 sec. (13.22 ticks)
+Clique table members: 7257.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 4 threads.
+Root relaxation solution time = 4.27 sec. (2125.53 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                           42.0000       22.1538            47.25%
+      0     0       22.1538  1119       42.0000       22.1538    97386   47.25%
+      0     0       22.1538   857       42.0000      Cuts: 20   110657   47.25%
+      0     0       22.3636   779       42.0000      Cuts: 42   117345   46.75%
+      0     0       22.3636   967       42.0000     Cuts: 123   127352   46.75%
+      0     0       22.3636   878       42.0000   MIRcuts: 60   140946   46.75%
+      0     0       22.4176  1325       42.0000     Cuts: 147   211720   46.62%
+      0     0       22.4324  1204       42.0000     Cuts: 173   226153   46.59%
+      0     0       22.4324  1288       42.0000     Cuts: 132   241556   46.59%
+Heuristic still looking.
+Heuristic still looking.
+      0     2       22.4324   449       42.0000       22.4324   241556   46.59%
+Elapsed time = 787.32 sec. (522710.24 ticks, tree = 0.02 MB, solutions = 10)
+      1     3       39.0000  1000       42.0000       22.4324   290421   46.59%
+      2     4       39.0000   844       42.0000       22.4324   305145   46.59%
+      3     3       22.4324  1211       42.0000       22.4324   281145   46.59%
+      4     5       39.0000   923       42.0000       22.4324   316723   46.59%
+      5     7       39.0000   812       42.0000       22.4324   356790   46.59%
+      7     9       39.0000   810       42.0000       22.4324   357802   46.59%
+      9    11       39.0000   629       42.0000       22.4324   358228   46.59%
+     12    14       39.0000   649       42.0000       22.4324   358991   46.59%
+     13    13        cutoff             42.0000       22.4324   361077   46.59%
+     19    19       39.0000   492       42.0000       22.4324   364263   46.59%
+Elapsed time = 867.54 sec. (586916.32 ticks, tree = 0.29 MB, solutions = 10)
+     33    31       39.0000   405       42.0000       22.4324   368031   46.59%
+     49    47       39.0000   154       42.0000       22.4324   372478   46.59%
+     56    50        cutoff             42.0000       22.4324   378414   46.59%
+     74    64       39.0000   110       42.0000       22.4324   384988   46.59%
+     89    73        cutoff             42.0000       22.4324   390704   46.59%
+    121    97       39.0000    57       42.0000       22.4324   397319   46.59%
+    144   118       39.0000   116       42.0000       22.4324   406017   46.59%
+    181   145       39.0000    60       42.0000       22.4324   411263   46.59%
+*   201+  129                           41.0000       22.4324            45.29%
+    223   153       39.0000   107       41.0000       22.4324   415205   45.29%
+    228   157       39.0000    98       41.0000       22.4324   420478   45.29%
+Elapsed time = 884.97 sec. (597540.80 ticks, tree = 2.76 MB, solutions = 11)
+    234   159        cutoff             41.0000       22.4324   424983   45.29%
+    245   168       39.0000   121       41.0000       22.4324   431614   45.29%
+    247   170       39.0000   154       41.0000       22.4324   447603   45.29%
+    249   171        cutoff             41.0000       22.4324   469269   45.29%
+    253   171       40.0000   221       41.0000       22.4324   478018   45.29%
+    258   168       39.0000    40       41.0000       22.4324   482866   45.29%
+    261   167        cutoff             41.0000       22.4324   488079   45.29%
+    265   165    infeasible             41.0000       22.4324   493783   45.29%
+    268   166        cutoff             41.0000       22.4324   500258   45.29%
+    273   165       39.0000    87       41.0000       22.4324   505041   45.29%
+Elapsed time = 900.84 sec. (610554.42 ticks, tree = 2.61 MB, solutions = 11)
+    276     5       39.0000   816       41.0000       22.4324   328658   45.29%
+    279   162    infeasible             41.0000       22.4324   514849   45.29%
+    287   165       39.0000    36       41.0000       22.4324   516500   45.29%
+    294   165        cutoff             41.0000       22.4324   521746   45.29%
+    305   163       39.0000    96       41.0000       22.4324   574416   45.29%
+    309   160        cutoff             41.0000       22.4324   533518   45.29%
+    315   160       39.0000    77       41.0000       22.4324   598011   45.29%
+    331   158       39.0000    54       41.0000       22.4324   624214   45.29%
+    336   157       33.0000   745       41.0000       22.4324   636895   45.29%
+    340   164        cutoff             41.0000       22.4324   603737   45.29%
+Elapsed time = 918.49 sec. (621837.86 ticks, tree = 1.90 MB, solutions = 11)
+    358   161       33.0000   740       41.0000       22.4324   640063   45.29%
+    364   178       39.0000    94       41.0000       22.4324   611414   45.29%
+    365   179       39.0000    45       41.0000       22.4324   619163   45.29%
+    369   181       40.0000    28       41.0000       22.4324   669649   45.29%
+    382   181    infeasible             41.0000       22.4324   746828   45.29%
+    384   181        cutoff             41.0000       22.4324   751885   45.29%
+    389   179    infeasible             41.0000       22.4324   758272   45.29%
+    420   179        cutoff             41.0000       22.4324   766692   45.29%
+    424   220       39.0000   379       41.0000       22.4324   750146   45.29%
+    439   178        cutoff             41.0000       22.4324   779733   45.29%
+Elapsed time = 934.98 sec. (634274.36 ticks, tree = 2.05 MB, solutions = 11)
+    453   235       39.0000   295       41.0000       22.4324   752462   45.29%
+    477   184        cutoff             41.0000       22.4324   794637   45.29%
+    490   263       39.0000   141       41.0000       22.4324   761112   45.29%
+    519   184       33.0000   670       41.0000       22.4324   800326   45.29%
+    530   194       33.0000   552       41.0000       22.4324   802257   45.29%
+    570   234       33.0000   564       41.0000       22.4324   804078   45.29%
+    590   254       33.0000   566       41.0000       22.4324   806420   45.29%
+    613   275       33.0000   521       41.0000       22.4324   808412   45.29%
+    624   190       39.0000   715       41.0000       22.4324   825143   45.29%
+    627   193       39.0000   546       41.0000       22.4324   826222   45.29%
+Elapsed time = 950.03 sec. (644855.90 ticks, tree = 2.27 MB, solutions = 11)
+    628   190       33.0000  1078       41.0000       22.4324   840498   45.29%
+    635   294       33.0000   503       41.0000       22.4324   842640   45.29%
+    649   194       33.0000   750       41.0000       22.4324   842235   45.29%
+    664   202       33.0000   779       41.0000       22.4324   843206   45.29%
+    692   213       33.0000   774       41.0000       22.4324   844404   45.29%
+    707   194       39.0000   564       41.0000       22.4324   826818   45.29%
+    719   431       39.0000   301       41.0000       22.4324   911760   45.29%
+    736   448       39.0000   209       41.0000       22.4324   915644   45.29%
+    755   465       39.0000   138       41.0000       22.4324   921150   45.29%
+    774   480       39.0000    82       41.0000       22.4324   927347   45.29%
+Elapsed time = 966.44 sec. (657448.71 ticks, tree = 6.88 MB, solutions = 11)
+    792   432       33.0000   543       41.0000       22.4324   897505   45.29%
+    813   448       33.0000   532       41.0000       22.4324   899577   45.29%
+    830   490        cutoff             41.0000       22.4324   943277   45.29%
+    837   542       33.0000   459       41.0000       22.4324   951749   45.29%
+    850   549       33.0000   415       41.0000       22.4324   954278   45.29%
+    870   559       33.0000   341       41.0000       22.4324   956963   45.29%
+    925   609       33.0000   390       41.0000       22.4324   965371   45.29%
+    996   606       38.0000    86       41.0000       22.4324   965002   45.29%
+   1039   623       38.0000   167       41.0000       22.4324   970326   45.29%
+   1072   635        cutoff             41.0000       22.4324   975624   45.29%
+Elapsed time = 978.18 sec. (667283.67 ticks, tree = 9.71 MB, solutions = 11)
+   1121   734       38.0000   217       41.0000       22.4324   991074   45.29%
+   1156   690       33.0000   410       41.0000       22.4324   978878   45.29%
+   1211   761       38.0000   331       41.0000       22.4324   997619   45.29%
+   1272   786       38.0000   270       41.0000       22.4324  1000370   45.29%
+   1317   689       33.0000   390       41.0000       22.4324   972738   45.29%
+   1346   813       38.0000   212       41.0000       22.4324  1006197   45.29%
+   1409   719       33.0000   440       41.0000       22.4324   977666   45.29%
+   1444   915       33.0000   346       41.0000       22.4324  1020618   45.29%
+   1460  1075       33.0000   352       41.0000       22.4324  1047610   45.29%
+   1464   721       33.0000   454       41.0000       22.4324   978395   45.29%
+Elapsed time = 992.22 sec. (678042.89 ticks, tree = 10.19 MB, solutions = 11)
+   1494  1083       33.0000   338       41.0000       22.4324  1049219   45.29%
+   1519  1094       33.0000   319       41.0000       22.4324  1052548   45.29%
+   1541  1116       38.0000   225       41.0000       22.4324  1055562   45.29%
+   1572  1213       33.0000   299       41.0000       22.4324  1065019   45.29%
+   1605  1264       39.0000    92       41.0000       22.4324  1078725   45.29%
+   1637  1291       39.0000    74       41.0000       22.4324  1084656   45.29%
+   1644  1297       39.0000   113       41.0000       22.4324  1091121   45.29%
+   1650  1303       39.0000   117       41.0000       22.4324  1097112   45.29%
+   1658  1311       39.0000   137       41.0000       22.4324  1102802   45.29%
+
+Performing restart 1
+
+Repeating presolve.
+Tried aggregator 2 times.
+MIP Presolve eliminated 81 rows and 1286 columns.
+MIP Presolve modified 5173 coefficients.
+Aggregator did 446 substitutions.
+Reduced MIP has 9923 rows, 21182 columns, and 175855 nonzeros.
+Reduced MIP has 21111 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.32 sec. (289.75 ticks)
+Tried aggregator 1 time.
+MIP Presolve modified 240 coefficients.
+Reduced MIP has 9923 rows, 21182 columns, and 175855 nonzeros.
+Reduced MIP has 21111 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.18 sec. (151.37 ticks)
+Represolve time = 1.08 sec. (700.60 ticks)
+   1663     0       22.5118  1075       41.0000      Cuts: 40  1252249   45.09%
+   1663     0       22.5298  1148       41.0000     Cuts: 133  1278795   45.05%
+   1663     0       22.5748  1206       41.0000     Cuts: 191  1294280   44.94%
+   1663     0       22.6107  1203       41.0000     Cuts: 242  1328800   44.85%
+*  1663+    0                           40.0000       22.6107            43.47%
+   1663     0       22.6360  1091       40.0000     Cuts: 176  1360906   43.41%
+   1663     0       22.6360  1139       40.0000     Cuts: 185  1380376   43.41%
+   1663     0       22.6360   818       40.0000      Cuts: 64  1395647   43.41%
+   1663     0       22.6360  1090       40.0000     Cuts: 128  1411478   43.41%
+   1663     0       22.6360   768       40.0000      Cuts: 41  1420016   43.41%
+   1663     0       22.6360  1023       40.0000     Cuts: 141  1439450   43.41%
+   1663     0       22.6360   762       40.0000      Cuts: 39  1448964   43.41%
+   1663     0       22.6360   866       40.0000     Cuts: 115  1464273   43.41%
+   1663     2       22.6360   662       40.0000       22.6360  1464273   43.41%
+Elapsed time = 1609.56 sec. (1048981.08 ticks, tree = 0.02 MB, solutions = 12)
+   1664     3       22.6564   980       40.0000       22.6564  1511669   43.36%
+   1665     4       22.6564   959       40.0000       22.6710  1512589   43.32%
+   1666     3       24.0000   941       40.0000       22.6710  1505529   43.32%
+   1667     6       24.0000   934       40.0000       22.6710  1557312   43.32%
+   1669     5       22.6822   929       40.0000       22.6783  1530370   43.30%
+   1671     8       22.6962   920       40.0000       22.6783  1591988   43.30%
+   1672     8       22.6962   958       40.0000       22.6783  1593007   43.30%
+   1674     5       24.0000   932       40.0000       22.6783  1534423   43.30%
+   1676    12       24.0000   848       40.0000       22.6962  1625610   43.26%
+   1678     9       22.6962   887       40.0000       22.6962  1607890   43.26%
+Elapsed time = 1796.39 sec. (1156371.97 ticks, tree = 0.12 MB, solutions = 12)
+   1680    14       24.0000   959       40.0000       22.6962  1646789   43.26%
+   1682    16       37.0000   724       40.0000       22.6962  1676827   43.26%
+   1684    15       22.6962   919       40.0000       22.6962  1664584   43.26%
+   1688    21       33.0000   707       40.0000       22.6962  1728639   43.26%
+   1690    18       22.6962   874       40.0000       22.6962  1707869   43.26%
+   1699    27       34.0000   535       40.0000       22.6962  1760676   43.26%
+   1711    36        cutoff             40.0000       22.6962  1765458   43.26%
+   1727    31       37.0000   505       40.0000       22.6962  1763048   43.26%
+   1755    53       37.0000   258       40.0000       22.6962  1768048   43.26%
+   1796    32       24.0000   793       40.0000       22.6962  1792038   43.26%
+Elapsed time = 1906.95 sec. (1215387.86 ticks, tree = 0.80 MB, solutions = 12)
+   1818    40       24.0000   686       40.0000       22.6962  1793460   43.26%
+   1848    71       39.0000    96       40.0000       22.6962  1818234   43.26%
+   1862    79       39.0000    63       40.0000       22.6962  1824843   43.26%
+   1889    86       39.0000   116       40.0000       22.6962  1837516   43.26%
+   1908   108       36.0000   408       40.0000       22.6962  1854249   43.26%
+   1920   119       36.0000   150       40.0000       22.6962  1859658   43.26%
+   1942   132       39.0000    87       40.0000       22.6962  1864290   43.26%
+   1960   124       22.6966   968       40.0000       22.6962  1886595   43.26%
+   1961   121       24.0000   795       40.0000       22.6962  1857821   43.26%
+   1969   169       22.6966   965       40.0000       22.6962  1919665   43.26%
+Elapsed time = 1980.54 sec. (1258479.45 ticks, tree = 5.67 MB, solutions = 12)
+   1978   163       24.0000   759       40.0000       22.6962  1904963   43.26%
+   1989   168       38.0000   673       40.0000       22.6962  1945886   43.26%
+   2015   178       38.0000   611       40.0000       22.6962  1946860   43.26%
+   2037   185       38.0000   383       40.0000       22.6962  1950346   43.26%
+   2062   199       38.0000   296       40.0000       22.6962  1952657   43.26%
+   2091   209       33.0000   378       40.0000       22.6962  1960175   43.26%
+   2102   199       22.9091   959       40.0000       22.6962  1976755   43.26%
+   2111   262       33.0000   819       40.0000       22.6962  2036911   43.26%
+   2123   235       23.8750   888       40.0000       22.6962  2026321   43.26%
+   2133   273       33.0000   773       40.0000       22.6962  2040533   43.26%
+Elapsed time = 2053.19 sec. (1301470.16 ticks, tree = 13.37 MB, solutions = 12)
+   2145   281       33.0000   792       40.0000       22.6962  2041778   43.26%
+   2168   290       33.0000   506       40.0000       22.6962  2043794   43.26%
+   2174   302        cutoff             40.0000       22.6962  2083955   43.26%
+   2175   311       23.8750   919       40.0000       22.6962  2106230   43.26%
+   2196   346       33.0000   471       40.0000       22.6966  2104325   43.26%
+   2213   317       23.8750   980       40.0000       22.6966  2108451   43.26%
+   2221   366       36.0000   778       40.0000       22.6966  2138859   43.26%
+   2228   365       36.0000   588       40.0000       22.6966  2113652   43.26%
+   2247   375       36.0000   454       40.0000       22.6966  2115193   43.26%
+   2261   400       36.0000   335       40.0000       22.6966  2151934   43.26%
+Elapsed time = 2151.16 sec. (1343911.69 ticks, tree = 22.58 MB, solutions = 12)
+   2270   415        cutoff             40.0000       22.6966  2178077   43.26%
+   2285   413       37.0000   830       40.0000       22.6966  2162551   43.26%
+   2291   422       36.0000   522       40.0000       22.6966  2181222   43.26%
+   2309   426       37.0000   776       40.0000       22.6966  2166604   43.26%
+   2321   431       37.0000   772       40.0000       22.6966  2169070   43.26%
+   2334   425        cutoff             40.0000       22.6966  2221721   43.26%
+   2338   432       36.0000   398       40.0000       22.6966  2183771   43.26%
+   2352   428        cutoff             40.0000       22.6966  2233645   43.26%
+   2356   457       23.8786   978       40.0000       22.6966  2269410   43.26%
+   2371   494       39.0000   614       40.0000       22.6966  2306803   43.26%
+Elapsed time = 2222.40 sec. (1390920.90 ticks, tree = 30.66 MB, solutions = 12)
+   2389   466       23.8795  1017       40.0000       22.6966  2273378   43.26%
+   2404   492       39.0000   719       40.0000       22.6966  2316236   43.26%
+   2419   500       39.0000   640       40.0000       22.6966  2325220   43.26%
+   2433   517       23.9085  1054       40.0000       22.6966  2352222   43.26%
+   2438   501       39.0000   574       40.0000       22.6966  2365665   43.26%
+   2454   546       39.0000   656       40.0000       22.6966  2378139   43.26%
+   2480   570       39.0000   535       40.0000       22.6966  2375619   43.26%
+   2488   579       32.0000   585       40.0000       22.6966  2415002   43.26%
+   2498   587       32.0000   599       40.0000       22.6966  2425099   43.26%
+   2508   591        cutoff             40.0000       22.6966  2443504   43.26%
+Elapsed time = 2282.93 sec. (1436288.29 ticks, tree = 39.29 MB, solutions = 12)
+   2511   594       33.0000   626       40.0000       22.6966  2447848   43.26%
+   2522   610       39.0000   454       40.0000       22.6966  2531849   43.26%
+   2540   620       24.2018   945       40.0000       22.6966  2537736   43.26%
+   2544   624       24.9600   953       40.0000       22.6966  2540172   43.26%
+   2550   630       24.9600   932       40.0000       22.6966  2541991   43.26%
+   2559   633       25.1022   933       40.0000       22.6966  2544495   43.26%
+   2567   645       24.1236  1017       40.0000       22.6966  2629760   43.26%
+   2575   664       34.0000   817       40.0000       22.6966  2634527   43.26%
+   2584   670       34.0000   868       40.0000       22.6966  2636158   43.26%
+   2592   653       24.3835   965       40.0000       22.6966  2636793   43.26%
+Elapsed time = 2351.33 sec. (1481430.81 ticks, tree = 44.55 MB, solutions = 12)
+   2609   685       39.0000   451       40.0000       22.6966  2640630   43.26%
+   2621   584       23.9236  1032       40.0000       22.6966  2487361   43.26%
+   2626   680       25.1024  1005       40.0000       22.6966  2656250   43.26%
+   2633   683       27.0000   903       40.0000       22.6966  2659356   43.26%
+   2641   686       39.0000   809       40.0000       22.6966  2663778   43.26%
+   2656   696       39.0000   598       40.0000       22.6966  2664963   43.26%
+   2682   707       39.0000   537       40.0000       22.6966  2666399   43.26%
+   2691   696       39.0000   436       40.0000       22.6966  2674408   43.26%
+   2711   710       39.0000   397       40.0000       22.6966  2676165   43.26%
+   2736   709        cutoff             40.0000       22.6966  2682280   43.26%
+Elapsed time = 2425.12 sec. (1523859.32 ticks, tree = 49.50 MB, solutions = 12)
+   2739   710       31.0000   821       40.0000       22.7988  2685996   43.00%
+   2753   725       35.0000   643       40.0000       22.7988  2697893   43.00%
+   2767   736       35.0000   560       40.0000       22.7988  2699368   43.00%
+   2780   714       39.0000   765       40.0000       22.7988  2697533   43.00%
+   2803   808       39.0000   581       40.0000       22.7988  2740511   43.00%
+   2811   801       32.0000   782       40.0000       22.8000  2770922   43.00%
+   2822   792       39.0000   740       40.0000       22.8000  2722516   43.00%
+   2829   824       39.0000   598       40.0000       22.8000  2775176   43.00%
+   2833   855       22.9091  1003       40.0000       22.9091  2793146   42.73%
+   2842   858       22.9130  1051       40.0000       22.9091  2796399   42.73%
+Elapsed time = 2511.50 sec. (1576216.88 ticks, tree = 62.45 MB, solutions = 12)
+   2846   862       22.9208  1052       40.0000       22.9091  2798974   42.73%
+   2852   865       22.9248  1073       40.0000       22.9091  2801824   42.73%
+   2857   867       22.9596  1024       40.0000       22.9091  2804682   42.73%
+   2859   856       39.0000   637       40.0000       22.9091  2841260   42.73%
+   2874   869       39.0000   552       40.0000       22.9091  2842742   42.73%
+   2884   869       23.7659  1055       40.0000       22.9091  2870993   42.73%
+   2893   862       34.0000   489       40.0000       22.9091  2863098   42.73%
+   2896   876       39.0000   515       40.0000       22.9091  2843573   42.73%
+   2905   862       39.0000   625       40.0000       22.9091  2883781   42.73%
+   2907   880       22.9910  1059       40.0000       22.9091  2911901   42.73%
+Elapsed time = 2604.26 sec. (1634879.67 ticks, tree = 64.39 MB, solutions = 12)
+   2909   905       39.0000   745       40.0000       22.9091  2912639   42.73%
+   2913   905       39.0000   610       40.0000       22.9091  2913514   42.73%
+   2921   922       23.7659   984       40.0000       22.9091  2981726   42.73%
+   2930   927       23.8110   973       40.0000       22.9091  2985643   42.73%
+   2935   925        cutoff             40.0000       22.9091  3004224   42.73%
+   2939   933       28.4326   926       40.0000       22.9091  2994493   42.73%
+   2945   924        cutoff             40.0000       22.9091  3018986   42.73%
+   2948   927       39.0000   592       40.0000       22.9091  3003868   42.73%
+   2957   924        cutoff             40.0000       22.9091  3032419   42.73%
+   2964   943        cutoff             40.0000       22.9091  3055441   42.73%
+Elapsed time = 2682.42 sec. (1687941.26 ticks, tree = 67.47 MB, solutions = 12)
+   2967   924       39.0000   674       40.0000       22.9091  3052503   42.73%
+   2985   947       33.0000   766       40.0000       22.9091  3092060   42.73%
+   3010   969       33.0000   663       40.0000       22.9091  3132690   42.73%
+   3027   955       39.0000   735       40.0000       22.9091  3118692   42.73%
+   3037   976       33.0000   853       40.0000       22.9091  3142004   42.73%
+   3042   967        cutoff             40.0000       22.9208  3176028   42.70%
+   3045   966        cutoff             40.0000       22.9248  3181856   42.69%
+   3055   967       39.0000   765       40.0000       22.9248  3187225   42.69%
+   3064   998       27.0000   951       40.0000       22.9248  3234802   42.69%
+   3071   977       34.0000   740       40.0000       22.9256  3230800   42.69%
+Elapsed time = 2759.98 sec. (1737476.48 ticks, tree = 67.89 MB, solutions = 12)
+   3084  1006        cutoff             40.0000       22.9256  3308591   42.69%
+   3086   999        cutoff             40.0000       22.9256  3291979   42.69%
+   3089   998        cutoff             40.0000       22.9256  3296543   42.69%
+   3093  1005       39.0000   618       40.0000       22.9896  3355786   42.53%
+   3099  1008       39.0000   635       40.0000       22.9896  3356094   42.53%
+   3107   996        cutoff             40.0000       22.9896  3310474   42.53%
+   3114  1014       39.0000   623       40.0000       22.9896  3356993   42.53%
+   3117  1006       39.0000   682       40.0000       22.9896  3417693   42.53%
+   3122  1009       39.0000   655       40.0000       23.3766  3458893   41.56%
+   3129  1002        cutoff             40.0000       23.3766  3408664   41.56%
+Elapsed time = 2837.54 sec. (1792168.74 ticks, tree = 67.89 MB, solutions = 12)
+   3131  1010       33.0000   804       40.0000       23.3766  3473591   41.56%
+   3133  1009        cutoff             40.0000       23.3766  3481817   41.56%
+   3136  1000        cutoff             40.0000       23.3766  3433903   41.56%
+   3138  1007       36.0000   818       40.0000       23.3766  3542603   41.56%
+   3145  1008        cutoff             40.0000       23.3766  3548609   41.56%
+   3149  1012       36.0000   736       40.0000       23.3766  3552298   41.56%
+   3152  1005       39.0000   709       40.0000       23.3766  3525086   41.56%
+   3155  1015       39.0000   546       40.0000       23.8110  3658156   40.47%
+   3166  1011       28.0000   919       40.0000       23.8110  3563251   40.47%
+   3167  1012       39.0000   645       40.0000       23.8440  3655616   40.39%
+Elapsed time = 2961.00 sec. (1863047.52 ticks, tree = 66.87 MB, solutions = 12)
+   3170  1015        cutoff             40.0000       23.8750  3736828   40.31%
+   3182  1019       28.0000   874       40.0000       23.8750  3708405   40.31%
+   3187  1034       33.0000   824       40.0000       23.8750  3739008   40.31%
+   3197  1023       28.0000   937       40.0000       23.8750  3712396   40.31%
+   3199  1023        cutoff             40.0000       23.8750  3716475   40.31%
+   3205  1043       39.0000   590       40.0000       23.8750  3749770   40.31%
+   3214  1018       39.0000   600       40.0000       23.8750  3760268   40.31%
+   3222  1008       33.0000   652       40.0000       23.8750  3583874   40.31%
+   3233  1040        cutoff             40.0000       23.8750  3765762   40.31%
+   3234  1037        cutoff             40.0000       23.8750  3810338   40.31%
+Elapsed time = 3032.38 sec. (1913707.38 ticks, tree = 66.86 MB, solutions = 12)
+   3242  1031       39.0000   699       40.0000       23.8750  3786871   40.31%
+   3256  1040       36.0000   617       40.0000       23.8750  3818337   40.31%
+   3267  1056        cutoff             40.0000       23.8750  3856559   40.31%
+   3269  1035        cutoff             40.0000       23.8750  3806286   40.31%
+   3271  1042       39.0000   784       40.0000       23.8750  3837496   40.31%
+   3276  1037       39.0000   594       40.0000       23.8750  3801543   40.31%
+   3282  1056       30.0000   783       40.0000       23.8795  3937068   40.30%
+   3289  1067        cutoff             40.0000       23.8795  3974914   40.30%
+   3290  1062       39.0000   710       40.0000       23.8795  3988045   40.30%
+   3295  1076        cutoff             40.0000       23.8795  4066659   40.30%
+Elapsed time = 3126.93 sec. (1974728.08 ticks, tree = 66.24 MB, solutions = 12)
+   3297  1075        cutoff             40.0000       23.8795  4071273   40.30%
+   3300  1066       27.0000   468       40.0000       23.8795  3997289   40.30%
+   3318  1076        cutoff             40.0000       23.8795  4156593   40.30%
+   3320  1068       24.0000   521       40.0000       23.8795  3999339   40.30%
+   3325  1082       25.4818   962       40.0000       23.8795  4310753   40.30%
+   3346  1082       24.0000   485       40.0000       23.8795  4225746   40.30%
+   3354  1082        cutoff             40.0000       23.8795  4321829   40.30%
+   3368  1084       33.0000   421       40.0000       23.8795  4348078   40.30%
+   3392  1088       37.0000   472       40.0000       23.8795  4351306   40.30%
+   3419  1093       31.0000   472       40.0000       23.8795  4354410   40.30%
+Elapsed time = 3204.33 sec. (2027048.93 ticks, tree = 66.29 MB, solutions = 12)
+   3445  1105       31.8844   419       40.0000       23.8795  4355947   40.30%
+   3472  1094       36.0000   484       40.0000       23.9057  4339543   40.24%
+   3483  1124       39.0000   364       40.0000       23.9085  4358193   40.23%
+   3509  1094        cutoff             40.0000       23.9085  4370407   40.23%
+   3528  1103       34.0000   395       40.0000       23.9085  4411495   40.23%
+   3555  1105       30.0000   486       40.0000       23.9254  4414448   40.19%
+   3575  1116       30.0000   455       40.0000       23.9254  4416501   40.19%
+   3588  1090        cutoff             40.0000       23.9254  4371740   40.19%
+   3600  1119       33.0000   863       40.0000       23.9254  4424521   40.19%
+   3610  1090       27.0000   427       40.0000       23.9254  4379898   40.19%
+Elapsed time = 3262.06 sec. (2067940.38 ticks, tree = 66.16 MB, solutions = 12)
+   3623  1159       35.0000   371       40.0000       24.0000  4452438   40.00%
+   3641  1137       39.0000   558       40.0000       24.0000  4431982   40.00%
+   3652  1166       24.0000   968       40.0000       24.0000  4494706   40.00%
+   3663  1172       24.0000   985       40.0000       24.0000  4496995   40.00%
+   3671  1176       24.0000   956       40.0000       24.0000  4498037   40.00%
+   3688  1222       34.0000   651       40.0000       24.0000  4554066   40.00%
+   3709  1226       36.0000   427       40.0000       24.0000  4557082   40.00%
+   3726  1155        cutoff             40.0000       24.0000  4481906   40.00%
+   3737  1189       39.0000   700       40.0000       24.0000  4510953   40.00%
+   3750  1228        cutoff             40.0000       24.0000  4569575   40.00%
+Elapsed time = 3339.23 sec. (2109639.35 ticks, tree = 78.51 MB, solutions = 12)
+   3772  1206       39.0000   522       40.0000       24.0000  4512872   40.00%
+   3797  1229        cutoff             40.0000       24.0000  4576385   40.00%
+   3807  1204        cutoff             40.0000       24.0000  4558070   40.00%
+   3813  1276       26.9932   909       40.0000       24.0000  4655288   40.00%
+   3818  1268        cutoff             40.0000       24.0000  4605435   40.00%
+   3822  1263       24.0000   888       40.0000       24.0000  4626575   40.00%
+   3826  1265        cutoff             40.0000       24.0000  4621104   40.00%
+   3835  1279       24.0000   881       40.0000       24.0000  4665585   40.00%
+   3843  1265       24.0000   953       40.0000       24.0000  4638859   40.00%
+   3848  1281        cutoff             40.0000       24.0000  4701591   40.00%
+Elapsed time = 3412.02 sec. (2159463.78 ticks, tree = 82.93 MB, solutions = 12)
+   3856  1265       24.6667   964       40.0000       24.0000  4629743   40.00%
+   3865  1295       24.7266   926       40.0000       24.0000  4750151   40.00%
+   3872  1295       24.0000   974       40.0000       24.0000  4718313   40.00%
+   3878  1300       24.0000   969       40.0000       24.0000  4720163   40.00%
+   3884  1301        cutoff             40.0000       24.0000  4724692   40.00%
+   3886  1294        cutoff             40.0000       24.0000  4768275   40.00%
+   3890  1299        cutoff             40.0000       24.0000  4735190   40.00%
+   3895  1300       33.0000   775       40.0000       24.0000  4739023   40.00%
+   3904  1298        cutoff             40.0000       24.0000  4744743   40.00%
+   3911  1303        cutoff             40.0000       24.0000  4864398   40.00%
+Elapsed time = 3482.64 sec. (2205886.95 ticks, tree = 85.22 MB, solutions = 12)
+   3918  1290        cutoff             40.0000       24.0000  4845483   40.00%
+   3920  1304        cutoff             40.0000       24.0000  4911145   40.00%
+   3922  1289        cutoff             40.0000       24.0000  4854369   40.00%
+   3924  1302        cutoff             40.0000       24.0000  4951302   40.00%
+   3926  1287        cutoff             40.0000       24.0000  4864303   40.00%
+   3932  1305       39.0000   649       40.0000       24.0000  4925218   40.00%
+   3937  1302        cutoff             40.0000       24.0000  4931886   40.00%
+   3944  1303       27.0000   890       40.0000       24.0000  4935464   40.00%
+   3948  1297        cutoff             40.0000       24.0000  5061845   40.00%
+   3951  1296        cutoff             40.0000       24.0000  5066771   40.00%
+Elapsed time = 3567.62 sec. (2256025.16 ticks, tree = 84.16 MB, solutions = 12)
+   3957  1295        cutoff             40.0000       24.0000  5072289   40.00%
+   3958  1295        cutoff             40.0000       24.0000  5014323   40.00%
+   3963  1290       39.0000   620       40.0000       24.0000  5115580   40.00%
+   3967  1292       39.0000   513       40.0000       24.0000  5116470   40.00%
+   3971  1295       39.0000   475       40.0000       24.0000  5116867   40.00%
+   3977  1296       37.0000   708       40.0000       24.0000  5032667   40.00%
+   3979  1291        cutoff             40.0000       24.0000  5099954   40.00%
+   3981  1279        cutoff             40.0000       24.0000  5210453   40.00%
+   3985  1288       37.0000   715       40.0000       24.0000  5161457   40.00%
+   3995  1282        cutoff             40.0000       24.0000  5241631   40.00%
+Elapsed time = 3666.14 sec. (2304055.42 ticks, tree = 83.02 MB, solutions = 12)
+   4007  1294        cutoff             40.0000       24.0000  5165219   40.00%
+   4016  1284        cutoff             40.0000       24.0000  5219996   40.00%
+   4020  1283        cutoff             40.0000       24.0000  5225525   40.00%
+   4031  1282       39.0000   343       40.0000       24.0000  5258899   40.00%
+   4039  1292        cutoff             40.0000       24.0000  5183017   40.00%
+   4042  1291    infeasible             40.0000       24.0000  5187795   40.00%
+   4043  1272       31.0000   744       40.0000       24.0000  5354904   40.00%
+   4045  1280       39.0000   640       40.0000       24.5097  5414287   38.73%
+   4050  1274       33.0000   693       40.0000       24.5097  5346632   38.73%
+   4056  1278       39.0000   622       40.0000       24.5097  5387259   38.73%
+Elapsed time = 3732.49 sec. (2351927.72 ticks, tree = 83.09 MB, solutions = 12)
+   4068  1274       31.0000   683       40.0000       24.5097  5356439   38.73%
+   4071  1277        cutoff             40.0000       24.5097  5393731   38.73%
+   4080  1277        cutoff             40.0000       24.5097  5359983   38.73%
+   4090  1289       39.0000   412       40.0000       24.9600  5456541   37.60%
+   4098  1288        cutoff             40.0000       25.1024  5463606   37.24%
+   4108  1286        cutoff             40.0000       25.1899  5468232   37.03%
+   4111  1288       39.0000   705       40.0000       25.1899  5529565   37.03%
+   4116  1286        cutoff             40.0000       25.1899  5536552   37.03%
+   4120  1283        cutoff             40.0000       25.1899  5507715   37.03%
+   4133  1286       34.0000   512       40.0000       25.2288  5492408   36.93%
+Elapsed time = 3805.05 sec. (2402430.05 ticks, tree = 84.37 MB, solutions = 12)
+   4155  1278        cutoff             40.0000       25.2288  5599481   36.93%
+   4161  1283        cutoff             40.0000       25.2288  5554272   36.93%
+   4165  1283        cutoff             40.0000       25.2288  5555096   36.93%
+   4174  1283        cutoff             40.0000       25.4818  5656547   36.30%
+   4189  1275       33.0000   427       40.0000       25.4818  5618418   36.30%
+   4201  1280        cutoff             40.0000       25.4818  5665290   36.30%
+   4205  1275        cutoff             40.0000       27.0000  5693172   32.50%
+   4211  1271        cutoff             40.0000       28.0000  5698336   30.00%
+   4227  1263        cutoff             40.0000       28.0000  5743249   30.00%
+   4229  1271       28.2304   960       40.0000       28.0000  5709261   30.00%
+Elapsed time = 3889.04 sec. (2461797.75 ticks, tree = 83.81 MB, solutions = 12)
+   4235  1263       30.0000   916       40.0000       28.0000  5757189   30.00%
+   4247  1270        cutoff             40.0000       28.0000  5717377   30.00%
+   4262  1263        cutoff             40.0000       28.0000  5759455   30.00%
+   4268  1271       31.0000   875       40.0000       28.0000  5710060   30.00%
+   4273  1257       31.0000   896       40.0000       30.0000  5800170   25.00%
+   4281  1262        cutoff             40.0000       30.0000  5779451   25.00%
+   4296  1251        cutoff             40.0000       30.0000  5823494   25.00%
+   4308  1250        cutoff             40.0000       30.0000  5827609   25.00%
+   4316  1264       33.0000   472       40.0000       30.0000  5812886   25.00%
+   4334  1261       39.0000   380       40.0000       30.0000  5776328   25.00%
+Elapsed time = 3951.52 sec. (2504999.28 ticks, tree = 82.75 MB, solutions = 12)
+   4350  1258        cutoff             40.0000       30.0000  5798772   25.00%
+   4363  1241        cutoff             40.0000       30.0000  5842449   25.00%
+   4379  1244        cutoff             40.0000       30.0000  5884548   25.00%
+   4398  1281       39.0000   401       40.0000       30.0000  5818951   25.00%
+   4412  1272        cutoff             40.0000       30.0000  5824142   25.00%
+   4414  1232       32.0000   577       40.0000       30.0000  5892544   25.00%
+   4425  1231        cutoff             40.0000       31.0000  5896480   22.50%
+   4433  1242       32.0000   457       40.0000       31.0000  5891248   22.50%
+   4444  1238       39.0000   450       40.0000       31.0000  5895953   22.50%
+   4456  1245       33.0000   480       40.0000       31.0000  5938545   22.50%
+Elapsed time = 4007.79 sec. (2546121.91 ticks, tree = 82.10 MB, solutions = 12)
+   4464  1242        cutoff             40.0000       31.0000  5952024   22.50%
+   4490  1242       36.0000   467       40.0000       31.0000  5976430   22.50%
+   4517  1240       39.0000   424       40.0000       31.0000  5980803   22.50%
+   4542  1240       39.0000   369       40.0000       31.0000  6003204   22.50%
+   4556  1235       36.0000   430       40.0000       31.0000  6008252   22.50%
+   4580  1247        cutoff             40.0000       31.0000  6013659   22.50%
+   4600  1240        cutoff             40.0000       31.0000  6018830   22.50%
+   4614  1242       34.0000   496       40.0000       31.0000  5990904   22.50%
+   4627  1242        cutoff             40.0000       31.0000  5994421   22.50%
+   4646  1238        cutoff             40.0000       31.0000  6014827   22.50%
+Elapsed time = 4063.37 sec. (2590126.73 ticks, tree = 81.59 MB, solutions = 12)
+   4653  1234       35.0000   506       40.0000       31.0000  6020050   22.50%
+   4664  1239       39.0000   417       40.0000       31.0000  6023575   22.50%
+   4687  1258       39.0000   435       40.0000       31.0000  6040289   22.50%
+   4698  1258       33.0000   358       40.0000       31.0000  6042105   22.50%
+   4714  1257       33.0000   389       40.0000       31.0000  6042742   22.50%
+   4729  1250       33.0000   433       40.0000       31.0000  6121602   22.50%
+   4740  1249        cutoff             40.0000       31.0000  6128094   22.50%
+   4755  1245       37.0000   496       40.0000       31.0000  6132397   22.50%
+   4765  1248       39.0000   371       40.0000       31.0000  6097506   22.50%
+   4792  1261       39.0000   351       40.0000       31.0000  6086465   22.50%
+Elapsed time = 4129.70 sec. (2637064.94 ticks, tree = 83.79 MB, solutions = 12)
+   4820  1246       39.0000   456       40.0000       31.0000  6102281   22.50%
+   4841  1242       33.0000   500       40.0000       31.0000  6138092   22.50%
+   4850  1243       39.0000   784       40.0000       31.0000  6064625   22.50%
+   4859  1244        cutoff             40.0000       31.0000  6141534   22.50%
+   4870  1250       33.0000   598       40.0000       31.0000  6107853   22.50%
+   4885  1247        cutoff             40.0000       31.0000  6171077   22.50%
+   4892  1239        cutoff             40.0000       31.0000  6160431   22.50%
+   4900  1251       39.0000   351       40.0000       31.0000  6172697   22.50%
+   4908  1245        cutoff             40.0000       31.0000  6177380   22.50%
+   4912  1240       33.0000   457       40.0000       31.0000  6163059   22.50%
+Elapsed time = 4196.82 sec. (2679919.02 ticks, tree = 82.60 MB, solutions = 12)
+   4924  1238        cutoff             40.0000       31.0000  6167986   22.50%
+   4929  1246       33.1214   792       40.0000       31.0000  6207773   22.50%
+   4937  1246        cutoff             40.0000       31.0000  6211493   22.50%
+   4956  1240        cutoff             40.0000       32.0000  6263098   20.00%
+   4972  1237       39.0000   480       40.0000       32.0000  6267449   20.00%
+   4987  1242       39.0000   478       40.0000       32.0000  6249014   20.00%
+   4993  1235        cutoff             40.0000       32.0000  6275928   20.00%
+   4995  1238        cutoff             40.0000       32.0000  6258750   20.00%
+   4997  1244       35.0000   765       40.0000       32.0000  6236416   20.00%
+   5011  1241       33.6000   522       40.0000       33.0000  6296612   17.50%
+Elapsed time = 4262.20 sec. (2724630.17 ticks, tree = 82.80 MB, solutions = 12)
+   5021  1239        cutoff             40.0000       33.0000  6300076   17.50%
+   5034  1236        cutoff             40.0000       33.0000  6304395   17.50%
+   5044  1237       37.0000   739       40.0000       33.0000  6308429   17.50%
+   5055  1245       39.0000   509       40.0000       33.0000  6310429   17.50%
+   5061  1244       33.1429   888       40.0000       33.0000  6315171   17.50%
+   5066  1239       39.0000   729       40.0000       33.0000  6360025   17.50%
+   5078  1242       39.0000   790       40.0000       33.0000  6365727   17.50%
+   5090  1247        cutoff             40.0000       33.0000  6367299   17.50%
+   5093  1239       33.0000   862       40.0000       33.0000  6390643   17.50%
+   5097  1231       33.0000   879       40.0000       33.0000  6420831   17.50%
+Elapsed time = 4324.32 sec. (2768735.77 ticks, tree = 82.46 MB, solutions = 12)
+   5106  1238       33.0000   623       40.0000       33.0000  6422581   17.50%
+   5127  1257       33.0000   469       40.0000       33.0000  6370724   17.50%
+   5139  1235        cutoff             40.0000       33.0000  6429225   17.50%
+   5156  1247       39.0000   802       40.0000       33.0000  6407518   17.50%
+   5161  1250       33.5526   851       40.0000       33.0000  6410168   17.50%
+   5165  1247        cutoff             40.0000       33.0000  6414394   17.50%
+   5170  1241       39.0000   669       40.0000       33.0000  6463206   17.50%
+   5189  1233       33.0000   783       40.0000       33.0000  6436749   17.50%
+   5209  1240       33.6000   586       40.0000       33.0000  6438701   17.50%
+   5220  1244        cutoff             40.0000       33.0000  6502398   17.50%
+Elapsed time = 4383.53 sec. (2809504.62 ticks, tree = 83.80 MB, solutions = 12)
+   5228  1235        cutoff             40.0000       33.0000  6447622   17.50%
+   5235  1252       39.0000   400       40.0000       33.0000  6571889   17.50%
+   5240  1250        cutoff             40.0000       33.0000  6577371   17.50%
+   5243  1261       39.0000   575       40.0000       33.0000  6568503   17.50%
+   5246  1251       39.0000   688       40.0000       33.0000  6585109   17.50%
+   5264  1249        cutoff             40.0000       33.0000  6632307   17.50%
+   5278  1267       39.0000   498       40.0000       33.0000  6570129   17.50%
+   5295  1241       34.3636   159       40.0000       33.0000  6664359   17.50%
+   5310  1240       34.3333   273       40.0000       33.0000  6666885   17.50%
+   5330  1239        cutoff             40.0000       33.0000  6663009   17.50%
+Elapsed time = 4455.64 sec. (2854633.21 ticks, tree = 84.04 MB, solutions = 12)
+   5360  1245       36.0000   359       40.0000       33.0000  6672039   17.50%
+   5383  1235        cutoff             40.0000       33.0000  6692209   17.50%
+   5400  1239        cutoff             40.0000       33.0000  6695606   17.50%
+   5412  1241        cutoff             40.0000       33.0000  6698732   17.50%
+   5422  1236        cutoff             40.0000       33.0000  6679432   17.50%
+   5423  1240       34.0000   589       40.0000       33.0000  6700007   17.50%
+   5443  1246       34.0000   883       40.0000       33.0000  6732007   17.50%
+   5468  1240        cutoff             40.0000       33.0000  6707087   17.50%
+   5492  1243        cutoff             40.0000       33.0000  6771544   17.50%
+   5527  1243       34.3333   285       40.0000       33.0000  6775299   17.50%
+Elapsed time = 4514.82 sec. (2901413.79 ticks, tree = 85.00 MB, solutions = 12)
+   5558  1245       34.0000   429       40.0000       33.0000  6779086   17.50%
+   5584  1250        cutoff             40.0000       33.0000  6751039   17.50%
+   5608  1235       34.0000   652       40.0000       33.1214  6786367   17.20%
+   5625  1233        cutoff             40.0000       33.1214  6789776   17.20%
+   5628  1228        cutoff             40.0000       33.1214  6823738   17.20%
+   5630  1238       34.0000   438       40.0000       33.1214  6834640   17.20%
+   5649  1240       34.0000   496       40.0000       33.1214  6837929   17.20%
+   5662  1238       39.0000   439       40.0000       33.1214  6793196   17.20%
+   5673  1232        cutoff             40.0000       33.1214  6846992   17.20%
+   5683  1233        cutoff             40.0000       33.1214  6865776   17.20%
+Elapsed time = 4563.24 sec. (2942493.45 ticks, tree = 84.02 MB, solutions = 12)
+   5704  1231        cutoff             40.0000       33.1429  6869883   17.14%
+   5717  1222        cutoff             40.0000       33.1429  6874797   17.14%
+   5737  1216        cutoff             40.0000       33.1429  6904819   17.14%
+   5743  1218       34.0000   610       40.0000       33.1429  6906657   17.14%
+   5753  1226       39.0000   610       40.0000       33.1429  6884610   17.14%
+   5764  1213        cutoff             40.0000       33.1429  6914875   17.14%
+   5771  1215       34.0000   594       40.0000       33.6000  6929093   16.00%
+   5790  1208        cutoff             40.0000       33.6000  6933790   16.00%
+   5796  1210       34.0000   581       40.0000       33.6000  6936442   16.00%
+   5814  1205        cutoff             40.0000       33.6000  6940402   16.00%
+Elapsed time = 4612.36 sec. (2982421.24 ticks, tree = 81.98 MB, solutions = 12)
+   5822  1201       34.0000   348       40.0000       34.0000  6985817   15.00%
+   5840  1204       34.0000   355       40.0000       34.0000  6986698   15.00%
+   5854  1200        cutoff             40.0000       34.0000  6988947   15.00%
+   5858  1208       39.0000   694       40.0000       34.0000  6953359   15.00%
+   5865  1195        cutoff             40.0000       34.0000  6998029   15.00%
+   5870  1184        cutoff             40.0000       34.0000  7067591   15.00%
+   5880  1181        cutoff             40.0000       34.0000  7070025   15.00%
+   5892  1179        cutoff             40.0000       34.0000  7072661   15.00%
+   5906  1172        cutoff             40.0000       34.0000  7077746   15.00%
+   5918  1199        cutoff             40.0000       34.0000  7038904   15.00%
+Elapsed time = 4679.74 sec. (3024805.37 ticks, tree = 81.74 MB, solutions = 12)
+   5931  1165        cutoff             40.0000       34.0000  7118741   15.00%
+   5939  1164       39.0000   735       40.0000       34.0000  7125799   15.00%
+   5949  1192       37.0000   651       40.0000       34.0000  7062711   15.00%
+   5959  1163        cutoff             40.0000       34.0000  7132820   15.00%
+   5961  1158       39.0000   638       40.0000       34.0000  7146392   15.00%
+   5969  1160        cutoff             40.0000       34.0000  7148377   15.00%
+   5981  1155        cutoff             40.0000       34.0000  7217625   15.00%
+   5992  1153        cutoff             40.0000       34.0000  7219975   15.00%
+   6004  1154        cutoff             40.0000       34.0000  7202452   15.00%
+   6016  1161        cutoff             40.0000       34.0000  7182910   15.00%
+Elapsed time = 4771.94 sec. (3069822.49 ticks, tree = 79.51 MB, solutions = 12)
+   6024  1150       36.0000   203       40.0000       34.0000  7238537   15.00%
+   6031  1153       36.0000   202       40.0000       34.0000  7239461   15.00%
+   6042  1148       39.0000   287       40.0000       34.0000  7242672   15.00%
+   6049  1151       39.0000   324       40.0000       34.0000  7243160   15.00%
+   6053  1155       35.0000   665       40.0000       34.0000  7217813   15.00%
+   6056  1158       35.0000   641       40.0000       34.0000  7218391   15.00%
+   6071  1149        cutoff             40.0000       35.0000  7286468   12.50%
+   6081  1148       36.0000   213       40.0000       35.0000  7290618   12.50%
+   6094  1148       36.0000   328       40.0000       35.0000  7293072   12.50%
+   6118  1152       36.0000   604       40.0000       35.0000  7308060   12.50%
+Elapsed time = 4830.52 sec. (3116406.91 ticks, tree = 78.82 MB, solutions = 12)
+   6144  1157        cutoff             40.0000       35.0000  7324949   12.50%
+   6189  1140       37.0000   398       40.0000       35.0000  7303419   12.50%
+   6226  1154        cutoff             40.0000       35.0000  7332310   12.50%
+   6235  1136       36.0000   472       40.0000       35.0000  7307197   12.50%
+   6260  1134        cutoff             40.0000       35.0000  7310999   12.50%
+   6278  1169       36.1111   420       40.0000       35.0000  7351134   12.50%
+   6300  1172       36.0000   175       40.0000       35.0000  7355576   12.50%
+   6339  1167        cutoff             40.0000       35.0000  7361376   12.50%
+   6365  1138       36.0000   575       40.0000       35.0000  7313631   12.50%
+   6389  1146        cutoff             40.0000       35.0000  7379823   12.50%
+Elapsed time = 4870.90 sec. (3156310.82 ticks, tree = 78.18 MB, solutions = 12)
+   6408  1153       36.0000   435       40.0000       35.0000  7337237   12.50%
+   6432  1146       36.0000   442       40.0000       35.0000  7343074   12.50%
+   6455  1144        cutoff             40.0000       35.0000  7347128   12.50%
+   6479  1145       39.0000   392       40.0000       35.0000  7382572   12.50%
+   6498  1170        cutoff             40.0000       35.0000  7376581   12.50%
+   6519  1152       36.0000   340       40.0000       35.0000  7420784   12.50%
+   6554  1148       36.0000   357       40.0000       35.0000  7453041   12.50%
+   6581  1147       36.0000   388       40.0000       35.0000  7457091   12.50%
+   6623  1141        cutoff             40.0000       36.0000  7461608   10.00%
+   6665  1157       39.0000   419       40.0000       36.0000  7436208   10.00%
+Elapsed time = 4916.62 sec. (3196193.51 ticks, tree = 79.10 MB, solutions = 12)
+   6708  1155        cutoff             40.0000       36.0000  7440425   10.00%
+   6742  1155        cutoff             40.0000       36.0000  7495353   10.00%
+   6788  1153        cutoff             40.0000       36.0000  7447324   10.00%
+   6810  1139       37.0000   575       40.0000       36.0000  7401581   10.00%
+   6832  1160       36.0000   403       40.0000       36.0000  7449617   10.00%
+   6860  1163       39.0000   402       40.0000       36.0000  7452779   10.00%
+   6882  1156        cutoff             40.0000       36.0000  7457336   10.00%
+   6899  1141       36.0000   560       40.0000       36.0000  7504194   10.00%
+   6937  1148        cutoff             40.0000       36.0000  7519113   10.00%
+   6968  1141       39.0000   658       40.0000       36.0000  7523287   10.00%
+Elapsed time = 4957.24 sec. (3235269.36 ticks, tree = 77.09 MB, solutions = 12)
+   6994  1151        cutoff             40.0000       36.0000  7559409   10.00%
+   7025  1159       36.0000   443       40.0000       36.0000  7561781   10.00%
+   7047  1149        cutoff             40.0000       36.0000  7566474   10.00%
+   7079  1146        cutoff             40.0000       36.0000  7630684   10.00%
+   7095  1147       36.0000   771       40.0000       36.0000  7534947   10.00%
+   7106  1160       39.0000   633       40.0000       36.0000  7605177   10.00%
+   7117  1154       36.0000   658       40.0000       36.0000  7569753   10.00%
+   7138  1162       36.0000   531       40.0000       36.0000  7571620   10.00%
+   7156  1157       39.0000   519       40.0000       36.0000  7575725   10.00%
+   7173  1156        cutoff             40.0000       36.0000  7579052   10.00%
+Elapsed time = 5005.10 sec. (3274948.19 ticks, tree = 78.69 MB, solutions = 12)
+   7176  1153       36.0000   587       40.0000       36.0000  7536029   10.00%
+   7183  1148       36.0000   424       40.0000       36.0000  7661590   10.00%
+   7203  1137       36.0000   636       40.0000       36.0000  7658577   10.00%
+   7220  1135        cutoff             40.0000       36.0000  7771872   10.00%
+   7235  1148       36.0000   409       40.0000       36.0000  7704831   10.00%
+   7245  1141        cutoff             40.0000       36.0000  7709825   10.00%
+   7258  1117        cutoff             40.0000       36.0000  7810071   10.00%
+   7272  1151        cutoff             40.0000       36.0000  7755494   10.00%
+   7282  1145        cutoff             40.0000       36.0000  7759671   10.00%
+   7293  1135        cutoff             40.0000       36.0000  7779861   10.00%
+Elapsed time = 5059.51 sec. (3316275.02 ticks, tree = 77.02 MB, solutions = 12)
+   7303  1137       39.0000   430       40.0000       36.0000  7783124   10.00%
+   7312  1117       37.0000   761       40.0000       36.0000  7832422   10.00%
+   7314  1119       37.0000   609       40.0000       36.0000  7833071   10.00%
+   7330  1119       37.0000   591       40.0000       36.0000  7836519   10.00%
+   7339  1146       36.0000   793       40.0000       36.0000  7760677   10.00%
+   7345  1118       37.0000   867       40.0000       36.0000  7846283   10.00%
+   7359  1123       37.0000   634       40.0000       36.0000  7848884   10.00%
+   7379  1127       37.0000   235       40.0000       36.0000  7849463   10.00%
+   7427  1131    infeasible             40.0000       36.0000  7854925   10.00%
+   7464  1117        cutoff             40.0000       36.0000  7860543   10.00%
+Elapsed time = 5118.38 sec. (3364123.49 ticks, tree = 75.96 MB, solutions = 12)
+   7479  1111        cutoff             40.0000       36.0000  7864550   10.00%
+   7507  1133       37.0000   311       40.0000       36.0000  7946177   10.00%
+   7530  1108       39.0000   459       40.0000       36.0000  7870201   10.00%
+   7540  1101        cutoff             40.0000       36.0000  7875955   10.00%
+   7561  1118        cutoff             40.0000       36.0000  7874320   10.00%
+   7580  1119        cutoff             40.0000       36.0000  7996470   10.00%
+   7585  1127       37.0000   338       40.0000       36.0000  7950497   10.00%
+   7605  1128       37.0000   370       40.0000       36.0000  7953671   10.00%
+   7623  1133       36.0000   633       40.0000       36.0000  7900945   10.00%
+   7640  1128        cutoff             40.0000       36.0000  7904763   10.00%
+Elapsed time = 5170.34 sec. (3407640.84 ticks, tree = 76.65 MB, solutions = 12)
+   7664  1118        cutoff             40.0000       36.0000  7999067   10.00%
+   7685  1120       37.0000   418       40.0000       36.0000  7963802   10.00%
+   7722  1107        cutoff             40.0000       36.0000  8008022   10.00%
+   7728  1108       37.0000   469       40.0000       36.0000  8008274   10.00%
+   7753  1134       37.0000   614       40.0000       36.0000  8048859   10.00%
+   7769  1101        cutoff             40.0000       36.0000  8016583   10.00%
+   7774  1104       37.0000   593       40.0000       36.0000  8018984   10.00%
+   7802  1108        cutoff             40.0000       36.0000  8097109   10.00%
+   7829  1142        cutoff             40.0000       36.0000  8061634   10.00%
+   7862  1126       37.0000   150       40.0000       36.0000  8032308   10.00%
+Elapsed time = 5211.72 sec. (3447597.00 ticks, tree = 76.66 MB, solutions = 12)
+   7903  1121        cutoff             40.0000       36.0000  8037132   10.00%
+   7939  1122        cutoff             40.0000       36.0000  8040198   10.00%
+   7977  1093        cutoff             40.0000       36.0000  8124727   10.00%
+   8004  1112        cutoff             40.0000       36.0000  8081571   10.00%
+   8032  1085        cutoff             40.0000       36.0000  8131996   10.00%
+   8051  1112       37.0000   820       40.0000       36.0000  8087341   10.00%
+   8073  1097       37.0000   651       40.0000       36.0000  8124704   10.00%
+   8100  1110        cutoff             40.0000       36.0000  8093721   10.00%
+   8118  1093       39.0000   570       40.0000       36.0000  8142222   10.00%
+   8155  1051       37.0000   335       40.0000       37.0000  8222128    7.50%
+Elapsed time = 5256.10 sec. (3486720.96 ticks, tree = 70.35 MB, solutions = 12)
+   8196  1088        cutoff             40.0000       37.0000  8148528    7.50%
+   8227  1047        cutoff             40.0000       37.0000  8230380    7.50%
+   8244  1071       37.0000   537       40.0000       37.0000  8184452    7.50%
+   8260  1018        cutoff             40.0000       37.0000  8313517    7.50%
+   8269  1015        cutoff             40.0000       37.0000  8317640    7.50%
+   8282  1063        cutoff             40.0000       37.0000  8196527    7.50%
+   8296  1028        cutoff             40.0000       37.0000  8322644    7.50%
+   8304  1001        cutoff             40.0000       37.0000  8351647    7.50%
+   8312  1016       38.0000   335       40.0000       37.0000  8323624    7.50%
+   8321  1012        cutoff             40.0000       37.0000  8326780    7.50%
+Elapsed time = 5327.96 sec. (3528495.61 ticks, tree = 66.89 MB, solutions = 12)
+   8326  1011       38.0000   355       40.0000       37.0000  8328772    7.50%
+   8350  1046       39.0000   532       40.0000       37.0000  8246199    7.50%
+   8372  1036        cutoff             40.0000       37.0000  8344766    7.50%
+   8389   989        cutoff             40.0000       37.0000  8379418    7.50%
+   8398   991       38.0000   508       40.0000       37.0000  8380054    7.50%
+   8406   995       39.0000   349       40.0000       37.0000  8429580    7.50%
+   8420   995       39.0000   335       40.0000       37.0000  8431092    7.50%
+   8432   997       39.0000   278       40.0000       37.0000  8431947    7.50%
+   8454  1009        cutoff             40.0000       37.0000  8335741    7.50%
+   8481   998       39.0000   460       40.0000       37.0000  8384114    7.50%
+Elapsed time = 5428.48 sec. (3571224.70 ticks, tree = 65.34 MB, solutions = 12)
+   8512   984        cutoff             40.0000       37.0000  8451986    7.50%
+   8539   989       38.0000   500       40.0000       37.0000  8468319    7.50%
+   8553  1000        cutoff             40.0000       37.0000  8437064    7.50%
+   8569   995        cutoff             40.0000       37.0000  8394935    7.50%
+   8590   985       39.0000   467       40.0000       37.0000  8476251    7.50%
+   8618   983        cutoff             40.0000       37.0000  8479715    7.50%
+   8641   980       38.0000   618       40.0000       37.0000  8494579    7.50%
+   8661  1000       38.0000   374       40.0000       37.0000  8443459    7.50%
+   8699   996        cutoff             40.0000       37.0000  8448041    7.50%
+   8734   976        cutoff             40.0000       37.0000  8514990    7.50%
+Elapsed time = 5474.87 sec. (3610526.90 ticks, tree = 63.45 MB, solutions = 12)
+   8751   995        cutoff             40.0000       37.0000  8453407    7.50%
+   8774   961        cutoff             40.0000       38.0000  8552223    5.00%
+   8799   960        cutoff             40.0000       38.0000  8555812    5.00%
+   8830   957       39.0000   349       40.0000       38.0000  8559594    5.00%
+   8854   956        cutoff             40.0000       38.0000  8541801    5.00%
+   8870   962       39.0000   420       40.0000       38.0000  8538399    5.00%
+   8884   953       39.0000   349       40.0000       38.0000  8578383    5.00%
+   8901   956        cutoff             40.0000       38.0000  8543642    5.00%
+   8917   947       39.0000   486       40.0000       38.0000  8547591    5.00%
+   8927   942        cutoff             40.0000       38.0000  8550058    5.00%
+Elapsed time = 5536.81 sec. (3656056.61 ticks, tree = 60.24 MB, solutions = 12)
+   8955   954        cutoff             40.0000       38.0000  8562711    5.00%
+   8986   939       39.0000   381       40.0000       38.0000  8552763    5.00%
+   9011   940       39.0000   400       40.0000       38.0000  8556284    5.00%
+   9034   938        cutoff             40.0000       38.0000  8556810    5.00%
+   9060   931       38.0000   590       40.0000       38.0000  8599345    5.00%
+   9086   903        cutoff             40.0000       38.0000  8633622    5.00%
+   9100   874        cutoff             40.0000       38.0000  8663853    5.00%
+   9121   903       39.0000   342       40.0000       38.0000  8634463    5.00%
+   9150   862        cutoff             40.0000       38.0000  8669438    5.00%
+   9171   898       39.0000   324       40.0000       38.0000  8637676    5.00%
+Elapsed time = 5584.61 sec. (3695528.22 ticks, tree = 56.17 MB, solutions = 12)
+   9176   858       39.0000   415       40.0000       38.0000  8671549    5.00%
+   9193   916       39.0000   368       40.0000       38.0000  8619725    5.00%
+   9220   912       39.0000   150       40.0000       38.0000  8623604    5.00%
+   9264   878        cutoff             40.0000       38.0000  8646660    5.00%
+   9302   875       39.0000   456       40.0000       38.0000  8650252    5.00%
+   9356   866        cutoff             40.0000       38.0000  8654973    5.00%
+   9385   913       39.0000   324       40.0000       38.0000  8618957    5.00%
+   9417   866       39.0000   467       40.0000       38.0000  8655357    5.00%
+   9474   891        cutoff             40.0000       38.0000  8628785    5.00%
+   9521   870        cutoff             40.0000       38.0000  8646582    5.00%
+Elapsed time = 5631.07 sec. (3737327.18 ticks, tree = 53.82 MB, solutions = 12)
+   9555   824        cutoff             40.0000       38.0000  8697491    5.00%
+   9582   781        cutoff             40.0000       38.0000  8733566    5.00%
+   9620   774       39.0000   407       40.0000       38.0000  8736495    5.00%
+   9664   770       39.0000   416       40.0000       38.0000  8740333    5.00%
+   9703   762        cutoff             40.0000       38.0000  8744130    5.00%
+   9713   762       39.0000   428       40.0000       38.0000  8744592    5.00%
+   9743   807       39.0000   464       40.0000       38.0000  8715245    5.00%
+   9769   713        cutoff             40.0000       38.0000  8782313    5.00%
+   9797   674        cutoff             40.0000       39.0000  8803127    2.50%
+   9811   752       39.0000   454       40.0000       39.0000  8754819    2.50%
+Elapsed time = 5680.61 sec. (3776574.09 ticks, tree = 42.61 MB, solutions = 12)
+   9827   664       39.0000   393       40.0000       39.0000  8808345    2.50%
+   9852   713       39.0000   446       40.0000       39.0000  8784531    2.50%
+   9866   658       39.0000   484       40.0000       39.0000  8811443    2.50%
+   9886   802        cutoff             40.0000       39.0000  8718847    2.50%
+   9892   738        cutoff             40.0000       39.0000  8766234    2.50%
+   9900   706       39.0000   425       40.0000       39.0000  8788522    2.50%
+   9913   701       39.0000   503       40.0000       39.0000  8791998    2.50%
+   9917   699       39.0000   465       40.0000       39.0000  8793189    2.50%
+   9932   658       39.0000   480       40.0000       39.0000  8812848    2.50%
+   9961   655        cutoff             40.0000       39.0000  8816056    2.50%
+Elapsed time = 5732.98 sec. (3816299.35 ticks, tree = 34.77 MB, solutions = 12)
+   9988   582        cutoff             40.0000       39.0000  8875335    2.50%
+  10005   564        cutoff             40.0000       39.0000  8892523    2.50%
+  10020   578        cutoff             40.0000       39.0000  8878560    2.50%
+  10041   645        cutoff             40.0000       39.0000  8825411    2.50%
+  10067   560        cutoff             40.0000       39.0000  8896793    2.50%
+  10087   520        cutoff             40.0000       39.0000  8921883    2.50%
+  10112   555       39.0000   430       40.0000       39.0000  8901914    2.50%
+  10136   553       39.0000   572       40.0000       39.0000  8895953    2.50%
+  10157   551       39.0000   521       40.0000       39.0000  8899273    2.50%
+  10168   519       39.0000   440       40.0000       39.0000  8924504    2.50%
+Elapsed time = 5794.32 sec. (3857086.20 ticks, tree = 23.78 MB, solutions = 12)
+  10194   547       39.0000   488       40.0000       39.0000  8909495    2.50%
+  10211   509        cutoff             40.0000       39.0000  8932159    2.50%
+  10244   552       39.0000   514       40.0000       39.0000  8902589    2.50%
+  10275   532        cutoff             40.0000       39.0000  8918503    2.50%
+  10292   529        cutoff             40.0000       39.0000  8922173    2.50%
+  10302   531        cutoff             40.0000       39.0000  8924919    2.50%
+  10310   551       39.0000   453       40.0000       39.0000  8905455    2.50%
+  10350   476        cutoff             40.0000       39.0000  8962241    2.50%
+  10384   496        cutoff             40.0000       39.0000  8947225    2.50%
+  10417   452        cutoff             40.0000       39.0000  8978886    2.50%
+Elapsed time = 5844.92 sec. (3896855.67 ticks, tree = 18.58 MB, solutions = 12)
+  10448   423        cutoff             40.0000       39.0000  9004096    2.50%
+  10475   448        cutoff             40.0000       39.0000  8985567    2.50%
+  10516   377        cutoff             40.0000       39.0000  9050966    2.50%
+  10549   444        cutoff             40.0000       39.0000  8992297    2.50%
+  10578   441        cutoff             40.0000       39.0000  8987755    2.50%
+  10609   440        cutoff             40.0000       39.0000  8991215    2.50%
+  10647   433        cutoff             40.0000       39.0000  9002709    2.50%
+  10689   438       39.0000   615       40.0000       39.0000  8998087    2.50%
+  10727   408        cutoff             40.0000       39.0000  9017055    2.50%
+  10765   443        cutoff             40.0000       39.0000  9003643    2.50%
+Elapsed time = 5896.90 sec. (3935983.15 ticks, tree = 18.35 MB, solutions = 12)
+  10797   341        cutoff             40.0000       39.0000  9079162    2.50%
+  10831   388        cutoff             40.0000       39.0000  9028274    2.50%
+  10864   433       39.0000   564       40.0000       39.0000  9014842    2.50%
+  10897   404        cutoff             40.0000       39.0000  9026308    2.50%
+  10922   272        cutoff             40.0000       39.0000  9164190    2.50%
+  10945   309        cutoff             40.0000       39.0000  9109060    2.50%
+  10968   260        cutoff             40.0000       39.0000  9171734    2.50%
+  10989   255        cutoff             40.0000       39.0000  9175259    2.50%
+  11021   254        cutoff             40.0000       39.0000  9178562    2.50%
+  11057   225        cutoff             40.0000       39.0000  9225935    2.50%
+Elapsed time = 5945.14 sec. (3975123.70 ticks, tree = 6.59 MB, solutions = 12)
+  11090   253        cutoff             40.0000       39.0000  9184433    2.50%
+  11126   176        cutoff             40.0000       39.0000  9259346    2.50%
+  11155   227        cutoff             40.0000       39.0000  9234962    2.50%
+  11191   216        cutoff             40.0000       39.0000  9239311    2.50%
+  11223   176       39.0000   527       40.0000       39.0000  9267355    2.50%
+  11260   157        cutoff             40.0000       39.0000  9287920    2.50%
+  11292   300        cutoff             40.0000       39.0000  9144632    2.50%
+  11308   210       39.0000   791       40.0000       39.0000  9251816    2.50%
+  11340   129        cutoff             40.0000       39.0000  9318164    2.50%
+  11363   294       39.0000   666       40.0000       39.0000  9154382    2.50%
+Elapsed time = 5988.70 sec. (4014697.02 ticks, tree = 8.25 MB, solutions = 12)
+  11399   204        cutoff             40.0000       39.0000  9261283    2.50%
+  11426   118        cutoff             40.0000       39.0000  9327557    2.50%
+  11461   149        cutoff             40.0000       39.0000  9310054    2.50%
+  11490    82        cutoff             40.0000       39.0000  9388706    2.50%
+  11516    81        cutoff             40.0000       39.0000  9391792    2.50%
+  11549    87       39.0000   380       40.0000       39.0000  9394981    2.50%
+  11577    84       39.0000   364       40.0000       39.0000  9399551    2.50%
+  11592    12       39.0000   423       40.0000       39.0000  9515028    2.50%
+  11609    48       39.0000   330       40.0000       39.0000  9454100    2.50%
+  11625    75       39.0000   496       40.0000       39.0000  9395626    2.50%
+Elapsed time = 6036.27 sec. (4057270.49 ticks, tree = 1.30 MB, solutions = 12)
+  11635    71       39.0000   722       40.0000       39.0000  9399246    2.50%
+  11644    17       39.0000   684       40.0000       39.0000  9515539    2.50%
+  11653    14        cutoff             40.0000       39.0000  9518401    2.50%
+
+GUB cover cuts applied:  13
+Clique cuts applied:  49
+Implied bound cuts applied:  1
+Mixed integer rounding cuts applied:  200
+Zero-half cuts applied:  235
+Lift and project cuts applied:  8
+Gomory fractional cuts applied:  23
+
+Root node processing (before b&c):
+  Real time             =  783.97 sec. (520753.01 ticks)
+Parallel b&c, 4 threads:
+  Real time             = 5278.26 sec. (3562485.90 ticks)
+  Sync time (average)   =  765.30 sec.
+  Wait time (average)   =    0.02 sec.
+                          ------------
+Total (root+branch&cut) = 6062.24 sec. (4083238.92 ticks)
+Objective Function Value: 40
+User cuts 0
+Total cuts 529
+Optimization done in 6062.26 secs.
+Status: Optimal
+Objective Function Value: 40
+x(1,12,9,6) = 1
+x(1,9,8,6) = 1
+x(1,7,5,6) = 1
+x(1,8,7,6) = 1
+x(2,12,11,38) = 1
+x(2,13,12,38) = 1
+x(3,13,12,21) = 1
+x(4,8,1,40) = 1
+x(4,2,3,40) = 1
+x(4,1,2,40) = 1
+x(5,6,10,21) = 1
+x(6,5,6,37) = 1
+x(6,6,10,37) = 1
+x(7,2,4,7) = 1
+x(8,14,11,18) = 1
+x(8,9,14,18) = 1
+x(8,11,4,18) = 1
+x(9,12,9,21) = 1
+x(9,9,8,21) = 1
+x(9,11,12,21) = 1
+x(10,6,3,12) = 1
+x(10,3,1,12) = 1
+x(11,6,13,40) = 1
+x(12,5,6,12) = 1
+x(12,4,5,12) = 1
+x(13,7,8,21) = 1
+x(13,5,7,21) = 1
+x(13,6,5,21) = 1
+x(14,14,11,27) = 1
+x(14,11,12,27) = 1
+x(15,12,13,6) = 1
+x(15,11,12,6) = 1
+x(15,4,11,6) = 1
+x(16,5,7,27) = 1
+x(17,14,11,40) = 1
+x(17,11,4,40) = 1
+x(17,4,2,40) = 1
+x(18,5,6,34) = 1
+x(18,6,3,34) = 1
+x(18,3,1,34) = 1
+x(19,10,6,40) = 1
+x(19,6,3,40) = 1
+x(20,10,6,27) = 1
+x(20,6,5,27) = 1
+x(21,7,5,15) = 1
+x(21,5,4,15) = 1
+x(21,4,11,15) = 1
+x(22,14,11,15) = 1
+x(22,9,14,15) = 1
+x(23,14,13,9) = 1
+x(23,9,14,9) = 1
+x(23,13,6,9) = 1
+x(23,6,3,9) = 1
+x(24,13,6,6) = 1
+x(24,6,3,6) = 1
+x(24,3,2,6) = 1
+x(25,13,12,33) = 1
+x(25,6,13,33) = 1
+x(26,4,5,37) = 1
+x(27,4,11,3) = 1
+x(27,2,4,3) = 1
+x(28,9,8,33) = 1
+x(28,10,9,33) = 1
+x(29,14,11,34) = 1
+x(29,11,4,34) = 1
+x(29,4,2,34) = 1
+x(30,7,5,30) = 1
+x(30,5,6,30) = 1
+x(30,6,3,30) = 1
+x(30,3,1,30) = 1
+x(31,12,9,12) = 1
+x(31,9,10,12) = 1
+x(31,10,6,12) = 1
+x(32,13,14,18) = 1
+x(32,6,13,18) = 1
+x(33,12,13,12) = 1
+x(33,13,6,12) = 1
+x(34,12,11,33) = 1
+x(35,1,8,9) = 1
+x(36,2,4,37) = 1
+x(37,5,4,22) = 1
+x(37,4,2,22) = 1
+x(37,2,1,22) = 1
+x(38,12,9,24) = 1
+x(38,9,10,24) = 1
+x(38,13,12,24) = 1
+x(38,6,13,24) = 1
+x(38,3,6,24) = 1
+x(39,7,5,36) = 1
+x(39,8,7,36) = 1
+x(40,12,13,27) = 1
+x(40,9,12,27) = 1
+x(40,13,6,27) = 1
+x(40,6,3,27) = 1
+x(41,5,6,6) = 1
+x(41,4,5,6) = 1
+x(42,2,4,16) = 1
+x(43,14,13,21) = 1
+x(43,9,14,21) = 1
+x(43,13,6,21) = 1
+x(43,10,9,21) = 1
+x(43,6,3,21) = 1
+x(44,12,11,10) = 1
+x(44,11,4,10) = 1
+x(44,4,2,10) = 1
+x(44,2,3,10) = 1
+x(45,9,10,18) = 1
+x(46,9,14,6) = 1
+x(46,10,9,6) = 1
+x(46,6,10,6) = 1
+x(47,8,7,40) = 1
+x(48,6,3,37) = 1
+x(48,3,2,37) = 1
+x(48,2,1,37) = 1
+x(49,12,9,18) = 1
+x(49,9,8,18) = 1
+x(49,11,12,18) = 1
+x(50,12,13,15) = 1
+x(50,9,12,15) = 1
+x(50,7,8,15) = 1
+x(50,8,9,15) = 1
+x(51,10,6,33) = 1
+x(52,12,11,3) = 1
+x(52,13,12,3) = 1
+x(53,2,1,12) = 1
+x(53,1,8,12) = 1
+x(54,3,2,16) = 1
+x(55,2,1,28) = 1
+x(55,1,8,28) = 1
+x(56,5,6,24) = 1
+x(56,6,10,24) = 1
+x(57,10,6,15) = 1
+x(57,6,3,15) = 1
+x(57,3,1,15) = 1
+x(58,4,5,25) = 1
+x(58,2,4,25) = 1
+x(59,14,11,4) = 1
+x(60,14,13,39) = 1
+x(60,9,14,39) = 1
+x(60,8,9,39) = 1
+x(61,12,9,39) = 1
+x(61,9,10,39) = 1
+x(62,13,14,3) = 1
+x(62,6,13,3) = 1
+x(62,3,6,3) = 1
+x(62,2,3,3) = 1
+x(63,14,11,30) = 1
+x(63,13,14,30) = 1
+x(64,11,4,21) = 1
+x(65,4,11,31) = 1
+x(66,14,11,24) = 1
+x(66,9,14,24) = 1
+x(66,11,4,24) = 1
+x(67,4,5,31) = 1
+x(67,3,2,31) = 1
+x(67,2,4,31) = 1
+x(68,7,5,40) = 1
+x(69,8,9,27) = 1
+x(70,7,8,12) = 1
+x(70,5,7,12) = 1
+x(70,8,9,12) = 1
+maxSliceOverall = 40
+ Time: 6062.26
+
+Update RSA
+Feasible
+Enter update.
+Leave update.
+
+--- Slice occupation ---
+#1. 1-2. ---------***----******---***------******-----------------------------------------------------------------
+#2. 1-3. ---------******------------***-***-----------------------------------------------------------------------
+#3. 1-8. ------******-------------***---------***-----------------------------------------------------------------
+#4. 2-3. ******-***---***---------******---******-----------------------------------------------------------------
+#5. 2-4. ****************************************-----------------------------------------------------------------
+#6. 3-6. ***************---************-*********-----------------------------------------------------------------
+#7. 4-5. ***************-***************--****--------------------------------------------------------------------
+#8. 4-11. ******-***--************-*********---***-----------------------------------------------------------------
+#9. 5-6. ************---***************-******--------------------------------------------------------------------
+#10. 5-7. ************************************-***-----------------------------------------------------------------
+#11. 6-10. *********************************-******-----------------------------------------------------------------
+#12. 6-13. *********************************-******-----------------------------------------------------------------
+#13. 7-8. *********************---------******-***-----------------------------------------------------------------
+#14. 8-9. ***************************************------------------------------------------------------------------
+#15. 9-10. ************************---************------------------------------------------------------------------
+#16. 9-12. ***************************------******------------------------------------------------------------------
+#17. 9-14. ************************---------******------------------------------------------------------------------
+#18. 11-12. ******-***-----******---*********-****-------------------------------------------------------------------
+#19. 11-14. ****-----*********---*********-***---***-----------------------------------------------------------------
+#20. 12-13. ******---************************-****-------------------------------------------------------------------
+#21. 13-14. ***---***---*********------***---******------------------------------------------------------------------
+
+For demand 1 : 
+(12--9, 6)
+(9--8, 6)
+(7--5, 6)
+(8--7, 6)
+
+For demand 2 : 
+(12--11, 38)
+(13--12, 38)
+
+For demand 3 : 
+(13--12, 21)
+
+For demand 4 : 
+(8--1, 40)
+(2--3, 40)
+(1--2, 40)
+
+For demand 5 : 
+(6--10, 21)
+
+For demand 6 : 
+(5--6, 37)
+(6--10, 37)
+
+For demand 7 : 
+(2--4, 7)
+
+For demand 8 : 
+(14--11, 18)
+(9--14, 18)
+(11--4, 18)
+
+For demand 9 : 
+(12--9, 21)
+(9--8, 21)
+(11--12, 21)
+
+For demand 10 : 
+(6--3, 12)
+(3--1, 12)
+
+For demand 11 : 
+(6--13, 40)
+
+For demand 12 : 
+(5--6, 12)
+(4--5, 12)
+
+For demand 13 : 
+(7--8, 21)
+(5--7, 21)
+(6--5, 21)
+
+For demand 14 : 
+(14--11, 27)
+(11--12, 27)
+
+For demand 15 : 
+(12--13, 6)
+(11--12, 6)
+(4--11, 6)
+
+For demand 16 : 
+(5--7, 27)
+
+For demand 17 : 
+(14--11, 40)
+(11--4, 40)
+(4--2, 40)
+
+For demand 18 : 
+(5--6, 34)
+(6--3, 34)
+(3--1, 34)
+
+For demand 19 : 
+(10--6, 40)
+(6--3, 40)
+
+For demand 20 : 
+(10--6, 27)
+(6--5, 27)
+
+For demand 21 : 
+(7--5, 15)
+(5--4, 15)
+(4--11, 15)
+
+For demand 22 : 
+(14--11, 15)
+(9--14, 15)
+
+For demand 23 : 
+(14--13, 9)
+(9--14, 9)
+(13--6, 9)
+(6--3, 9)
+
+For demand 24 : 
+(13--6, 6)
+(6--3, 6)
+(3--2, 6)
+
+For demand 25 : 
+(13--12, 33)
+(6--13, 33)
+
+For demand 26 : 
+(4--5, 37)
+
+For demand 27 : 
+(4--11, 3)
+(2--4, 3)
+
+For demand 28 : 
+(9--8, 33)
+(10--9, 33)
+
+For demand 29 : 
+(14--11, 34)
+(11--4, 34)
+(4--2, 34)
+
+For demand 30 : 
+(7--5, 30)
+(5--6, 30)
+(6--3, 30)
+(3--1, 30)
+
+For demand 31 : 
+(12--9, 12)
+(9--10, 12)
+(10--6, 12)
+
+For demand 32 : 
+(13--14, 18)
+(6--13, 18)
+
+For demand 33 : 
+(12--13, 12)
+(13--6, 12)
+
+For demand 34 : 
+(12--11, 33)
+
+For demand 35 : 
+(1--8, 9)
+
+For demand 36 : 
+(2--4, 37)
+
+For demand 37 : 
+(5--4, 22)
+(4--2, 22)
+(2--1, 22)
+
+For demand 38 : 
+(12--9, 24)
+(9--10, 24)
+(13--12, 24)
+(6--13, 24)
+(3--6, 24)
+
+For demand 39 : 
+(7--5, 36)
+(8--7, 36)
+
+For demand 40 : 
+(12--13, 27)
+(9--12, 27)
+(13--6, 27)
+(6--3, 27)
+
+For demand 41 : 
+(5--6, 6)
+(4--5, 6)
+
+For demand 42 : 
+(2--4, 16)
+
+For demand 43 : 
+(14--13, 21)
+(9--14, 21)
+(13--6, 21)
+(10--9, 21)
+(6--3, 21)
+
+For demand 44 : 
+(12--11, 10)
+(11--4, 10)
+(4--2, 10)
+(2--3, 10)
+
+For demand 45 : 
+(9--10, 18)
+
+For demand 46 : 
+(9--14, 6)
+(10--9, 6)
+(6--10, 6)
+
+For demand 47 : 
+(8--7, 40)
+
+For demand 48 : 
+(6--3, 37)
+(3--2, 37)
+(2--1, 37)
+
+For demand 49 : 
+(12--9, 18)
+(9--8, 18)
+(11--12, 18)
+
+For demand 50 : 
+(12--13, 15)
+(9--12, 15)
+(7--8, 15)
+(8--9, 15)
+
+For demand 51 : 
+(10--6, 33)
+
+For demand 52 : 
+(12--11, 3)
+(13--12, 3)
+
+For demand 53 : 
+(2--1, 12)
+(1--8, 12)
+
+For demand 54 : 
+(3--2, 16)
+
+For demand 55 : 
+(2--1, 28)
+(1--8, 28)
+
+For demand 56 : 
+(5--6, 24)
+(6--10, 24)
+
+For demand 57 : 
+(10--6, 15)
+(6--3, 15)
+(3--1, 15)
+
+For demand 58 : 
+(4--5, 25)
+(2--4, 25)
+
+For demand 59 : 
+(14--11, 4)
+
+For demand 60 : 
+(14--13, 39)
+(9--14, 39)
+(8--9, 39)
+
+For demand 61 : 
+(12--9, 39)
+(9--10, 39)
+
+For demand 62 : 
+(13--14, 3)
+(6--13, 3)
+(3--6, 3)
+(2--3, 3)
+
+For demand 63 : 
+(14--11, 30)
+(13--14, 30)
+
+For demand 64 : 
+(11--4, 21)
+
+For demand 65 : 
+(4--11, 31)
+
+For demand 66 : 
+(14--11, 24)
+(9--14, 24)
+(11--4, 24)
+
+For demand 67 : 
+(4--5, 31)
+(3--2, 31)
+(2--4, 31)
+
+For demand 68 : 
+(7--5, 40)
+
+For demand 69 : 
+(8--9, 27)
+
+For demand 70 : 
+(7--8, 12)
+(5--7, 12)
+(8--9, 12)
+
+Displaying OSNR 
+For demand 1 : 19.1638 x 16 limit
+For demand 2 : 20.9679 x 16 limit
+For demand 3 : 27.8125 x 21 limit
+For demand 4 : 14.3272 x 13 limit
+For demand 5 : 22.8554 x 16 limit
+For demand 6 : 17.0681 x 15 limit
+For demand 7 : 22.0952 x 16 limit
+For demand 8 : 15.0793 x 13 limit
+For demand 9 : 17.4565 x 15 limit
+For demand 10 : 15.2671 x 13 limit
+For demand 11 : 20.8698 x 16 limit
+For demand 12 : 21.3832 x 21 limit
+For demand 13 : 19.4074 x 16 limit
+For demand 14 : 18.3209 x 15 limit
+For demand 15 : 15.2226 x 13 limit
+For demand 16 : 24.3415 x 21 limit
+For demand 17 : 14.5639 x 13 limit
+For demand 18 : 14.0876 x 13 limit
+For demand 19 : 15.7295 x 13 limit
+For demand 20 : 17.0681 x 15 limit
+For demand 21 : 14.9487 x 13 limit
+For demand 22 : 22.3369 x 16 limit
+For demand 23 : 13.9398 x 13 limit
+For demand 24 : 14.2016 x 13 limit
+For demand 25 : 20.0702 x 16 limit
+For demand 26 : 24.0349 x 16 limit
+For demand 27 : 15.5904 x 13 limit
+For demand 28 : 21.7049 x 21 limit
+For demand 29 : 14.5639 x 13 limit
+For demand 30 : 13.3371 x 13 limit
+For demand 31 : 19.6054 x 16 limit
+For demand 32 : 20.0702 x 16 limit
+For demand 33 : 17.0599 x 15 limit
+For demand 34 : 24.3415 x 21 limit
+For demand 35 : 16.5021 x 13 limit
+For demand 36 : 20.8458 x 15 limit
+For demand 37 : 19.4357 x 16 limit
+For demand 38 : 13.225 x 13 limit
+For demand 39 : 21.6607 x 16 limit
+For demand 40 : 13.9398 x 13 limit
+For demand 41 : 21.3832 x 21 limit
+For demand 42 : 23.8561 x 21 limit
+For demand 43 : 13.225 x 13 limit
+For demand 44 : 13.9546 x 13 limit
+For demand 45 : 24.4238 x 24 limit
+For demand 46 : 19.6054 x 16 limit
+For demand 47 : 22.0173 x 15 limit
+For demand 48 : 15.0984 x 13 limit
+For demand 49 : 17.4565 x 15 limit
+For demand 50 : 16.9473 x 15 limit
+For demand 51 : 22.8554 x 16 limit
+For demand 52 : 19.7185 x 15 limit
+For demand 53 : 14.9955 x 13 limit
+For demand 54 : 22.7855 x 15 limit
+For demand 55 : 14.9955 x 13 limit
+For demand 56 : 17.0681 x 15 limit
+For demand 57 : 13.9686 x 13 limit
+For demand 58 : 18.6979 x 15 limit
+For demand 59 : 22.5806 x 16 limit
+For demand 60 : 21.5766 x 21 limit
+For demand 61 : 22.3885 x 16 limit
+For demand 62 : 13.8389 x 13 limit
+For demand 63 : 19.7185 x 15 limit
+For demand 64 : 17.128 x 13 limit
+For demand 65 : 20.1383 x 16 limit
+For demand 66 : 15.0793 x 13 limit
+For demand 67 : 20.2776 x 16 limit
+For demand 68 : 21.3312 x 15 limit
+For demand 69 : 25.0276 x 24 limit
+For demand 70 : 20.0154 x 16 limit
+Extra OSNR in routing: 220.655
+Displaying data for multiple metrics 
+Accepted demand set: 70
+Demands in C band: 70
+Links with L band: 0
+Network last used slot: 40
+Sum of last used slots: 819
+Sum of used links by demands: 161
+Total route length: 176400
+Total used slots: 641
+Total used amplifiers: 84016.7
+Time taken by iteration is : 6076.607680 sec
+UB: 40.000000000
+LB: 40.000000000
+GAP: 0.000000000
+Tree size: 11657
+Time: 6062.257575035
+
+Output demands_1_FINAL
+Output EdgeSliceHols: demands_1_FINAL
+
+--- The Demands ---
+#1. 12 -- 5. nbSlices C: 6, maxCD C: 50000.000000000, osnrLimit C: 16.000000000, pchC: 0.000750000, transpIdC: 5. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#2. 13 -- 11. nbSlices C: 4, maxCD C: 20000.000000000, osnrLimit C: 16.000000000, pchC: 0.000500000, transpIdC: 3. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#3. 13 -- 12. nbSlices C: 6, maxCD C: 40000.000000000, osnrLimit C: 21.000000000, pchC: 0.000750000, transpIdC: 6. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 300.000000000, ROUTED: YES
+#4. 8 -- 3. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#5. 6 -- 10. nbSlices C: 6, maxCD C: 50000.000000000, osnrLimit C: 16.000000000, pchC: 0.000750000, transpIdC: 5. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#6. 5 -- 10. nbSlices C: 3, maxCD C: 40000.000000000, osnrLimit C: 15.000000000, pchC: 0.000375000, transpIdC: 1. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#7. 2 -- 4. nbSlices C: 4, maxCD C: 20000.000000000, osnrLimit C: 16.000000000, pchC: 0.000500000, transpIdC: 3. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#8. 9 -- 4. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#9. 11 -- 8. nbSlices C: 3, maxCD C: 40000.000000000, osnrLimit C: 15.000000000, pchC: 0.000375000, transpIdC: 1. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#10. 6 -- 1. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#11. 6 -- 13. nbSlices C: 6, maxCD C: 50000.000000000, osnrLimit C: 16.000000000, pchC: 0.000750000, transpIdC: 5. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#12. 4 -- 6. nbSlices C: 6, maxCD C: 40000.000000000, osnrLimit C: 21.000000000, pchC: 0.000750000, transpIdC: 6. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 300.000000000, ROUTED: YES
+#13. 6 -- 8. nbSlices C: 6, maxCD C: 50000.000000000, osnrLimit C: 16.000000000, pchC: 0.000750000, transpIdC: 5. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#14. 14 -- 12. nbSlices C: 3, maxCD C: 40000.000000000, osnrLimit C: 15.000000000, pchC: 0.000375000, transpIdC: 1. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#15. 4 -- 13. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#16. 5 -- 7. nbSlices C: 6, maxCD C: 40000.000000000, osnrLimit C: 21.000000000, pchC: 0.000750000, transpIdC: 6. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 300.000000000, ROUTED: YES
+#17. 14 -- 2. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#18. 5 -- 1. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#19. 10 -- 3. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#20. 10 -- 5. nbSlices C: 3, maxCD C: 40000.000000000, osnrLimit C: 15.000000000, pchC: 0.000375000, transpIdC: 1. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#21. 7 -- 11. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#22. 9 -- 11. nbSlices C: 6, maxCD C: 50000.000000000, osnrLimit C: 16.000000000, pchC: 0.000750000, transpIdC: 5. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#23. 9 -- 3. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#24. 13 -- 2. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#25. 6 -- 12. nbSlices C: 6, maxCD C: 50000.000000000, osnrLimit C: 16.000000000, pchC: 0.000750000, transpIdC: 5. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#26. 4 -- 5. nbSlices C: 4, maxCD C: 20000.000000000, osnrLimit C: 16.000000000, pchC: 0.000500000, transpIdC: 3. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#27. 2 -- 11. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#28. 10 -- 8. nbSlices C: 6, maxCD C: 40000.000000000, osnrLimit C: 21.000000000, pchC: 0.000750000, transpIdC: 6. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 300.000000000, ROUTED: YES
+#29. 14 -- 2. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#30. 7 -- 1. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#31. 12 -- 6. nbSlices C: 6, maxCD C: 50000.000000000, osnrLimit C: 16.000000000, pchC: 0.000750000, transpIdC: 5. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#32. 6 -- 14. nbSlices C: 6, maxCD C: 50000.000000000, osnrLimit C: 16.000000000, pchC: 0.000750000, transpIdC: 5. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#33. 12 -- 6. nbSlices C: 3, maxCD C: 40000.000000000, osnrLimit C: 15.000000000, pchC: 0.000375000, transpIdC: 1. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#34. 12 -- 11. nbSlices C: 6, maxCD C: 40000.000000000, osnrLimit C: 21.000000000, pchC: 0.000750000, transpIdC: 6. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 300.000000000, ROUTED: YES
+#35. 1 -- 8. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#36. 2 -- 4. nbSlices C: 3, maxCD C: 40000.000000000, osnrLimit C: 15.000000000, pchC: 0.000375000, transpIdC: 1. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#37. 5 -- 1. nbSlices C: 6, maxCD C: 50000.000000000, osnrLimit C: 16.000000000, pchC: 0.000750000, transpIdC: 5. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#38. 3 -- 10. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#39. 8 -- 5. nbSlices C: 6, maxCD C: 50000.000000000, osnrLimit C: 16.000000000, pchC: 0.000750000, transpIdC: 5. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#40. 9 -- 3. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#41. 4 -- 6. nbSlices C: 6, maxCD C: 40000.000000000, osnrLimit C: 21.000000000, pchC: 0.000750000, transpIdC: 6. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 300.000000000, ROUTED: YES
+#42. 2 -- 4. nbSlices C: 6, maxCD C: 40000.000000000, osnrLimit C: 21.000000000, pchC: 0.000750000, transpIdC: 6. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 300.000000000, ROUTED: YES
+#43. 10 -- 3. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#44. 12 -- 3. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#45. 9 -- 10. nbSlices C: 6, maxCD C: 20000.000000000, osnrLimit C: 24.000000000, pchC: 0.000750000, transpIdC: 7. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 400.000000000, ROUTED: YES
+#46. 6 -- 14. nbSlices C: 6, maxCD C: 50000.000000000, osnrLimit C: 16.000000000, pchC: 0.000750000, transpIdC: 5. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#47. 8 -- 7. nbSlices C: 3, maxCD C: 40000.000000000, osnrLimit C: 15.000000000, pchC: 0.000375000, transpIdC: 1. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#48. 6 -- 1. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#49. 11 -- 8. nbSlices C: 3, maxCD C: 40000.000000000, osnrLimit C: 15.000000000, pchC: 0.000375000, transpIdC: 1. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#50. 7 -- 13. nbSlices C: 3, maxCD C: 40000.000000000, osnrLimit C: 15.000000000, pchC: 0.000375000, transpIdC: 1. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#51. 10 -- 6. nbSlices C: 6, maxCD C: 50000.000000000, osnrLimit C: 16.000000000, pchC: 0.000750000, transpIdC: 5. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#52. 13 -- 11. nbSlices C: 3, maxCD C: 40000.000000000, osnrLimit C: 15.000000000, pchC: 0.000375000, transpIdC: 1. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#53. 2 -- 8. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#54. 3 -- 2. nbSlices C: 3, maxCD C: 40000.000000000, osnrLimit C: 15.000000000, pchC: 0.000375000, transpIdC: 1. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#55. 2 -- 8. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#56. 5 -- 10. nbSlices C: 3, maxCD C: 40000.000000000, osnrLimit C: 15.000000000, pchC: 0.000375000, transpIdC: 1. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#57. 10 -- 1. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#58. 2 -- 5. nbSlices C: 3, maxCD C: 40000.000000000, osnrLimit C: 15.000000000, pchC: 0.000375000, transpIdC: 1. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#59. 14 -- 11. nbSlices C: 4, maxCD C: 20000.000000000, osnrLimit C: 16.000000000, pchC: 0.000500000, transpIdC: 3. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#60. 8 -- 13. nbSlices C: 6, maxCD C: 40000.000000000, osnrLimit C: 21.000000000, pchC: 0.000750000, transpIdC: 6. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 300.000000000, ROUTED: YES
+#61. 12 -- 10. nbSlices C: 6, maxCD C: 50000.000000000, osnrLimit C: 16.000000000, pchC: 0.000750000, transpIdC: 5. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#62. 2 -- 14. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#63. 13 -- 11. nbSlices C: 3, maxCD C: 40000.000000000, osnrLimit C: 15.000000000, pchC: 0.000375000, transpIdC: 1. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#64. 11 -- 4. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#65. 4 -- 11. nbSlices C: 6, maxCD C: 50000.000000000, osnrLimit C: 16.000000000, pchC: 0.000750000, transpIdC: 5. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#66. 9 -- 4. nbSlices C: 3, maxCD C: 100000.000000000, osnrLimit C: 13.000000000, pchC: 0.000375000, transpIdC: 2. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#67. 3 -- 5. nbSlices C: 6, maxCD C: 50000.000000000, osnrLimit C: 16.000000000, pchC: 0.000750000, transpIdC: 5. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+#68. 7 -- 5. nbSlices C: 3, maxCD C: 40000.000000000, osnrLimit C: 15.000000000, pchC: 0.000375000, transpIdC: 1. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 100.000000000, ROUTED: YES
+#69. 8 -- 9. nbSlices C: 6, maxCD C: 20000.000000000, osnrLimit C: 24.000000000, pchC: 0.000750000, transpIdC: 7. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 400.000000000, ROUTED: YES
+#70. 5 -- 9. nbSlices C: 6, maxCD C: 50000.000000000, osnrLimit C: 16.000000000, pchC: 0.000750000, transpIdC: 5. nbSlices L: 0, maxCD L: 0.000000000, osnrLimit L: 0.000000000, pchL: 0.000000000, transpIdL: 0, maxCD S: 0.000000000, osnrLimit S: 0.000000000, pchS: 0.000000000. Gbits/s: 200.000000000, ROUTED: YES
+
+Time taken by optimization is : 6076.632020349 sec
+Total time taken by program is : 6076.669702243 sec
