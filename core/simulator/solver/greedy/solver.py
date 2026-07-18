@@ -17,6 +17,7 @@ def edge_key(u,v):
     return tuple(sorted((u,v)))
 
 def path_to_edges(path):
+#     Convert a node path into undirected edge keys
     return {
         edge_key(path[i], path[i + 1])
         for i in range(len(path) - 1)
