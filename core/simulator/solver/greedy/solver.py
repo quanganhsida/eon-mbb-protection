@@ -22,3 +22,15 @@ def path_to_edges(path):
         edge_key(path[i], path[i + 1])
         for i in range(len(path) - 1)
     }
+
+
+
+def solve_greedy_resilient_rsa(env, solution_path: str):
+#     1. Take the affected demands K_Z.
+#     2. Generate an order of migration randomly.
+#     3. While rerouting set is not empty:
+#         - Consider the first demand in the order;
+#         - Compute candidate shortest paths;
+#         - Search a feasible spectrum assignment;
+#         - Establish the migrated lightpath iff it is feasible;
+#         - Then remove the nominal lightpath.
