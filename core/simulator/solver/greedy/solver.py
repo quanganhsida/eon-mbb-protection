@@ -25,6 +25,10 @@ def path_to_edges(path):
 
 def get_failure_edges(env):
 #     get forecasted failure zone Z
+    return {
+        edge_key(u, v)
+        for u, v in getattr(env, "failure_links", [])
+    }
 
 
 def solve_greedy_resilient_rsa(env, solution_path: str):
