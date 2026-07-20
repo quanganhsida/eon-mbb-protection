@@ -23,6 +23,8 @@ def path_to_edges(path):
         for i in range(len(path) - 1)
     }
 
+def get_failure_edges(env):
+#     get forecasted failure zone Z
 
 
 def solve_greedy_resilient_rsa(env, solution_path: str):
@@ -34,3 +36,9 @@ def solve_greedy_resilient_rsa(env, solution_path: str):
 #         - Search a feasible spectrum assignment;
 #         - Establish the migrated lightpath iff it is feasible;
 #         - Then remove the nominal lightpath.
+
+    start_time = perf_counter()
+
+    # get affected demands from failure zone
+    affected_demands = list(getattr(env, "affected_demands", []))
+    failure_edges    = get_failure_edges(env)
