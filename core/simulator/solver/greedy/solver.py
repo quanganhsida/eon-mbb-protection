@@ -48,6 +48,10 @@ def build_initial_occupation(env):
 def try_reroute_demand(env, occupation, demand_id, failure_edges):
 #     try to reroute demand by testing candidate paths
     source, target = get_demand_source_target(env, demand_id)
+    slot_count     = get_demand_slot_count(env, demand_id)
+
+def get_demand_slot_count(env, demand_id):
+#     get the number of required slots
 
 def get_demand_source_target(env, demand_id):
 #     get source and target of a demand
@@ -70,6 +74,11 @@ def get_demand_source_target(env, demand_id):
 
         if source is not None and target is not None:
             return source, target
+
+    nominal      = get_nominal_lightpath(env, demand_id)
+    nominal_path = nominal["path"]
+
+    return nominal_path[0], nominal_path[-1]
 
 def get_demand_record(env, demand_id):
 #     find demand data in env.demands
@@ -94,6 +103,11 @@ def get_demand_record(env, demand_id):
                 return demand
 
     return None
+
+def get_nominal_lightpath(env, demand_id):
+#     get the nominal lightpath of a demand.
+    demand_id_str = str(demand_id)
+    return env.nominal_paths[demand_id_str]
 
 
 def solve_greedy_resilient_rsa(env, solution_path: str):
