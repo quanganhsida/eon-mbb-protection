@@ -53,6 +53,16 @@ def try_reroute_demand(env, occupation, demand_id, failure_edges):
 def get_demand_slot_count(env, demand_id):
 #     get the number of required slots
 
+    demand = get_demand_record(env, demand_id)
+
+    if demand is not None:
+        for key in ["slots", "num_slots", "nbSlices", "nb_slices", "width"]:
+            if key in demand:
+                return int(demand[key])
+
+    nominal = get_nominal_lightpath(env, demand_id)
+    return len(nominal["slot_block"])
+
 def get_demand_source_target(env, demand_id):
 #     get source and target of a demand
     demand = get_demand_record(env, demand_id)
