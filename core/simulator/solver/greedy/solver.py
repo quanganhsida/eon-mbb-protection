@@ -50,6 +50,144 @@ def try_reroute_demand(env, occupation, demand_id, failure_edges):
     source, target = get_demand_source_target(env, demand_id)
     slot_count     = get_demand_slot_count(env, demand_id)
 
+    candidate_paths = generate_candidate_paths(
+        env=env,
+        source=source,
+        target=target,
+        failure_edges=failure_edges,
+    )
+
+    for rank, path in enumerate(candidate_paths, start=1):
+        slot_block = find_first_feasible_slot_block(
+            env=env,
+            occupation=occupation,
+            path=path,
+            slot_count=slot_count,
+            failure_edges=failure_edges,
+        )
+
+        if slot_block is not None:
+            crossed_failure_edge = get_crossed_failure_edge(
+                env=env,
+                demand_id=demand_id,
+                failure_edges=failure_edges,
+            )
+
+        return {
+            "path": path,
+            "slot_block": slot_block,
+            "candidate_path_rank": rank,
+            "failure_link": list(crossed_failure_edge)
+            if crossed_failure_edge is not None
+            else None,
+            "path_length": path_length(env, path),
+        }
+
+    return None
+
+def get_crossed_failure_edge(env, demand_id, failure_edges):
+#     Identify which failure link affects this demand
+
+    nominal = get_nominal_lightpath(env, demand_id)
+    nominal_edges = path_to_edges(nominal["path"])
+
+    for failure_edge in failure_edges:
+        if failure_edge in nominal_edges:
+            return failure_edge
+
+    return None
+
+def find_first_feasible_slot_block(env, occupation, path, slot_count, failure_edges):
+#     Search the first feasible slot block on a candidate path
+    path_edges = path_to_edges(path)
+
+    if not path_edges:
+        return None
+
+    max_start = min(
+        get_edge_capacity(env, edge)
+        for edge in path_edges
+    ) - slot_count + 1
+
+    for start_slot in range(1, max_start + 1):
+        slot_block = list(range(start_slot, start_slot + slot_count))
+
+        if is_slot_block_free(
+            env=env,
+            occupation=occupation,
+            path=path,
+            slot_block=slot_block,
+            failure_edges=failure_edges,
+        ):
+            return slot_block
+
+    return None
+
+def is_slot_block_free(env, occupation, path, slot_block, failure_edges):
+#     check spectrum satisfy EON constrains
+
+    path_edges = path_to_edges(path)
+
+    for edge in path_edges:
+        if edge in failure_edges:
+            return False
+
+        edge_capacity = get_edge_capacity(env, edge)
+
+        for slot in slot_block:
+            if slot > edge_capacity:
+                return False
+
+            if occupation[edge].get(slot) is not None:
+                return False
+
+    return True
+
+def get_edge_capacity(env, edge):
+#     Get the number of avail slots on an edge
+
+    data = get_edge_data(env.graph, edge)
+
+    for key in ["slices", "capacity", "num_slots", "nbSlices", "nb_slices"]:
+        if key in data:
+            return int(data[key])
+
+
+    max_slot = 0
+
+    for item in env.nominal_paths.values():
+        if item.get("slot_block"):
+            max_slot = max(max_slot, max(item["slot_block"]))
+
+    return max_slot + 100
+
+
+def get_edge_data(env.graph, edge):
+#     Return edge attributes for simple graphs and multigraphs
+
+    u, v = edge
+
+    if not graph.has_edge(u, v):
+        return {}
+
+    data = graph.get_edge_data(u, v)
+
+    if data is None:
+        return {}
+
+#     Simple graph case
+    if "length" in data or "slices" in data:
+        return data
+
+#     Multigraph case
+    if isinstance(data, dict):
+        for value in data.values():
+            if isinstance(value, dict):
+                return value
+
+    return {}
+
+
 def get_demand_slot_count(env, demand_id):
 #     get the number of required slots
 
@@ -148,4 +286,14 @@ def solve_greedy_resilient_rsa(env, solution_path: str):
 
 #     reroute demands one by one
     for demand_id in migration_order:
-        result = try_reroute_demand()
+        result = try_reroute_demand(
+            env=env,
+            occupation=occupation,
+            demand_id=demand_id,
+            failure_edges=failure_edges,
+        )
+
+        if result is None:
+            failed_demands.append(demand_id)
+            print(f"[WARNING] Greedy could not reroute demand {demand_id}.")
+            continue
