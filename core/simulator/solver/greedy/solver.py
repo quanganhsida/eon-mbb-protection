@@ -45,6 +45,56 @@ def build_initial_occupation(env):
 
     return occupation
 
+def try_reroute_demand(env, occupation, demand_id, failure_edges):
+#     try to reroute demand by testing candidate paths
+    source, target = get_demand_source_target(env, demand_id)
+
+def get_demand_source_target(env, demand_id):
+#     get source and target of a demand
+    demand = get_demand_record(env, demand_id)
+
+    if demand is not None:
+        source = (
+            demand.get("source")
+            or demand.get("origin")
+            or demand.get("src")
+            or demand.get("o")
+        )
+
+        target = (
+            demand.get("target")
+            or demand.get("destination")
+            or demand.get("dst")
+            or demand.get("t")
+        )
+
+        if source is not None and target is not None:
+            return source, target
+
+def get_demand_record(env, demand_id):
+#     find demand data in env.demands
+
+    demands = getattr(env, "demands", None)
+
+    if demands is None:
+        return None
+
+    if isinstance(demands, dict):
+        return demands.get(str(demand_id), demands.get(demand_id))
+
+    if isinstance(demands, dict):
+        for demand in demands:
+            current_id = (
+                demand.get("id")
+                or demand.get("demand_id")
+                or demand.get("index")
+            )
+
+            if str(current_id) == str(demand_id):
+                return demand
+
+    return None
+
 
 def solve_greedy_resilient_rsa(env, solution_path: str):
 #     1. Take the affected demands K_Z.
@@ -71,3 +121,7 @@ def solve_greedy_resilient_rsa(env, solution_path: str):
 
     migrated_paths = {}
     failed_demands = []
+
+#     reroute demands one by one
+    for demand_id in migration_order:
+        result = try_reroute_demand()
