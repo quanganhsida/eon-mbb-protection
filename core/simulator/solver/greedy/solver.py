@@ -162,7 +162,7 @@ def get_edge_capacity(env, edge):
     return max_slot + 100
 
 
-def get_edge_data(env.graph, edge):
+def get_edge_data(graph, edge):
 #     Return edge attributes for simple graphs and multigraphs
 
     u, v = edge
@@ -326,3 +326,54 @@ def solve_greedy_resilient_rsa(env, solution_path: str):
             path=result["path"],
             slot_block=result["slot_block"],
         )
+
+#         Then release the old nominal lightpath
+        release_nominal_lightpath(
+            env=env,
+            occupation=occupation,
+            demand_id=demand_id
+        )
+
+        migrated_paths[str(demand_id)] = result
+
+        print(
+            f"[OK] Greedy rerouted demand {demand_id}: "
+            f"path={result['path']}, "
+            f"S={result['slot_block']}"
+        )
+
+    running_time = perf_counter() - start_time
+
+
+#     Define final status
+    if not affected_demands:
+        status = "NO_AFFECTED_DEMAND"
+        message = "No demand is affected by the failure zone."
+    elif failed_demands:
+        status = "PARTIAL"
+        message = f"Greedy successfully rerouted all affected demands."
+
+
+#     build output
+    solution = build_greedy_solution(
+        env=env,
+        status=status,
+        migrated_paths=migrated_paths,
+        migration_order=migration_order,
+        running_time=running_time,
+        message=message,
+    )
+
+    solution["failed_demands"] = failed_demands
+    solution["search_batch_size"] = SEARCH_BATCH_SIZE
+    solution["max_candidate_paths"] = MAX_CANDIDATE_PATHS
+    solution["random_seed"] = RANDOM_SEED
+
+
+#     Write JSON solution
+    write_greedy_solution(
+        solution=solution,
+        solution_path=solution_path
+    )
+
+    return solution
