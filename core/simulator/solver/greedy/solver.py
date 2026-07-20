@@ -257,6 +257,13 @@ def get_nominal_lightpath(env, demand_id):
     demand_id_str = str(demand_id)
     return env.nominal_paths[demand_id_str]
 
+def reserve_lightpath(occupation, demand_id, path, slot_block):
+#     Reserve the migrated lightpath
+
+    for edge in path_to_edges(path):
+        for slot in slot_block:
+            occupation[edge][slot] = int(demand_id)
+
 
 def solve_greedy_resilient_rsa(env, solution_path: str):
 #     1. Take the affected demands K_Z.
