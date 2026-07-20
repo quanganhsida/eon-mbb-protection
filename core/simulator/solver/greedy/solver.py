@@ -264,6 +264,18 @@ def reserve_lightpath(occupation, demand_id, path, slot_block):
         for slot in slot_block:
             occupation[edge][slot] = int(demand_id)
 
+def release_nominal_lightpath(env, occupation, demand_id):
+#     Release the nominal lightpath only the migrated one is established
+
+    nominal = get_nominal_lightpath(env, demand_id)
+    path = nominal["path"]
+    slot_block = nominal["slot_block"]
+
+    for edge in path_to_edges(path):
+        for slot in slot_block:
+            if occupation[edge].get(slot) == int(demand_id):
+                del occupation[edge][slot]
+
 
 def solve_greedy_resilient_rsa(env, solution_path: str):
 #     1. Take the affected demands K_Z.
@@ -304,3 +316,13 @@ def solve_greedy_resilient_rsa(env, solution_path: str):
             failed_demands.append(demand_id)
             print(f"[WARNING] Greedy could not reroute demand {demand_id}.")
             continue
+
+
+#         Make-before-break
+#         first reserve the migrated lightpath
+        reserve_lightpath(
+            occupation=occupation,
+            demand_id=demand_id,
+            path=result["path"],
+            slot_block=result["slot_block"],
+        )
