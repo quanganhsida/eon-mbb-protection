@@ -15,7 +15,16 @@ plot-orange-topology:
 
 # ==============================================================================================================================================================================
 
-solve-orange-model:
+solve-orange-gurobi:
+	mkdir -p ../data/log/european_18_40/
+	python3 main.py \
+		--instance_file=../data/instance/european_18_40/orange_european_18_40_d10-b.json \
+		--plot_type=solve \
+		--solution_file=../data/solution/european_18_40/orange_european_18_40_d10-b_solution.json 2>&1 | tee ../data/log/european_18_40/orange_european_18_40_d10-b_solution.log
+
+# ==============================================================================================================================================================================
+
+solve-orange-greedy:
 	mkdir -p ../data/log/European_18_40_greedy/
 	python3 main.py \
 		--instance_file=../data/instance/european_18_40_greedy/orange_european_18_40_d10-b.json \
