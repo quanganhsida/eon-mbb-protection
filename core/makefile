@@ -1,9 +1,9 @@
 generate-orange:
 	python3 -m sample.orange.prepare_instance \
-		--link_file=../data/raw/orange/Outputs/Instances/1.5x/efficient/European_18_40/Links/100_demands-b/Link.csv\
-		--execution_file=../data/raw/orange/Outputs/executionOutputs/oP_L1.5x_Teff_iEuropean_18_40_d100-b_ofNLUS_f0_cd1_os1_gn0_b1_r0_cu0_p2.txt \
-		--output_file=../data/instance/European_18_40_z2/orange_european_18_40_d100-b_z2.json \
-		--num_failed_links=2
+		--link_file=../data/raw/orange/Outputs/Instances/1.5x/efficient/European_18_40/Links/10_demands-b/Link.csv\
+		--execution_file=../data/raw/orange/Outputs/executionOutputs/oP_L1.5x_Teff_iEuropean_18_40_d10-b_ofNLUS_f0_cd1_os1_gn0_b1_r0_cu0_p2.txt \
+		--output_file=../data/instance/European_18_40_z2/orange_european_18_40_d10-b.json \
+		--num_failed_links=1
 
 # ==============================================================================================================================================================================
 
