@@ -4,6 +4,7 @@ from scenario.plot.plot_network import plot_network
 from scenario.plot.plot_solution import plot_nominal_solution, plot_model_solution, plot_model_solution_by_demand
 
 from simulator.solver.gurobi.solver import solve_basic_resilient_rsa
+from simulator.solver.greedy.solver import solve_greedy_resilient_rsa
 
 def main(args):
     env = Environment(args.instance_file)
@@ -32,6 +33,11 @@ def main(args):
         solve_basic_resilient_rsa(
             env=env,
             output_path=args.solution_file,
+        )
+    elif args.plot_type == "solve_greedy":
+        solve_greedy_resilient_rsa(
+            env=env,
+            solution_path=args.solution_file,
         )
     elif args.plot_type == "result":
         plot_model_solution(
