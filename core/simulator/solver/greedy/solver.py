@@ -3,7 +3,7 @@ from time import perf_counter
 import random
 import networkx as nx
 
-from simulation.solver.greedy.output import (
+from simulator.solver.greedy.output import (
     build_greedy_solution,
     write_greedy_solution,
 )
@@ -45,6 +45,79 @@ def build_initial_occupation(env):
 
     return occupation
 
+def build_working_graph(env, failure_edges):
+    """
+    Remove the forecasted failure links from the graph.
+    """
+
+    graph = env.graph.copy()
+
+    for u, v in failure_edges:
+        if graph.has_edge(u, v):
+            if graph.is_multigraph():
+                keys = list(graph[u][v].keys())
+                for key in keys:
+                    graph.remove_edge(u, v, key)
+            else:
+                graph.remove_edge(u, v)
+
+    return graph
+
+
+def generate_candidate_paths(env, source, target, failure_edges):
+    """
+    Generate candidate paths using k-shortest paths.
+    """
+
+    working_graph = build_working_graph(env, failure_edges)
+
+    try:
+        generator = nx.shortest_simple_paths(
+            working_graph,
+            source,
+            target,
+            weight="length",
+        )
+    except (nx.NetworkXNoPath, nx.NodeNotFound):
+        return []
+
+    candidate_paths = []
+
+    for path in generator:
+        candidate_paths.append(list(path))
+
+        if len(candidate_paths) >= MAX_CANDIDATE_PATHS:
+            break
+
+    return candidate_paths
+
+
+def get_edge_length(graph, edge):
+    """
+    Get edge length/latency.
+    """
+
+    data = get_edge_data(graph, edge)
+
+    for key in ["length", "latency", "weight"]:
+        if key in data:
+            return float(data[key])
+
+    return 1.0
+
+
+def path_length(env, path):
+    """
+    Compute the length of a path.
+    """
+
+    total_length = 0.0
+
+    for edge in path_to_edges(path):
+        total_length += get_edge_length(env.graph, edge)
+
+    return total_length
+
 def try_reroute_demand(env, occupation, demand_id, failure_edges):
 #     try to reroute demand by testing candidate paths
     source, target = get_demand_source_target(env, demand_id)
@@ -72,16 +145,15 @@ def try_reroute_demand(env, occupation, demand_id, failure_edges):
                 demand_id=demand_id,
                 failure_edges=failure_edges,
             )
-
-        return {
-            "path": path,
-            "slot_block": slot_block,
-            "candidate_path_rank": rank,
-            "failure_link": list(crossed_failure_edge)
-            if crossed_failure_edge is not None
-            else None,
-            "path_length": path_length(env, path),
-        }
+            return {
+                "path": path,
+                "slot_block": slot_block,
+                "candidate_path_rank": rank,
+                "failure_link": list(crossed_failure_edge)
+                if crossed_failure_edge is not None
+                else None,
+                "path_length": path_length(env, path),
+            }
 
     return None
 
@@ -239,7 +311,7 @@ def get_demand_record(env, demand_id):
     if isinstance(demands, dict):
         return demands.get(str(demand_id), demands.get(demand_id))
 
-    if isinstance(demands, dict):
+    if isinstance(demands, list):
         for demand in demands:
             current_id = (
                 demand.get("id")
@@ -352,6 +424,9 @@ def solve_greedy_resilient_rsa(env, solution_path: str):
     elif failed_demands:
         status = "PARTIAL"
         message = f"Greedy successfully rerouted all affected demands."
+    else:
+        status = "FEASIBLE"
+        message = "Greedy successfully rerouted all affected demands."
 
 
 #     build output
