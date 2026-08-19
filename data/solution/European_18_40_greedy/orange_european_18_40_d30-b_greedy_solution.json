@@ -1,0 +1,160 @@
+{
+  "status": "FEASIBLE",
+  "solver": "greedy",
+  "message": "Greedy successfully rerouted all affected demands.",
+  "instance": "oP_L1_5x_Teff_iEuropean_18_40_d30_b_ofNLUS_f0_cd1_os1_gn0_b1_r0_cu0_p2",
+  "failure_links": [
+    [
+      1,
+      17
+    ]
+  ],
+  "affected_demands_KZ": [
+    4,
+    8,
+    21,
+    22,
+    26
+  ],
+  "migrated_demands_K_prime": [
+    4,
+    8,
+    21,
+    22,
+    26
+  ],
+  "migration_order": [
+    21,
+    8,
+    4,
+    26,
+    22
+  ],
+  "migration_order_text": "21 -> 8 -> 4 -> 26 -> 22",
+  "migrated_paths": {
+    "21": {
+      "path": [
+        18,
+        1,
+        15,
+        17
+      ],
+      "slot_block": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        1,
+        17
+      ],
+      "path_length": 1440.0
+    },
+    "8": {
+      "path": [
+        17,
+        15,
+        1,
+        18
+      ],
+      "slot_block": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        1,
+        17
+      ],
+      "path_length": 1440.0
+    },
+    "4": {
+      "path": [
+        11,
+        3,
+        5,
+        9,
+        15,
+        17
+      ],
+      "slot_block": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        1,
+        17
+      ],
+      "path_length": 2334.0
+    },
+    "26": {
+      "path": [
+        17,
+        15,
+        1,
+        18
+      ],
+      "slot_block": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        1,
+        17
+      ],
+      "path_length": 1440.0
+    },
+    "22": {
+      "path": [
+        17,
+        15,
+        9,
+        5,
+        3
+      ],
+      "slot_block": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        1,
+        17
+      ],
+      "path_length": 1852.0
+    }
+  },
+  "precedence_relations": [],
+  "objective_value": null,
+  "total_path_length": 8506.0,
+  "max_used_slot": 42,
+  "number_of_affected_demands": 5,
+  "number_of_migrated_demands": 5,
+  "running_time": 0.06125250200057053,
+  "failed_demands": [],
+  "search_batch_size": 5,
+  "max_candidate_paths": 50,
+  "random_seed": 0
+}
