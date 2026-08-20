@@ -1,0 +1,33 @@
+Gurobi vs Greedy comparison
+================================
+
+Solver: gurobi
+  status                       : OPTIMAL
+  affected demands |K_Z|       : 10
+  recovered affected demands   : 10
+  recovery ratio               : 1.0
+  migrated demands |K'|        : 10
+  extra migrations             : 0
+  route-only migrations        : 0
+  route-spectrum migrations    : 10
+  spectrum changes             : 10
+  max used slot                : 75
+  total migrated path length   : 16519.0
+  running time                 : 27.663324 s
+  migration order              : 1 -> 4 -> 7 -> 8 -> 12 -> 14 -> 20 -> 34 -> 44 -> 48
+
+Solver: greedy
+  status                       : FEASIBLE
+  affected demands |K_Z|       : 10
+  recovered affected demands   : 10
+  recovery ratio               : 1.0
+  migrated demands |K'|        : 10
+  extra migrations             : 0
+  route-only migrations        : 0
+  route-spectrum migrations    : 10
+  spectrum changes             : 10
+  max used slot                : 84
+  total migrated path length   : 15889.0
+  running time                 : 0.110965 s
+  migration order              : 34 -> 44 -> 4 -> 14 -> 8 -> 12 -> 7 -> 1 -> 48 -> 20
+

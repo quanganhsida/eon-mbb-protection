@@ -1,0 +1,290 @@
+{
+  "status": "FEASIBLE",
+  "solver": "greedy",
+  "message": "Greedy successfully rerouted all affected demands.",
+  "instance": "oP_L1_5x_Teff_iEuropean_18_40_d50_b_ofNLUS_f0_cd1_os1_gn0_b1_r0_cu0_p2",
+  "failure_links": [
+    [
+      11,
+      16
+    ],
+    [
+      2,
+      5
+    ]
+  ],
+  "affected_demands_KZ": [
+    1,
+    4,
+    7,
+    8,
+    12,
+    14,
+    20,
+    34,
+    44,
+    48
+  ],
+  "migrated_demands_K_prime": [
+    1,
+    4,
+    7,
+    8,
+    12,
+    14,
+    20,
+    34,
+    44,
+    48
+  ],
+  "migration_order": [
+    34,
+    44,
+    4,
+    14,
+    8,
+    12,
+    7,
+    1,
+    48,
+    20
+  ],
+  "migration_order_text": "34 -> 44 -> 4 -> 14 -> 8 -> 12 -> 7 -> 1 -> 48 -> 20",
+  "migrated_paths": {
+    "34": {
+      "path": [
+        16,
+        10,
+        5,
+        3,
+        6
+      ],
+      "slot_block": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        11,
+        16
+      ],
+      "path_length": 1807.0
+    },
+    "44": {
+      "path": [
+        11,
+        3,
+        5,
+        9,
+        4,
+        13
+      ],
+      "slot_block": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        11,
+        16
+      ],
+      "path_length": 2778.0
+    },
+    "4": {
+      "path": [
+        16,
+        10,
+        5,
+        3
+      ],
+      "slot_block": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        2,
+        5
+      ],
+      "path_length": 1287.0
+    },
+    "14": {
+      "path": [
+        10,
+        5,
+        3,
+        11
+      ],
+      "slot_block": [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        11,
+        16
+      ],
+      "path_length": 1412.0
+    },
+    "8": {
+      "path": [
+        3,
+        5,
+        10,
+        16
+      ],
+      "slot_block": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        2,
+        5
+      ],
+      "path_length": 1287.0
+    },
+    "12": {
+      "path": [
+        5,
+        9,
+        15
+      ],
+      "slot_block": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        2,
+        5
+      ],
+      "path_length": 905.0
+    },
+    "7": {
+      "path": [
+        4,
+        9,
+        5,
+        3
+      ],
+      "slot_block": [
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        2,
+        5
+      ],
+      "path_length": 1245.0
+    },
+    "1": {
+      "path": [
+        3,
+        5,
+        10,
+        16
+      ],
+      "slot_block": [
+        67,
+        68,
+        69,
+        70,
+        71,
+        72
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        11,
+        16
+      ],
+      "path_length": 1287.0
+    },
+    "48": {
+      "path": [
+        11,
+        3,
+        5,
+        9,
+        4,
+        13
+      ],
+      "slot_block": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        11,
+        16
+      ],
+      "path_length": 2778.0
+    },
+    "20": {
+      "path": [
+        3,
+        5,
+        10,
+        2
+      ],
+      "slot_block": [
+        79,
+        80,
+        81,
+        82,
+        83,
+        84
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        2,
+        5
+      ],
+      "path_length": 1103.0
+    }
+  },
+  "precedence_relations": [],
+  "objective_value": null,
+  "total_path_length": 15889.0,
+  "max_used_slot": 84,
+  "number_of_affected_demands": 10,
+  "number_of_migrated_demands": 10,
+  "running_time": 0.11096463000285439,
+  "failed_demands": [],
+  "search_batch_size": 5,
+  "max_candidate_paths": 50,
+  "random_seed": 0
+}

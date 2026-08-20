@@ -1,0 +1,182 @@
+{
+  "status": "FEASIBLE",
+  "solver": "greedy",
+  "message": "Greedy successfully rerouted all affected demands.",
+  "instance": "oP_L1_5x_Teff_iEuropean_18_40_d70_b_ofNLUS_f0_cd1_os1_gn0_b1_r0_cu0_p2",
+  "failure_links": [
+    [
+      5,
+      18
+    ]
+  ],
+  "affected_demands_KZ": [
+    5,
+    7,
+    37,
+    49,
+    56,
+    62
+  ],
+  "migrated_demands_K_prime": [
+    5,
+    7,
+    37,
+    49,
+    56,
+    62
+  ],
+  "migration_order": [
+    56,
+    37,
+    7,
+    5,
+    62,
+    49
+  ],
+  "migration_order_text": "56 -> 37 -> 7 -> 5 -> 62 -> 49",
+  "migrated_paths": {
+    "56": {
+      "path": [
+        5,
+        1,
+        18
+      ],
+      "slot_block": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        5,
+        18
+      ],
+      "path_length": 780.0
+    },
+    "37": {
+      "path": [
+        5,
+        1,
+        18
+      ],
+      "slot_block": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        5,
+        18
+      ],
+      "path_length": 780.0
+    },
+    "7": {
+      "path": [
+        5,
+        1,
+        14
+      ],
+      "slot_block": [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        5,
+        18
+      ],
+      "path_length": 1805.0
+    },
+    "5": {
+      "path": [
+        14,
+        17,
+        15,
+        9,
+        10
+      ],
+      "slot_block": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        5,
+        18
+      ],
+      "path_length": 2298.0
+    },
+    "62": {
+      "path": [
+        2,
+        9,
+        15,
+        17,
+        14
+      ],
+      "slot_block": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        5,
+        18
+      ],
+      "path_length": 2165.0
+    },
+    "49": {
+      "path": [
+        14,
+        17,
+        15,
+        9,
+        10
+      ],
+      "slot_block": [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "candidate_path_rank": 1,
+      "failure_link": [
+        5,
+        18
+      ],
+      "path_length": 2298.0
+    }
+  },
+  "precedence_relations": [],
+  "objective_value": null,
+  "total_path_length": 10126.0,
+  "max_used_slot": 54,
+  "number_of_affected_demands": 6,
+  "number_of_migrated_demands": 6,
+  "running_time": 0.07806258100026753,
+  "failed_demands": [],
+  "search_batch_size": 5,
+  "max_candidate_paths": 50,
+  "random_seed": 0
+}

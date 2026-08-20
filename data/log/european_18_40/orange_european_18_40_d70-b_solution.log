@@ -1,0 +1,134 @@
+[INFO] Instance loaded
+    name            : oP_L1_5x_Teff_iEuropean_18_40_d70_b_ofNLUS_f0_cd1_os1_gn0_b1_r0_cu0_p2
+    nodes           : 18
+    links           : 40
+    demands         : 70
+    nominal path    : 70
+    plot type       : solve
+    failure links   : [[5, 18]]
+    affected K_Z    : [5, 7, 37, 49, 56, 62]
+Set parameter Username
+Set parameter LicenseID to value 2812610
+Academic license - for non-commercial use only - expires 2027-04-23
+Set parameter TimeLimit to value 1800
+Set parameter OutputFlag to value 1
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Arch Linux")
+
+CPU model: Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 4 logical processors, using up to 4 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Optimize a model with 553327 rows, 565070 columns and 10744447 nonzeros (Min)
+Model fingerprint: 0xc57fa3ff
+Model has 26909 linear objective coefficients
+Variable types: 0 continuous, 565070 integer (565070 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 2e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+
+
+---------------------------------------------------------------------------
+Multi-objectives: starting optimization (min) with 2 objectives... 
+---------------------------------------------------------------------------
+
+Multi-objectives: applying initial presolve...
+---------------------------------------------------------------------------
+
+Presolve removed 44519 rows and 71821 columns (presolve time = 5s)...
+Presolve removed 46736 rows and 74221 columns (presolve time = 10s)...
+Presolve removed 46912 rows and 74221 columns (presolve time = 15s)...
+Presolve removed 46848 rows and 74157 columns
+Presolve time: 16.93s
+Presolved: 506479 rows, 490913 columns, 5579757 nonzeros
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 1 (min_additional_mig) ...
+---------------------------------------------------------------------------
+
+Found heuristic solution: objective 0.0000000
+
+Explored 0 nodes (0 simplex iterations) in 17.40 seconds (38.71 work units)
+Thread count was 1 (of 4 available processors)
+
+Solution count 1: 0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+---------------------------------------------------------------------------
+
+Multi-objectives: optimize objective 2 (min_total_latency) ...
+---------------------------------------------------------------------------
+
+Loaded user MIP start with objective 27969
+
+Presolve removed 425342 rows and 194482 columns
+Presolve time: 1.42s
+Presolved: 81138 rows, 296431 columns, 2347495 nonzeros
+Variable types: 0 continuous, 296431 integer (296431 binary)
+Performing another presolve...
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 0.25s
+
+Barrier performed 0 iterations in 25.20 seconds (47.65 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with primal simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    5759    1.0126000e+04   0.000000e+00   0.000000e+00     25s
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root crossover log...
+
+   71233 DPushes remaining with DInf 0.0000000e+00                25s
+       0 DPushes remaining with DInf 0.0000000e+00                25s
+
+       4 PPushes remaining with PInf 0.0000000e+00                25s
+       0 PPushes remaining with PInf 0.0000000e+00                25s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 0.0000000e+00     25s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    5893    1.0126000e+04   0.000000e+00   0.000000e+00     25s
+Crossover time: 0.09 seconds (0.06 work units)
+
+Root relaxation: objective 1.012600e+04, 5893 iterations, 1.96 seconds (2.04 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    10126.000000 10126.0000  0.00%     -   25s
+
+Explored 1 nodes (5893 simplex iterations) in 25.40 seconds (47.72 work units)
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 10126 27969 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.012600000000e+04, best bound 1.012600000000e+04, gap 0.0000%
+
+---------------------------------------------------------------------------
+Multi-objectives: solved in 25.49 seconds (47.72 work units), solution count 2
+
+[OK] Result saved to: ../data/solution/european_18_40/orange_european_18_40_d70-b_solution.json
+[SOLUTION] Basic resilient RSA
+    affected K_Z    : [5, 7, 37, 49, 56, 62]
+    K_prime         : [5, 7, 37, 49, 56, 62]
+    migration_order : 5 -> 7 -> 49 -> 56 -> 62 -> 37
+    migrated_paths  : {'5': {'path': [14, 17, 15, 9, 10], 'start_slot': 81, 'last_slot': 86, 'slot_block': [81, 82, 83, 84, 85, 86], 'selected_arcs': [[9, 10], [15, 9], [14, 17], [17, 15]]}, '7': {'path': [5, 1, 14], 'start_slot': 100, 'last_slot': 105, 'slot_block': [100, 101, 102, 103, 104, 105], 'selected_arcs': [[5, 1], [1, 14]]}, '37': {'path': [5, 1, 18], 'start_slot': 41, 'last_slot': 46, 'slot_block': [41, 42, 43, 44, 45, 46], 'selected_arcs': [[5, 1], [1, 18]]}, '49': {'path': [14, 17, 15, 9, 10], 'start_slot': 100, 'last_slot': 105, 'slot_block': [100, 101, 102, 103, 104, 105], 'selected_arcs': [[9, 10], [15, 9], [14, 17], [17, 15]]}, '56': {'path': [5, 1, 18], 'start_slot': 87, 'last_slot': 92, 'slot_block': [87, 88, 89, 90, 91, 92], 'selected_arcs': [[5, 1], [1, 18]]}, '62': {'path': [2, 9, 15, 17, 14], 'start_slot': 38, 'last_slot': 43, 'slot_block': [38, 39, 40, 41, 42, 43], 'selected_arcs': [[2, 9], [9, 15], [17, 14], [15, 17]]}}
+    running_time    : 25.4931 seconds
