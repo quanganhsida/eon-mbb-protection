@@ -39,7 +39,7 @@ Multi-objectives: applying initial presolve...
 ---------------------------------------------------------------------------
 
 Presolve removed 11016 rows and 12896 columns
-Presolve time: 2.04s
+Presolve time: 2.05s
 Presolved: 55773 rows, 83974 columns, 806000 nonzeros
 ---------------------------------------------------------------------------
 
@@ -48,7 +48,7 @@ Multi-objectives: optimize objective 1 (min_additional_mig) ...
 
 Found heuristic solution: objective 1.0000000
 Presolve removed 1150 rows and 78 columns
-Presolve time: 1.94s
+Presolve time: 1.92s
 Presolved: 54623 rows, 83896 columns, 803678 nonzeros
 Variable types: 0 continuous, 83896 integer (83896 binary)
 Deterministic concurrent LP optimizer: primal and dual simplex
@@ -94,7 +94,7 @@ Root relaxation: objective 0.000000e+00, 71 iterations, 0.18 seconds (0.22 work 
 H    0     0                       0.0000000    0.00000  0.00%     -    5s
      0     0    0.00000    0   23    0.00000    0.00000  0.00%     -    5s
 
-Explored 1 nodes (71 simplex iterations) in 5.19 seconds (9.28 work units)
+Explored 1 nodes (71 simplex iterations) in 5.18 seconds (9.28 work units)
 Thread count was 4 (of 4 available processors)
 
 Solution count 2: 0 1 
@@ -109,7 +109,7 @@ Multi-objectives: optimize objective 2 (min_total_latency) ...
 Loaded user MIP start with objective 24129
 
 Presolve removed 42676 rows and 43173 columns
-Presolve time: 0.88s
+Presolve time: 0.90s
 Presolved: 13098 rows, 40801 columns, 273611 nonzeros
 Variable types: 0 continuous, 40801 integer (40801 binary)
 Deterministic concurrent LP optimizer: primal and dual simplex
@@ -146,14 +146,14 @@ Iteration    Objective       Primal Inf.    Dual Inf.      Time
 Crossover time: 0.01 seconds (0.01 work units)
      975    8.5060000e+03   0.000000e+00   0.000000e+00      6s
 
-Root relaxation: objective 8.506000e+03, 975 iterations, 0.19 seconds (0.24 work units)
+Root relaxation: objective 8.506000e+03, 975 iterations, 0.20 seconds (0.24 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
 *    0     0               0    8506.0000000 8506.00000  0.00%     -    6s
 
-Explored 1 nodes (975 simplex iterations) in 6.40 seconds (10.88 work units)
+Explored 1 nodes (975 simplex iterations) in 6.41 seconds (10.88 work units)
 Thread count was 4 (of 4 available processors)
 
 Solution count 2: 8506 24129 
@@ -162,7 +162,7 @@ Optimal solution found (tolerance 1.00e-04)
 Best objective 8.506000000000e+03, best bound 8.506000000000e+03, gap 0.0000%
 
 ---------------------------------------------------------------------------
-Multi-objectives: solved in 6.42 seconds (10.88 work units), solution count 3
+Multi-objectives: solved in 6.43 seconds (10.88 work units), solution count 3
 
 [OK] Result saved to: ../data/solution/european_18_40/orange_european_18_40_d30-b_solution.json
 [SOLUTION] Basic resilient RSA
@@ -170,4 +170,4 @@ Multi-objectives: solved in 6.42 seconds (10.88 work units), solution count 3
     K_prime         : [4, 8, 21, 22, 26]
     migration_order : 4 -> 8 -> 21 -> 22 -> 26
     migrated_paths  : {'4': {'path': [11, 3, 5, 9, 15, 17], 'start_slot': 32, 'last_slot': 37, 'slot_block': [32, 33, 34, 35, 36, 37], 'selected_arcs': [[3, 5], [11, 3], [5, 9], [9, 15], [15, 17]]}, '8': {'path': [17, 15, 1, 18], 'start_slot': 13, 'last_slot': 18, 'slot_block': [13, 14, 15, 16, 17, 18], 'selected_arcs': [[15, 1], [1, 18], [17, 15]]}, '21': {'path': [18, 1, 15, 17], 'start_slot': 19, 'last_slot': 24, 'slot_block': [19, 20, 21, 22, 23, 24], 'selected_arcs': [[1, 15], [18, 1], [15, 17]]}, '22': {'path': [17, 15, 9, 5, 3], 'start_slot': 40, 'last_slot': 45, 'slot_block': [40, 41, 42, 43, 44, 45], 'selected_arcs': [[5, 3], [9, 5], [15, 9], [17, 15]]}, '26': {'path': [17, 15, 1, 18], 'start_slot': 25, 'last_slot': 30, 'slot_block': [25, 26, 27, 28, 29, 30], 'selected_arcs': [[15, 1], [1, 18], [17, 15]]}}
-    running_time    : 6.4189 seconds
+    running_time    : 6.4269 seconds

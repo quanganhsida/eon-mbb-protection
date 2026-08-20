@@ -27,7 +27,7 @@ solve-orange-gurobi:
 solve-orange-greedy:
 	mkdir -p ../data/log/European_18_40_greedy/
 	python3 main.py \
-		--instance_file=../data/instance/european_18_40_greedy/orange_european_18_40_d30-b.json \
+		--instance_file=../data/instance/european_18_40/orange_european_18_40_d30-b.json \
 		--plot_type=solve_greedy \
 		--solution_file=../data/solution/European_18_40_greedy/orange_european_18_40_d30-b_greedy_solution.json 2>&1 | tee ../data/log/European_18_40_greedy/orange_european_18_40_d30-b_greedy_solution.log
 
@@ -35,10 +35,10 @@ solve-orange-greedy:
 
 plot-orange-result-by-demand:
 	python3 main.py \
-		--instance_file=../data/instance/european_18_40_greedy/orange_european_18_40_d10-b.json \
+		--instance_file=../data/instance/european_18_40_greedy/orange_european_18_40_d30-b.json \
 		--plot_type=result_by_demand \
-		--solution_file=../data/solution/European_18_40_greedy/orange_european_18_40_d10-b_greedy_solution.json \
-		--figure_dir=../data/figure/european_18_40_greedy/orange_european_18_40_d10-b_greedy_by_demand
+		--solution_file=../data/solution/European_18_40_greedy/orange_european_18_40_d30-b_greedy_solution.json \
+		--figure_dir=../data/figure/european_18_40_greedy/orange_european_18_40_d30-b_greedy_by_demand
 
 # ==============================================================================================================================================================================
 
@@ -47,7 +47,7 @@ compare-orange-solvers:
 	python3 -m scenario.compare.compare_solutions \
 		--instance_file=../data/instance/european_18_40/orange_european_18_40_d30-b.json \
 		--gurobi_solution_file=../data/solution/european_18_40/orange_european_18_40_d30-b_solution.json \
-		--greedy_solution_file=../data/solution/European_18_40_greedy/orange_european_18_40_d10-b_greedy_solution.json \
+		--greedy_solution_file=../data/solution/European_18_40_greedy/orange_european_18_40_d30-b_greedy_solution.json \
 		--output_dir=../data/comparison \
 		--case_name=orange_european_18_40_d30-b \
 
