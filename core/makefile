@@ -48,7 +48,7 @@ compare-orange-solvers:
 		--instance_file=../data/instance/european_18_40/orange_european_18_40_d30-b.json \
 		--gurobi_solution_file=../data/solution/european_18_40/orange_european_18_40_d30-b_solution.json \
 		--greedy_solution_file=../data/solution/European_18_40_greedy/orange_european_18_40_d10-b_greedy_solution.json \
-		--output_dir=../data/figure/comparison \
+		--output_dir=../data/comparison \
 		--case_name=orange_european_18_40_d30-b \
 
 
