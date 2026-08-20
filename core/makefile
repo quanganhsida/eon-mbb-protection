@@ -51,7 +51,16 @@ compare-orange-solvers:
 		--output_dir=../data/comparison \
 		--case_name=orange_european_18_40_d30-b \
 
+# ==============================================================================================================================================================================
+
+plot-orange-comparison:
+	mkdir -p ../data/figure/comparison
+	python3 -m scenario.plot.plot_comparison \
+		--summary_csv=../data/comparison/orange_european_18_40_d30-b_comparison_summary.csv \
+		--output_dir=../data/figure/comparison \
+		--case_name=orange_european_18_40_d30-b
+
 
 # ==============================================================================================================================================================================
 
-run-comparison-basic: generate-orange plot-orange-topology solve-orange-gurobi solve-orange-greedy compare-orange-solvers
+run-comparison-basic: generate-orange plot-orange-topology solve-orange-gurobi solve-orange-greedy compare-orange-solvers plot-orange-comparison
